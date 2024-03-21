@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-13-2023-12-16",
+	"cardId": "000023",
+	"account": {
+		"id": "ACC-UNIQ-13-2023-12-16",
+		"srcRefId": "ACC-13-2023-12-16"
+	},
+	"channel": {
+		"code": "0002",
+		"group": "PAYPAL GROUP",
+		"description": "PAYPAL"
+	},
+	"txnType": {
+		"code": "TT0023",
+		"name": null,
+		"scope": "EXTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "CHEQUE",
+		"description": "TRAVELLERS CHEQUE BUY"
+	},
+	"deviceId": "0005",
+	"location": null,
+	"tellerId": "382",
+	"employeeId": null,
+	"originator": {
+		"id": "N/A",
+		"name": "Della Parkburg",
+		"role": "CounterParty",
+		"account": {
+			"id": "ACC-371-2004816",
+			"bic": null,
+			"bank": {
+				"name": "FIRST UNION",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "3438 CHURNS STREET",
+					"countryCode": "NG"
+				}
+			},
+			"iban": null,
+			"name": "DELLA PARKBURG-ACC-371-2004816",
+			"type": null,
+			"srcRefId": "ACC-371-2004816",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "FIRST UNIO"
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "5261 INTRUSIONS STREET",
+			"countryCode": "BZ"
+		},
+		"segment": "N/A",
+		"srcRefId": "N/A"
+	},
+	"beneficiary": {
+		"id": "AUTO_SUBJ_13",
+		"name": "Shreck",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-13-2023-12-16",
+			"bic": null,
+			"iban": null,
+			"name": "SONIA REMLER-13-2023-12-16",
+			"type": "Cheque/Check",
+			"address": {
+				"city": "City11",
+				"zone": "EET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "BR"
+			},
+			"balance": 33612.82,
+			"srcRefId": "ACC-13-2023-12-16",
+			"typeCode": "AT0003",
+			"branchDetail": [
+				{
+					"id": "000008",
+					"name": "BRANCH 0008",
+					"sortCode": "876908"
+				}
+			]
+		},
+		"address": {
+			"city": "City10",
+			"zone": "EET",
+			"postalCode": "19077",
+			"addressLine": "1 Cannibal Forest",
+			"countryCode": "MY"
+		},
+		"segment": "SME",
+		"srcRefId": "AUTO_SUBJ_13"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-13-2023-12-16",
+	"localTimestamp": "2016-09-16T06:18:27",
+	"txnSrcUniqueId": "TXN-13-2023-12-16",
+	"creditDebitCode": "Credit",
+	"originationDate": "2015-12-31T06:27:11",
+	"transactionDate": "2016-01-05T06:26:37",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "EUR",
+	"txnAmountInBaseCurrency": 25612.71,
+	"txnAmountInOriginCurrency": 10740.92,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

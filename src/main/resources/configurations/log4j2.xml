@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %highlight{%-5level}{DEBUG=blue}
+            %logger{36} - %highlight{%msg%n}{DEBUG=blue}" disableAnsi="false"/>
+            <Filters>
+                <RegexFilter regex="RP_MESSAGE.*" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="TEST_LOG" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+        </Console>
+        <Console name="MarkerConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%msg%n" disableAnsi="false"/>
+            <Filters>
+                <MarkerFilter marker="TEST_LOG" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.smile" additivity="false" level="INFO">
+            <Appender-ref ref="Console"/>
+        </Logger>
+        <Logger name="investigation.hub" additivity="false" level="INFO">
+            <Appender-ref ref="Console"/>
+        </Logger>
+        <Root level="ERROR">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MarkerConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>

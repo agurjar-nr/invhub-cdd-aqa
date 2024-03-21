@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" name="Demo TestSuite"> <!--parallel="tests" - for future usage-->
+
+    <test name="Event Log">
+        <classes>
+            <class name="investigation.hub.test.EventLogTest"/>
+        </classes>
+    </test>
+
+    <test name="Investigation">
+        <classes>
+            <class name="investigation.hub.test.InvestigationTest"/>
+        </classes>
+    </test>
+
+    <test name="Login">
+        <classes>
+            <class name="investigation.hub.test.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="SAML Settings">
+        <classes>
+            <class name="investigation.hub.test.SAMLSettingsUITest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,9 @@
+mutation createNewLoginCode($email: String!) {
+    createNewLoginCode(input: {email:$email}) {
+        success
+        token
+        refreshToken
+        appMode
+        samlCallbackUrl
+    }
+}

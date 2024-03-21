@@ -1,0 +1,18 @@
+query ( $id: ID!) {
+    getTeamById(query: {id: $id}) {
+        id
+        name
+        description
+        accessPolicy {
+            id
+            name
+        }
+        createdOn
+        updatedOn
+        membersCount
+        roles {
+            id
+            name
+        }
+    }
+}

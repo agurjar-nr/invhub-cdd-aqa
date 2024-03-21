@@ -1,0 +1,43 @@
+mutation ( $email: String!,
+    $enabled: Boolean,
+    $first_name: String,
+    $imageId: String,
+    $language: String,
+    $last_name: String,
+    $permissions: JSONObject,
+    $preferences: JSONObject,
+    $role: String,
+    $time_zone: String,
+    $updatedOn: DateTime,
+    $username: String,
+    $weekStartsOn: String) {
+    createUser(
+        input: { email: $email,
+            enabled: $enabled,
+            first_name: $first_name,
+            imageId: $imageId,
+            language: $language,
+            last_name: $last_name,
+            permissions: $permissions,
+            preferences: $preferences,
+            role: $role,
+            time_zone: $time_zone,
+            updatedOn: $updatedOn,
+            username: $username,
+            weekStartsOn: $weekStartsOn }) {
+        createdOn
+        email
+        enabled
+        id
+        first_name
+        imageId
+        language
+        last_name
+        role
+        time_zone
+        weekStartsOn
+        permissions
+        updatedOn
+        username
+    }
+}

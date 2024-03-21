@@ -1,0 +1,1953 @@
+{
+	"id": "20231216000000000000000_62BFB289E11D290CE0630300140BC553",
+	"name": "UNUSUAL_ACTIVITY_FOUND",
+	"version": "1.0",
+	"timestamp": "2023-12-12T09:23:01",
+	"entity": {
+		"id": "AUTO_SUBJ_13",
+		"name": "Subject"
+	},
+	"context": {
+		"summary": "AUTO_SUBJ_13 done manually friday",
+		"organisationUnit": "EUR",
+		"technical": false,
+		"source": {
+			"name": "SMBD",
+			"userInfo": {
+				"username": "System"
+			}
+		},
+		"detail": {
+			"eventDate": "2016-01-05",
+			"scenarioModelId": 1000,
+			"domainCode": "SUSPICIOUS_ACTIVITY"
+		}
+	},
+	"value": {
+		"apiVersion": "1.0",
+		"context": "arbitrary text",
+		"id": "62BFB289E11D290CE0630300140B678F",
+		"data": {
+			"created": "2023-12-13T06:23:01",
+			"source": {
+				"subject": {
+					"subjectId": "AUTO_SUBJ_13",
+					"subjectName": "AUTO_SUBJ_13",
+					"subjectSrcRefId": "AUTO_SUBJ_13",
+					"subjectTypeCode": "P",
+					"subjectType": "Personal",
+					"organisationUnit": "EUR"
+				}
+			},
+			"unusualActivity": {
+				"detections": [
+					{
+						"id": 7716,
+						"srcUniqueId": "f9b70278-8a25-47e4-ab80-9e657ad9991b",
+						"sourceSystem": "SMBD",
+						"checkName": "AML99 Very strange detection",
+						"description": "AML99: Something happen = <b>0.0 euro</b><br/><br/>Threshold = <b>15000.0 euro</b><br/>Nobody know what happen <b>And never know</b><br/>Some info about money <b>0.0 euro</b><br/>Again about money <b>(null) euro</b><br/>and some formulas = <b>(null) %</b>",
+						"score": 58,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2011-11-01T06:05:00",
+						"checkGroup": "WeeklyCashDeposits",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "CORP",
+						"raisedOnName": "Client",
+						"raisedOnId": "AUTO_SUBJ_13",
+						"raisedOnRefId": "AUTO_SUBJ_13",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-99-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-99-2023-12-16",
+						"weight": 1622.12,
+						"detectionTimestamp": "2011-11-12T06:08:17",
+						"accountId": "ACC-UNIQ-99-2023-12-16",
+						"accountSrcRefId": "ACC-99-2023-12-16",
+						"accountName": "ARTHUR LEIN-99-2023-12-16",
+						"branchId": "000011",
+						"alertId": 1020,
+						"alertIdentifier": "A202309041020",
+						"ietScore": 74,
+						"alertScore": 1540.4,
+						"dueTimestamp": "2023-11-09T06:09:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-99-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-99-2023-12-16",
+									"srcRefId": "ACC-99-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:03:58",
+								"originationDate": "2015-12-13T06:11:24",
+								"txnAmountInOriginCurrency": 2697.35,
+								"currencyCodeOrigin": "UZS",
+								"txnAmountInBaseCurrency": 58741.54,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-99-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-99-2023-12-16",
+								"txnType": {
+									"code": "TT0006",
+									"name": null,
+									"description": "Debit Card",
+									"scope": "EXTERNAL",
+									"instrument": "CARD",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "RABAH ABOU",
+									"address": {
+										"addressLine": "Kolola Pushta Street",
+										"city": "City1",
+										"zone": "EET",
+										"postalCode": "555000",
+										"countryCode": "AF"
+									},
+									"segment": "CORP",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-99-2023-12-16",
+										"name": "ARTHUR LEIN-99-2023-12-16",
+										"srcRefId": "ACC-99-2023-12-16",
+										"type": "Unknown",
+										"typeCode": "AT0013",
+										"balance": 65874.69,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City2",
+											"zone": "CET",
+											"postalCode": null,
+											"countryCode": "TL"
+										},
+										"branchDetail": [
+											{
+												"id": "000011",
+												"name": "BRANCH 0011",
+												"sortCode": "103433"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Miriam Markland",
+									"address": {
+										"addressLine": "7812 RUMMY LANE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "SM"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ORIG-ACC-ID-99-2023-12-16",
+										"name": "MIRIAM MARKLAND-ACC-521-20041211",
+										"srcRefId": "ORIG-ACC-SRC-REF-99-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "BEDFORD NATIONAL BANK (BANK ONE -> JPMORGANCHASE)",
+											"address": {
+												"addressLine": "4689 PEGS LANE",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "BW"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "BEDFORD NA"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000010",
+								"localTimestamp": "2011-11-13T06:18:10",
+								"location": null,
+								"channel": {
+									"code": "0002",
+									"description": "PAYPAL",
+									"group": "PAYPAL GROUP"
+								},
+								"deviceId": "0006",
+								"employeeId": null,
+								"tellerId": "81",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditMaximum_max_month_past1",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditMaximum_max_month_past2",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditMaximum_max_month_past3",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "CashCreditParameters_ThreeMonthsMaxFactor",
+								"valueNum": 1.5,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "CashCreditParameters_IndividualAmount",
+								"valueNum": 15,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 16212.12,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1016,
+						"srcUniqueId": "f9b70278-8a25-47e4-ab80-9e657ad9991b",
+						"sourceSystem": "SMBD",
+						"checkName": "AML03 A large cash deposit",
+						"description": "AML03: Cash deposit = <b>16212.12 euro</b><br/><br/>Threshold = <b>15000.0 euro</b><br/>The account or client is known in the system for = <b>1 calendar months</b><br/>Maximum cash deposit in previous 3 months = <b>0.0 euro</b><br/>Average cash deposit in previous 3 months = <b>(null) euro</b><br/>Percentage variance = <b>(null) %</b>",
+						"score": 60,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2012-12-12T06:12:00",
+						"checkGroup": "CashDeposits",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "CORP",
+						"raisedOnName": "Client",
+						"raisedOnId": "AUTO_SUBJ_13",
+						"raisedOnRefId": "AUTO_SUBJ_13",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-03-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-03-2023-12-16",
+						"weight": 16212.12,
+						"detectionTimestamp": "2023-12-04T06:19:17",
+						"accountId": "ACC-UNIQ-4-2023-12-16",
+						"accountSrcRefId": "ACC-4-2023-12-16",
+						"accountName": "ARTHUR LEIN-4-2023-12-16",
+						"branchId": "000011",
+						"alertId": 1020,
+						"alertIdentifier": "A202309041020",
+						"ietScore": 74,
+						"alertScore": 1540.4,
+						"dueTimestamp": "2023-09-15T06:24:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-03-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-03-2023-12-16",
+									"srcRefId": "ACC-03-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:38:08",
+								"originationDate": "2015-12-13T06:25:02",
+								"txnAmountInOriginCurrency": 12756.12,
+								"currencyCodeOrigin": "UZS",
+								"txnAmountInBaseCurrency": 3652.21,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-03-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-03-2023-12-16",
+								"txnType": {
+									"code": "TT0050",
+									"name": null,
+									"description": "OWN FOREIGN CURRENCY DEPOSIT",
+									"scope": "EXTERNAL",
+									"instrument": "CASH",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Wilmot Williams",
+									"address": {
+										"addressLine": "3874 SAGES AVENUE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "IT"
+									},
+									"segment": "CORP",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-03-2023-12-16",
+										"name": "ARTHUR LEIN-03-2023-12-16",
+										"srcRefId": "ACC-03-2023-12-16",
+										"type": "Unknown",
+										"typeCode": "AT0013",
+										"balance": 26516.51,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City3",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "TL"
+										},
+										"branchDetail": [
+											{
+												"id": "000011",
+												"name": "BRANCH 0011",
+												"sortCode": "103433"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "ORIG-ACC-ID-03-2023-12-16",									
+									"srcRefId": "N/A",
+									"name": "Miriam Markland",
+									"address": {
+										"addressLine": "7812 RUMMY LANE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "SM"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-521-20041211",
+										"name": "MIRIAM MARKLAND-ACC-521-20041211",
+										"srcRefId": "ACC-521-20041211",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "BEDFORD NATIONAL BANK (BANK ONE -> JPMORGANCHASE)",
+											"address": {
+												"addressLine": "4689 PEGS LANE",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "BW"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "BEDFORD NA"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000010",
+								"localTimestamp": "2012-12-17T06:15:10",
+								"location": null,
+								"channel": {
+									"code": "0002",
+									"description": "PAYPAL",
+									"group": "PAYPAL GROUP"
+								},
+								"deviceId": "0006",
+								"employeeId": null,
+								"tellerId": "81",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditMaximum_max_month_past1",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditMaximum_max_month_past2",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditMaximum_max_month_past3",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "CashCreditParameters_ThreeMonthsMaxFactor",
+								"valueNum": 1.5,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "CashCreditParameters_IndividualAmount",
+								"valueNum": 15,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 16212.12,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1392,
+						"srcUniqueId": "0c88e67c-c82d-453b-817f-103ad7a3e92f",
+						"sourceSystem": "SMBD",
+						"checkName": "AML17 A terrorist haven transaction",
+						"description": "AML17: Transaction debit/credit = <b>Debit</b><br/>Transaction amount = <b>23503.48 euros</b><br/>To/from country = <b>GT</b><br/><br/>Threshold = <b>10000.0 euros</b>",
+						"score": 72.5,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2013-05-13T06:18:25",
+						"checkGroup": "InternationalTransaction",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "SME",
+						"raisedOnName": "Account",
+						"raisedOnId": "ACC-UNIQ-17-2023-12-16",
+						"raisedOnRefId": "ACC-17-2023-12-16",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-17-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-17-2023-12-16",
+						"weight": 23503.48,
+						"detectionTimestamp": "2023-09-13T06:58:01",
+						"accountId": "ACC-UNIQ-17-2023-12-16",
+						"accountSrcRefId": "ACC-17-2023-12-16",
+						"accountName": "SONIA REMLER-17-2023-12-16",
+						"branchId": "000008",
+						"alertId": 1024,
+						"alertIdentifier": "A202309041024",
+						"ietScore": 74,
+						"alertScore": 1825.3,
+						"dueTimestamp": "2023-09-09T06:24:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-17-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-17-2023-12-16",
+									"srcRefId": "ACC-17-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:41:32",
+								"originationDate": "2015-08-07T06:36:58",
+								"txnAmountInOriginCurrency": 20722.29,
+								"currencyCodeOrigin": "BYB",
+								"txnAmountInBaseCurrency": 23503.48,
+								"creditDebitCode": "Debit",
+								"txnSrcUniqueId": "TXN-17-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-17-2023-12-16",
+								"txnType": {
+									"code": "TT0050",
+									"name": null,
+									"description": "OWN FOREIGN CURRENCY DEPOSIT",
+									"scope": "EXTERNAL",
+									"instrument": "CASH",
+									"region": "DOMESTIC"
+								},
+								"originator": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "AUTO_SUBJ_13",
+									"address": {
+										"addressLine": "7666 TOILS BOULEVARD",
+										"city": "City4",
+										"zone": "EET",
+										"postalCode": "19065",
+										"countryCode": "MY"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-17-2023-12-16",
+										"name": "SONIA REMLER-17-2023-12-16",
+										"srcRefId": "ACC-17-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 58764.68,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City5",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"beneficiary": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Lana Case",
+									"address": {
+										"addressLine": "3337 SNARLED STREET",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "GT"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-17-2023-12-16",
+										"name": "LANA CASE-ACC-17-2023-12-16",
+										"srcRefId": "ACC-17-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "TD BANKNORTH",
+											"address": {
+												"addressLine": "9359 HYPOTHESES STREET",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "MC"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "TD BANKNOR"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000045",
+								"localTimestamp": "2004-09-17T06:13:39",
+								"location": null,
+								"channel": {
+									"code": "0004",
+									"description": "CREDITCARD",
+									"group": "CREDITCARD GROUP"
+								},
+								"deviceId": "0008",
+								"employeeId": null,
+								"tellerId": "375",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "InternationalParameters_IndividualTerroristhavenAmount",
+								"valueNum": 10,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 23503.48,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1406,
+						"srcUniqueId": "03700077-9ed3-427c-895a-a14313d115e6",
+						"sourceSystem": "SMBD",
+						"checkName": "AML16 A high risk transaction",
+						"description": "AML16: Transaction debit/credit = <b>Credit</b><br/>Transaction amount = <b>38.27 euros</b><br/>To/from country = <b>MU</b><br/><br/>Threshold = <b>0.0 euros</b>",
+						"score": 80,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2014-01-14T06:40:28",
+						"checkGroup": "InternationalTransaction",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "SME",
+						"raisedOnName": "Account",
+						"raisedOnId": "ACC-UNIQ-16-2023-12-16",
+						"raisedOnRefId": "ACC-16-2023-12-16",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-16-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-16-2023-12-16",
+						"weight": 38.27,
+						"detectionTimestamp": "2023-09-04T06:17:51",
+						"accountId": "ACC-UNIQ-16-2023-12-16",
+						"accountSrcRefId": "ACC-16-2023-12-16",
+						"accountName": "SONIA REMLER-16-2023-12-16",
+						"branchId": "000008",
+						"alertId": 1024,
+						"alertIdentifier": "A202309041024",
+						"ietScore": 74,
+						"alertScore": 1825.3,
+						"dueTimestamp": "2024-12-14T05:24:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-16-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-16-2023-12-16",
+									"srcRefId": "ACC-16-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:29:47",
+								"originationDate": "2015-08-26T06:35:43",
+								"txnAmountInOriginCurrency": 30722.18,
+								"currencyCodeOrigin": "KWD",
+								"txnAmountInBaseCurrency": 38.27,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-16-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-16-2023-12-16",
+								"txnType": {
+									"code": "TT0034",
+									"name": null,
+									"description": "INT DEBIT TRANSFER",
+									"scope": "EXTERNAL",
+									"instrument": "WIRE",
+									"region": "INTERNATIONAL"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Black Widow",
+									"address": {
+										"addressLine": "7666 Happy street",
+										"city": "Widow City",
+										"zone": "EET",
+										"postalCode": "19065",
+										"countryCode": "MY"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-16-2023-12-16",
+										"name": "SONIA REMLER-16-2023-12-16",
+										"srcRefId": "ACC-16-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 6977.87,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City6",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Beth Ross",
+									"address": {
+										"addressLine": "10035 STITCHING STREET",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "MU"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-16-2023-12-16",
+										"name": "BETH ROSS-ACC-16-2023-12-16",
+										"srcRefId": "ACC-947-2007717",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "SCHERING-PLOUGH EMPLOYEES FEDERAL CREDIT UNION (MERGED INTO SYNERGY BANK)",
+											"address": {
+												"addressLine": "8445 SHIPPED STREET",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "SR"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "SCHERING-P"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000044",
+								"localTimestamp": "2014-09-14T06:39:05",
+								"location": null,
+								"channel": {
+									"code": "0002",
+									"description": "PAYPAL",
+									"group": "PAYPAL GROUP"
+								},
+								"deviceId": "0002",
+								"employeeId": null,
+								"tellerId": "402",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "InternationalParameters_IndividualHighRiskAmount",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 38.27,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1316,
+						"srcUniqueId": "401d2f07-dcec-4641-ad11-613ad5a3492a",
+						"sourceSystem": "SMBD",
+						"checkName": "AML56 A high risk for Human Trafficking transaction",
+						"description": "AML56: Transaction debit/credit = <b>Credit</b><br/>Transaction amount = <b>10360.75 euros</b><br/>To/from country = <b>GQ</b><br/><br/>Threshold = <b>10000.0 euros</b>",
+						"score": 80.1,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2015-11-15T06:08:29",
+						"checkGroup": "InternationalTransaction",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "SME",
+						"raisedOnName": "Account",
+						"raisedOnId": "ACC-UNIQ-56-2023-12-16",
+						"raisedOnRefId": "ACC-56-2023-12-16",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-56-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-56-2023-12-16",
+						"weight": 1036.75,
+						"detectionTimestamp": "2022-09-15T05:28:35",
+						"accountId": "ACC-UNIQ-56-2023-12-16",
+						"accountSrcRefId": "ACC-56-2023-12-16",
+						"accountName": "SONIA REMLER-56-2023-12-16",
+						"branchId": "000008",
+						"alertId": 1024,
+						"alertIdentifier": "A202309041024",
+						"ietScore": 74,
+						"alertScore": 1825.3,
+						"dueTimestamp": "2023-09-09T06:24:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-56-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-56-2023-12-16",
+									"srcRefId": "ACC-56-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T07:28:42",
+								"originationDate": "2015-04-23T05:51:39",
+								"txnAmountInOriginCurrency": 23433.63,
+								"currencyCodeOrigin": "CLP",
+								"txnAmountInBaseCurrency": 10360.75,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-56-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-56-2023-12-16",
+								"txnType": {
+									"code": "TT0015",
+									"name": null,
+									"description": "Purchase",
+									"scope": "EXTERNAL",
+									"instrument": "OTHER",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Alphonse Rothman",
+									"address": {
+										"addressLine": "11105 GLIMPSED DRIVE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "GN"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-56-2023-12-16",
+										"name": "SONIA REMLER-56-2023-12-16",
+										"srcRefId": "ACC-56-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 4512.87,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City7",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Doria Rodrick",
+									"address": {
+										"addressLine": "7255 INCLINE CIRCLE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "GQ"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-421-200448",
+										"name": "DORIA RODRICK-ACC-421-200448",
+										"srcRefId": "ACC-56-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "ARMED FORCES BANK",
+											"address": {
+												"addressLine": "4468 REGATTA LANE",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "MY"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "ARMED FORC"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": null,
+								"localTimestamp": "2014-09-15T05:18:47",
+								"location": null,
+								"channel": {
+									"code": "0003",
+									"description": "MONEYGRAM",
+									"group": "MONEYGRAM GROUP"
+								},
+								"deviceId": "0009",
+								"employeeId": null,
+								"tellerId": "41",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "InternationalParameters_HumanTraffickingRiskAmount",
+								"valueNum": 10,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 10360.75,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1242,
+						"srcUniqueId": "73036218-eb8a-45f9-bbae-d1ed7d56b5c5",
+						"sourceSystem": "SMBD",
+						"checkName": "AML18 A financial haven transaction",
+						"description": "AML18: Transaction debit/credit = <b>Debit</b><br/>Transaction amount = <b>23385.34 euros</b><br/>To/from country = <b>YT</b><br/><br/>Threshold = <b>20000.0 euros</b>",
+						"score": 41.3,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2015-01-15T05:08:30",
+						"checkGroup": "InternationalTransaction",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "SME",
+						"raisedOnName": "Account",
+						"raisedOnId": "ACC-UNIQ-18-2023-12-16",
+						"raisedOnRefId": "ACC-18-2023-12-16",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-18-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-18-2023-12-16",
+						"weight": 2385.34,
+						"detectionTimestamp": "2015-09-15T06:18:12",
+						"accountId": "ACC-UNIQ-18-2023-12-16",
+						"accountSrcRefId": "ACC-18-2023-12-16",
+						"accountName": "SONIA REMLER-18-2023-12-16",
+						"branchId": "000008",
+						"alertId": 1024,
+						"alertIdentifier": "A202309041024",
+						"ietScore": 74,
+						"alertScore": 1825.3,
+						"dueTimestamp": "2025-09-15T06:34:51",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-18-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-18-2023-12-16",
+									"srcRefId": "ACC-18-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:28:38",
+								"originationDate": "2015-01-22T06:57:41",
+								"txnAmountInOriginCurrency": 19861.78,
+								"currencyCodeOrigin": "BIF",
+								"txnAmountInBaseCurrency": 23385.34,
+								"creditDebitCode": "Debit",
+								"txnSrcUniqueId": "TXN-18-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-18-2023-12-16",
+								"txnType": {
+									"code": "TT0008",
+									"name": null,
+									"description": "Draft",
+									"scope": "INTERNAL",
+									"instrument": "OTHER",
+									"region": "DOMESTIC"
+								},
+								"originator": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "AUTO_SUBJ_13",
+									"address": {
+										"addressLine": "7666 TOILS BOULEVARD",
+										"city": "City8",
+										"zone": "EET",
+										"postalCode": "19065",
+										"countryCode": "MY"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-8-19911125",
+										"name": "SONIA REMLER-8-19911125",
+										"srcRefId": "SUBJ-ORIGINATOR-ACC-AML18-ACC-8-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 79245.58,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City9",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Fae Ackerly",
+									"address": {
+										"addressLine": "4486 CONTEST LANE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "YT"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-FA-18-2023-12-16",
+										"name": "FAE ACKERLY-ACC-18-2023-12-16",
+										"srcRefId": "ACC-18-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "MELLON UNITED NATIONAL BANK",
+											"address": {
+												"addressLine": "1448 LUSTINESS LANE",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "FI"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "MELLON UNI"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": null,
+								"localTimestamp": "2015-09-15T06:28:32",
+								"location": null,
+								"channel": {
+									"code": "0004",
+									"description": "CREDITCARD",
+									"group": "CREDITCARD GROUP"
+								},
+								"deviceId": "0002",
+								"employeeId": null,
+								"tellerId": "399",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "InternationalParameters_IndividualTaxhavenAmount",
+								"valueNum": 20,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 23385.34,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1115,
+						"srcUniqueId": "bc360ec3-e134-495d-955e-1d90e7822e88",
+						"sourceSystem": "SMBD",
+						"checkName": "AML13 A large cheque deposit",
+						"description": "AML13: Cheque deposit = <b>25612.71 euro</b><br/><br/>Threshold = <b>15000.0 euro</b><br/>The account or client is known in the system for = <b>1 calendar months</b><br/><br/>Maximum cheque deposit amount in previous 3 months = <b>0.0 euro</b><br/>Average cheque deposit amount in previous 3 months = <b>(null) euro</b><br/><br/>Percentage variance = <b>(null) %</b>",
+						"score": 50,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2016-01-15T06:29:31",
+						"checkGroup": "ChequeDeposit",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "SME",
+						"raisedOnName": "Client",
+						"raisedOnId": "AUTO_SUBJ_13",
+						"raisedOnRefId": "AUTO_SUBJ_13",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-13-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-13-2023-12-16",
+						"weight": 25612.71,
+						"detectionTimestamp": "2016-09-16T06:19:24",
+						"accountId": "ACC-UNIQ-13-2023-12-16",
+						"accountSrcRefId": "ACC-13-2023-12-16",
+						"accountName": "SONIA REMLER-13-2023-12-16",
+						"branchId": "000008",
+						"alertId": 1024,
+						"alertIdentifier": "A202309041024",
+						"ietScore": 74,
+						"alertScore": 1825.3,
+						"dueTimestamp": "2024-09-16T06:24:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-13-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-13-2023-12-16",
+									"srcRefId": "ACC-13-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:26:37",
+								"originationDate": "2015-12-31T06:27:11",
+								"txnAmountInOriginCurrency": 10740.92,
+								"currencyCodeOrigin": "EUR",
+								"txnAmountInBaseCurrency": 25612.71,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-13-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-13-2023-12-16",
+								"txnType": {
+									"code": "TT0023",
+									"name": null,
+									"description": "TRAVELLERS CHEQUE BUY",
+									"scope": "EXTERNAL",
+									"instrument": "CHEQUE",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Shreck",
+									"address": {
+										"addressLine": "1 Cannibal Forest",
+										"city": "City10",
+										"zone": "EET",
+										"postalCode": "19077",
+										"countryCode": "MY"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-13-2023-12-16",
+										"name": "SONIA REMLER-13-2023-12-16",
+										"srcRefId": "ACC-13-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 33612.82,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City11",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Della Parkburg",
+									"address": {
+										"addressLine": "5261 INTRUSIONS STREET",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "BZ"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-371-2004816",
+										"name": "DELLA PARKBURG-ACC-371-2004816",
+										"srcRefId": "ACC-371-2004816",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "FIRST UNION",
+											"address": {
+												"addressLine": "3438 CHURNS STREET",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "NG"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "FIRST UNIO"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000023",
+								"localTimestamp": "2016-09-16T06:18:27",
+								"location": null,
+								"channel": {
+									"code": "0002",
+									"description": "PAYPAL",
+									"group": "PAYPAL GROUP"
+								},
+								"deviceId": "0005",
+								"employeeId": null,
+								"tellerId": "382",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "LifeTime_months",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "ChequeCreditMaximum_max_month_past1",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "ChequeCreditMaximum_max_month_past2",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "ChequeCreditMaximum_max_month_past3",
+								"valueNum": 0,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "ChequeCreditParameters_IndividualAmount",
+								"valueNum": 15,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "ChequeCreditParameters_CheckCreditFactor",
+								"valueNum": 1.5,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 25612.71,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1700,
+						"srcUniqueId": "d7c9172c-ae81-42d6-9e50-a367fe0158c9",
+						"sourceSystem": "SMBD",
+						"checkName": "AML50 Large cash deposits and cash withdrawals",
+						"description": "AML50: Weekly  cash deposit amount = <b>30040.11 euros</b><br/><br/>Weekly cash withdrawal amount = <b>40986.11 euros</b><br/>Threshold for weekly cash withdrawal amount = <b>25000.0 euros</b><br/><br/>Threshold for percentage difference between cash deposits and withdrawals<br/>= <b>20.0 %</b>",
+						"score": 20,
+						"timePeriod": "Weekly",
+						"eventTimestamp": "2017-01-17T06:22:33",
+						"checkGroup": "WeeklyTurnover",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "CORP",
+						"raisedOnName": "Client",
+						"raisedOnId": "AUTO_SUBJ_13",
+						"raisedOnRefId": "AUTO_SUBJ_13",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-50-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-50-2023-12-16",
+						"weight": 40986.11,
+						"detectionTimestamp": "2017-09-17T06:50:43",
+						"accountId": null,
+						"accountSrcRefId": null,
+						"accountName": null,
+						"branchId": null,
+						"alertId": 1245,
+						"alertIdentifier": "A202309041245",
+						"ietScore": 74,
+						"alertScore": 40,
+						"dueTimestamp": "2024-09-17T06:55:31",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-50-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-50-2023-12-16",
+									"srcRefId": "ACC-50-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T06:27:51",
+								"originationDate": "2015-12-13T05:38:43",
+								"txnAmountInOriginCurrency": 23451.29,
+								"currencyCodeOrigin": "UZS",
+								"txnAmountInBaseCurrency": 2345.82,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-50-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-50-2023-12-16",
+								"txnType": {
+									"code": "TT0050",
+									"name": null,
+									"description": "OWN FOREIGN CURRENCY DEPOSIT",
+									"scope": "EXTERNAL",
+									"instrument": "CASH",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Brandy Mulholland",
+									"address": {
+										"addressLine": "9129 SNOWILY TURNPIKE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "MR"
+									},
+									"segment": "CORP",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-50-2023-12-16",
+										"name": "ARTHUR LEIN-50-2023-12-16",
+										"srcRefId": "ACC-50-2023-12-16",
+										"type": "Unknown",
+										"typeCode": "AT0013",
+										"balance": 22547.81,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City17",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "TL"
+										},
+										"branchDetail": [
+											{
+												"id": "000011",
+												"name": "BRANCH 0011",
+												"sortCode": "103433"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Miriam Markland",
+									"address": {
+										"addressLine": "7812 RUMMY LANE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "SM"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-521-20041211",
+										"name": "MIRIAM MARKLAND-ACC-521-20041211",
+										"srcRefId": "ACC-521-20041211",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "BEDFORD NATIONAL BANK (BANK ONE -> JPMORGANCHASE)",
+											"address": {
+												"addressLine": "4689 PEGS LANE",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "BW"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "BEDFORD NA"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000010",
+								"localTimestamp": "2017-09-17T06:28:32",
+								"location": null,
+								"channel": {
+									"code": "0002",
+									"description": "PAYPAL",
+									"group": "PAYPAL GROUP"
+								},
+								"deviceId": "0006",
+								"employeeId": null,
+								"tellerId": "81",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashCreditAmount_acc_week_present",
+								"valueNum": 30040.11,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashDebitAmount_acc_week_present",
+								"valueNum": 40986.11,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "TurnoverParameters_CashInCashOutPercentage",
+								"valueNum": 20,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "CashDebitParameters_WeekAmount2",
+								"valueNum": 25,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1756,
+						"srcUniqueId": "64d7ac0b-c864-41f9-930b-66007fc47457",
+						"sourceSystem": "SMBD",
+						"checkName": "AML51 Large check deposits and wire withdrawals",
+						"description": "AML51: Weekly  cheque deposit amount = <b>38832.99 euros</b><br/><br/>Weekly wire withdrawal amount = <b>32363.98 euros</b><br/>Threshold for weekly wire withdrawal amount = <b>25000.0 euros</b><br/><br/>Threshold for percentage difference between cheque deposits and wire withdrawals<br/>= <b>20.0 %</b>",
+						"score": 20,
+						"timePeriod": "Weekly",
+						"eventTimestamp": "2018-01-18T05:18:21",
+						"checkGroup": "WeeklyTurnover",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",						
+						"entitySegment": "SME",
+						"raisedOnName": "Client",
+						"raisedOnId": "ACC-UNIQ-17-2023-12-16",
+						"raisedOnRefId": "ACC-17-2023-12-16",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-51-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-51-2023-12-16",
+						"weight": 32363.98,
+						"detectionTimestamp": "2018-09-18T05:28:42",
+						"accountId": "AML51-ACC_ID-2023-12-16",
+						"accountSrcRefId": "AML51-ACC_SRC_REF_ID-2023-12-16",
+						"accountName": null,
+						"branchId": null,
+						"alertId": 1246,
+						"alertIdentifier": "A202309041246",
+						"ietScore": 74,
+						"alertScore": 20,
+						"dueTimestamp": "2028-09-18T18:55:31",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-51-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-51-2023-12-16",
+									"srcRefId": "ACC-51-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T07:23:45",
+								"originationDate": "2015-03-18T05:04:31",
+								"txnAmountInOriginCurrency": 15169.4,
+								"currencyCodeOrigin": "EUR",
+								"txnAmountInBaseCurrency": 13220.28,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-51-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-51-2023-12-16",
+								"txnType": {
+									"code": "TT0003",
+									"name": null,
+									"description": "Cheque / Check",
+									"scope": "EXTERNAL",
+									"instrument": "CHEQUE",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "CUST-51-2023-12-16",
+									"srcRefId": "CUST-51-2023-12-16",
+									"name": "WENDEL BARNES",
+									"address": {
+										"addressLine": "101010 Main city",
+										"city": "City14",
+										"zone": "EET",
+										"postalCode": "19065",
+										"countryCode": "MY"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-51-2023-12-16",
+										"name": "SONIA REMLER-8-19911125",
+										"srcRefId": "ACC-51-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 21357.65,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Rupert Charron",
+									"address": {
+										"addressLine": "6028 CRAFTSPEOPLE DRIVE",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "LI"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-51-2023-12-16",
+										"name": "RUPERT CHARRON-ACC-563-20051015",
+										"srcRefId": "ACC-51-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "BANK OF LOUISVILLE (BB&T)",
+											"address": {
+												"addressLine": "101 PASSIONATELY BOULEVARD",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "GF"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "BANK OF LO"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000044",
+								"localTimestamp": "2018-09-18T10:10:10",
+								"location": null,
+								"channel": {
+									"code": "0003",
+									"description": "MONEYGRAM",
+									"group": "MONEYGRAM GROUP"
+								},
+								"deviceId": "0008",
+								"employeeId": null,
+								"tellerId": "380",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "ChequeCreditAmount_acc_week_present",
+								"valueNum": 38832.99,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "WireDebitAmount_acc_week_present",
+								"valueNum": 32363.98,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "TurnoverParameters_CheckInWiresOutPercentage",
+								"valueNum": 20,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "WireParameters_WeekAmount2",
+								"valueNum": 25,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1781,
+						"srcUniqueId": "320c2385-97f2-4645-baa5-e6f3e575f75b",
+						"sourceSystem": "SMBD",
+						"checkName": "AML52 Large check deposits and cash withdrawals",
+						"description": "AML52: Weekly  cheque deposit amount = <b>32536.35 euros</b><br/><br/>Weekly cash withdrawal amount = <b>40986.11 euros</b><br/>Threshold for weekly cash withdrawal amount = <b>25000.0 euros</b><br/><br/>Threshold for percentage difference between cheque deposits and cash withdrawals<br/>= <b>20.0 %</b>",
+						"score": 20,
+						"timePeriod": "Weekly",
+						"eventTimestamp": "2019-01-19T10:00:00",
+						"checkGroup": "WeeklyTurnover",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "CORP",
+						"raisedOnName": "Client",
+						"raisedOnId": "AUTO_SUBJ_13",
+						"raisedOnRefId": "AUTO_SUBJ_13",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-52-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-52-2023-12-16",
+						"weight": 40986.11,
+						"detectionTimestamp": "2019-09-19T09:19:47",
+						"accountId": null,
+						"accountSrcRefId": null,
+						"accountName": null,
+						"branchId": null,
+						"alertId": 1245,
+						"alertIdentifier": "A202309041245",
+						"ietScore": 74,
+						"alertScore": 40,
+						"dueTimestamp": "2029-09-19T09:55:31",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-52-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-52-2023-12-16",
+									"srcRefId": "ACC-52-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T07:25:39",
+								"originationDate": "2015-10-06T06:21:52",
+								"txnAmountInOriginCurrency": 325.14,
+								"currencyCodeOrigin": "EUR",
+								"txnAmountInBaseCurrency": 32536.35,
+								"creditDebitCode": "Credit",
+								"txnSrcUniqueId": "TXN-52-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-52-2023-12-16",
+								"txnType": {
+									"code": "TT0022",
+									"name": null,
+									"description": "CHEQUE PAYMENT",
+									"scope": "EXTERNAL",
+									"instrument": "CHEQUE",
+									"region": "DOMESTIC"
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Wonder Woman",
+									"address": {
+										"addressLine": "99-66-50 Hungry Road",
+										"city": "London",
+										"zone": "EEST",
+										"postalCode": "85-14",
+										"countryCode": "UK"
+									},
+									"segment": "CORP",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-52-2023-12-16",
+										"name": "ARTHUR LEIN-52-2023-12-16",
+										"srcRefId": "SUBJ-BENE-ACC-52-2023-12-16",
+										"type": "Unknown",
+										"typeCode": "AT0013",
+										"balance": 63214.54,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City12",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "TL"
+										},
+										"branchDetail": [
+											{
+												"id": "000011",
+												"name": "BRANCH 0011",
+												"sortCode": "103433"
+											}
+										]
+									}
+								},
+								"originator": {
+									"id": "N/A",
+									"srcRefId": "N/A",
+									"name": "Stanilaus Handkins",
+									"address": {
+										"addressLine": "10195 SHEAF STREET",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "FR"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-52-2023-12-16",
+										"name": "STANILAUS HANDKINS-ACC-369-20071017",
+										"srcRefId": "SUBJ-ORIG-ACC-52-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "COMMUNITY BANK OF FLORIDA",
+											"address": {
+												"addressLine": "9404 VOTERS STREET",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "GN"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "COMMUNITY "
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": null,
+								"localTimestamp": "2019-09-17T10:10:10",
+								"location": null,
+								"channel": {
+									"code": "0004",
+									"description": "CREDITCARD",
+									"group": "CREDITCARD GROUP"
+								},
+								"deviceId": "0002",
+								"employeeId": null,
+								"tellerId": "351",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "CashDebitAmount_acc_week_present",
+								"valueNum": 40986.11,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PROFILE_FIELD",
+								"elementName": "ChequeCreditAmount_acc_week_present",
+								"valueNum": 32536.35,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "CashDebitParameters_WeekAmount2",
+								"valueNum": 25,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "TurnoverParameters_CheckInCashOutPercentage",
+								"valueNum": 20,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					},
+					{
+						"id": 1070,
+						"srcUniqueId": "da5907e6-312a-49d0-9af4-70548d49a180",
+						"sourceSystem": "SMBD",
+						"checkName": "AML57 A high risk for Wildlife Trafficking transaction",
+						"description": "AML57: Transaction debit/credit = <b>Debit</b><br/>Transaction amount = <b>15478.03 euros</b><br/>To/from country = <b>GN</b><br/><br/>Threshold = <b>10000.0 euros</b>",
+						"score": 80.4,
+						"timePeriod": "ForEachRecord",
+						"eventTimestamp": "2020-01-20T10:00:00",
+						"checkGroup": "InternationalTransaction",
+						"entityName": "Customer",
+						"entityId": "AUTO_SUBJ_13",
+						"entityRefId": "AUTO_SUBJ_13",
+						"entitySegment": "SME",
+						"raisedOnName": "Account",
+						"raisedOnId": "ACC-UNIQ-RAISED-8-19911125",
+						"raisedOnRefId": "RAISED-ACC-8-19911125",
+						"datasourceName": "Transaction",
+						"transactionId": "TXN-57-2023-12-16",
+						"transactionSrcRefId": "TXN-NUM-57-2023-12-16",
+						"weight": 15478.03,
+						"detectionTimestamp": "2020-09-20T20:20:52",
+						"accountId": "AML57-ACC_ID-2023-12-16",
+						"accountSrcRefId": "AML57-ACC_SRC_REF_ID-2023-12-16",
+						"accountName": "SONIA REMLER-8-19911125",
+						"branchId": "000008",
+						"alertId": 1024,
+						"alertIdentifier": "A202309041024",
+						"ietScore": 74,
+						"alertScore": 1825.3,
+						"dueTimestamp": "2023-09-20T09:24:21",
+						"contributingTransactions": [
+							{
+								"txnId": "TXN-57-2023-12-16",
+								"account": {
+									"id": "ACC-UNIQ-57-2023-12-16",
+									"srcRefId": "ACC-57-2023-12-16"
+								},
+								"transactionDate": "2016-01-05T05:29:41",
+								"originationDate": "2015-10-07T07:28:32",
+								"txnAmountInOriginCurrency": 15330.47,
+								"currencyCodeOrigin": "THB",
+								"txnAmountInBaseCurrency": 15478.03,
+								"creditDebitCode": "Debit",
+								"txnSrcUniqueId": "TTXN-57-2023-12-16",
+								"txnSrcRefId": "TXN-NUM-57-2023-12-16",
+								"txnType": {
+									"code": "TT0056",
+									"name": null,
+									"description": "COMMON ACCOUNTS DEBIT",
+									"scope": "CLIENT",
+									"instrument": "OTHER",
+									"region": "DOMESTIC"
+								},
+								"originator": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "AUTO_SUBJ_13",
+									"address": {
+										"addressLine": "5432 Andorman",
+										"city": "City16",
+										"zone": "EET",
+										"postalCode": "19065",
+										"countryCode": "MY"
+									},
+									"segment": "SME",
+									"role": "FirstParty",
+									"account": {
+										"id": "ACC-UNIQ-57-2023-12-16",
+										"name": "SONIA REMLER-8-19911125",
+										"srcRefId": "ACC-57-2023-12-16",
+										"type": "Cheque/Check",
+										"typeCode": "AT0003",
+										"balance": 21386.5,
+										"iban": null,
+										"bic": null,
+										"address": {
+											"addressLine": null,
+											"city": "City15",
+											"zone": "EET",
+											"postalCode": null,
+											"countryCode": "BR"
+										},
+										"branchDetail": [
+											{
+												"id": "000008",
+												"name": "BRANCH 0008",
+												"sortCode": "876908"
+											}
+										]
+									}
+								},
+								"beneficiary": {
+									"id": "AUTO_SUBJ_13",
+									"srcRefId": "AUTO_SUBJ_13",
+									"name": "Gunther Alden",
+									"address": {
+										"addressLine": "226 EVENTFULLY BOULEVARD",
+										"city": "London",
+										"zone": "CET",
+										"postalCode": "78-100",
+										"countryCode": "SC"
+									},
+									"segment": "N/A",
+									"role": "CounterParty",
+									"account": {
+										"id": "ACC-57-2023-12-16",
+										"name": "ALPHONSE ROTHMAN-ACC-967-2007713",
+										"srcRefId": "ACC-57-2023-12-16",
+										"type": null,
+										"typeCode": "N/A",
+										"iban": null,
+										"bic": null,
+										"bank": {
+											"name": "CONTINENTAL SAVINGS BANK (PURCHASED BY DOLLAR BANK)",
+											"address": {
+												"addressLine": "1140 POSSIBILITIES CIRCLE",
+												"city": "London",
+												"zone": "CET",
+												"postalCode": "78-100",
+												"countryCode": "BM"
+											}
+										},
+										"branchDetail": {
+											"sortCode": "CONTINENTA"
+										}
+									}
+								},
+								"organisationUnit": "EUR",
+								"currencyCodeBase": "EUR",
+								"cardId": "000044",
+								"localTimestamp": "2020-09-20T20:10:10",
+								"location": null,
+								"channel": {
+									"code": "0002",
+									"description": "PAYPAL",
+									"group": "PAYPAL GROUP"
+								},
+								"deviceId": "0007",
+								"employeeId": null,
+								"tellerId": "373",
+								"description": "Lorem ipsum dolor sit amet."
+							}
+						],
+						"detectionFeatures": [
+							{
+								"elementKind": "PARAM_VALUE",
+								"elementName": "InternationalParameters_WildlifeTraffickingRiskAmount",
+								"valueNum": 10,
+								"valueText": null,
+								"valueTimestamp": null
+							},
+							{
+								"elementKind": "DATASOURCE_FIELD",
+								"elementName": "AmountBaseCurrency",
+								"valueNum": 15478.03,
+								"valueText": null,
+								"valueTimestamp": null
+							}
+						]
+					}
+				],
+				"profiles": null
+			}
+		}
+	}
+}

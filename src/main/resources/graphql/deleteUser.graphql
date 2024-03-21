@@ -1,0 +1,18 @@
+mutation deleteUser ($id: String!) {
+    deleteUser(input: {id: $id }) {
+        createdOn
+        email
+        enabled
+        id
+        first_name
+        imageId
+        language
+        last_name
+        role
+        time_zone
+        weekStartsOn
+        permissions
+        updatedOn
+        username
+    }
+}

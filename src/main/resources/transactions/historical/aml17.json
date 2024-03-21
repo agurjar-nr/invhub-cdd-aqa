@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-17-2023-12-16",
+	"cardId": "000045",
+	"account": {
+		"id": "ACC-UNIQ-17-2023-12-16",
+		"srcRefId": "ACC-17-2023-12-16"
+	},
+	"channel": {
+		"code": "0004",
+		"group": "CREDITCARD GROUP",
+		"description": "CREDITCARD"
+	},
+	"txnType": {
+		"code": "TT0050",
+		"name": null,
+		"scope": "EXTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "CASH",
+		"description": "OWN FOREIGN CURRENCY DEPOSIT"
+	},
+	"deviceId": "0008",
+	"location": null,
+	"tellerId": "375",
+	"employeeId": null,
+	"originator": {
+		"id": "AUTO_SUBJ_14",
+		"name": "AUTO_SUBJ_14",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-17-2023-12-16",
+			"bic": null,
+			"iban": null,
+			"name": "SONIA REMLER-17-2023-12-16",
+			"type": "Cheque/Check",
+			"address": {
+				"city": "City5",
+				"zone": "EET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "BR"
+			},
+			"balance": 58764.68,
+			"srcRefId": "ACC-17-2023-12-16",
+			"typeCode": "AT0003",
+			"branchDetail": [
+				{
+					"id": "000008",
+					"name": "BRANCH 0008",
+					"sortCode": "876908"
+				}
+			]
+		},
+		"address": {
+			"city": "City4",
+			"zone": "EET",
+			"postalCode": "19065",
+			"addressLine": "7666 TOILS BOULEVARD",
+			"countryCode": "MY"
+		},
+		"segment": "SME",
+		"srcRefId": "AUTO_SUBJ_14"
+	},
+	"beneficiary": {
+		"id": "N/A",
+		"name": "Lana Case",
+		"role": "CounterParty",
+		"account": {
+			"id": "ACC-17-2023-12-16",
+			"bic": null,
+			"bank": {
+				"name": "TD BANKNORTH",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "9359 HYPOTHESES STREET",
+					"countryCode": "MC"
+				}
+			},
+			"iban": null,
+			"name": "LANA CASE-ACC-17-2023-12-16",
+			"type": null,
+			"srcRefId": "ACC-17-2023-12-16",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "TD BANKNOR"
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "3337 SNARLED STREET",
+			"countryCode": "GT"
+		},
+		"segment": "N/A",
+		"srcRefId": "N/A"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-17-2023-12-16",
+	"localTimestamp": "2004-09-17T06:13:39",
+	"txnSrcUniqueId": "TXN-17-2023-12-16",
+	"creditDebitCode": "Debit",
+	"originationDate": "2015-08-07T06:36:58",
+	"transactionDate": "2016-01-05T06:41:32",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "BYB",
+	"txnAmountInBaseCurrency": 23503.48,
+	"txnAmountInOriginCurrency": 20722.29,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

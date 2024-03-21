@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite to check updated MainHeader correctness">
+    <test name="All Open Investigations">
+        <classes>
+            <class name="investigation.hub.test.AllOpenInvestigationsTest"/>
+        </classes>
+    </test>
+    <!--v not present in testsuite v-->
+    <test name="Accounts">
+        <classes>
+            <class name="investigation.hub.test.AccountsTest"/>
+        </classes>
+    </test>
+    <test name="Data Access">
+        <classes>
+            <class name="investigation.hub.test.DataAccessTest"/>
+        </classes>
+    </test>
+    <test name="Organization Units">
+        <classes>
+            <class name="investigation.hub.test.OrganisationUnitsTest"/>
+        </classes>
+    </test>
+    <!--^ not present in testsuite ^-->
+
+    <test name="Log History">
+        <classes>
+            <class name="investigation.hub.test.LogHistoryTest"/>
+        </classes>
+    </test>
+
+    <test name="SAML Settings">
+        <classes>
+            <class name="investigation.hub.test.SAMLSettingsUITest"/>
+        </classes>
+    </test>
+    <test name="SMTP Settings">
+        <classes>
+            <class name="investigation.hub.test.SMTPSettingsTest"/>
+        </classes>
+    </test>
+
+    <test name="Users and Roles">
+        <classes>
+            <class name="investigation.hub.test.UsersAndRolesTest"/>
+        </classes>
+    </test>
+
+    <test name="Team Management">
+        <classes>
+            <class name="investigation.hub.test.TeamsManagementTest"/>
+            <class name="investigation.hub.test.TeamDetailsTest"/>
+        </classes>
+    </test>
+</suite>
