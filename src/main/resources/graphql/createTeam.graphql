@@ -1,0 +1,5 @@
+mutation ($name: String!, $accessPolicyId: String, $description: String, $roleIds: [String!]!,$queues: [AssignQueuesToTeamInput!]!) {
+    createTeam(input: {
+        name: $name, roleIds: $roleIds, accessPolicyId: $accessPolicyId, description: $description, queues: $queues })
+    { id }
+}

@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-50-2023-12-16",
+	"cardId": "000010",
+	"account": {
+		"id": "ACC-UNIQ-50-2023-12-16",
+		"srcRefId": "ACC-50-2023-12-16"
+	},
+	"channel": {
+		"code": "0002",
+		"group": "PAYPAL GROUP",
+		"description": "PAYPAL"
+	},
+	"txnType": {
+		"code": "TT0050",
+		"name": null,
+		"scope": "EXTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "CASH",
+		"description": "OWN FOREIGN CURRENCY DEPOSIT"
+	},
+	"deviceId": "0006",
+	"location": null,
+	"tellerId": "81",
+	"employeeId": null,
+	"originator": {
+		"id": "N/A",
+		"name": "Miriam Markland",
+		"role": "CounterParty",
+		"account": {
+			"id": "ACC-521-20041211",
+			"bic": null,
+			"bank": {
+				"name": "BEDFORD NATIONAL BANK (BANK ONE -> JPMORGANCHASE)",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "4689 PEGS LANE",
+					"countryCode": "BW"
+				}
+			},
+			"iban": null,
+			"name": "MIRIAM MARKLAND-ACC-521-20041211",
+			"type": null,
+			"srcRefId": "ACC-521-20041211",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "BEDFORD NA"
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "7812 RUMMY LANE",
+			"countryCode": "SM"
+		},
+		"segment": "N/A",
+		"srcRefId": "N/A"
+	},
+	"beneficiary": {
+		"id": "AUTO_SUBJ_14",
+		"name": "Brandy Mulholland",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-50-2023-12-16",
+			"bic": null,
+			"iban": null,
+			"name": "ARTHUR LEIN-50-2023-12-16",
+			"type": "Unknown",
+			"address": {
+				"city": "City17",
+				"zone": "EET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "TL"
+			},
+			"balance": 22547.81,
+			"srcRefId": "ACC-50-2023-12-16",
+			"typeCode": "AT0013",
+			"branchDetail": [
+				{
+					"id": "000011",
+					"name": "BRANCH 0011",
+					"sortCode": "103433"
+				}
+			]
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "9129 SNOWILY TURNPIKE",
+			"countryCode": "MR"
+		},
+		"segment": "CORP",
+		"srcRefId": "AUTO_SUBJ_14"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-50-2023-12-16",
+	"localTimestamp": "2017-09-17T06:28:32",
+	"txnSrcUniqueId": "TXN-50-2023-12-16",
+	"creditDebitCode": "Credit",
+	"originationDate": "2015-12-13T05:38:43",
+	"transactionDate": "2016-01-05T06:27:51",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "UZS",
+	"txnAmountInBaseCurrency": 2345.82,
+	"txnAmountInOriginCurrency": 23451.29,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

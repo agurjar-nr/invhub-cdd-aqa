@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-18-2023-12-16",
+	"cardId": null,
+	"account": {
+		"id": "ACC-UNIQ-18-2023-12-16",
+		"srcRefId": "ACC-18-2023-12-16"
+	},
+	"channel": {
+		"code": "0004",
+		"group": "CREDITCARD GROUP",
+		"description": "CREDITCARD"
+	},
+	"txnType": {
+		"code": "TT0008",
+		"name": null,
+		"scope": "INTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "OTHER",
+		"description": "Draft"
+	},
+	"deviceId": "0002",
+	"location": null,
+	"tellerId": "399",
+	"employeeId": null,
+	"originator": {
+		"id": "AUTO_SUBJ_14",
+		"name": "AUTO_SUBJ_14",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-8-19911125",
+			"bic": null,
+			"iban": null,
+			"name": "SONIA REMLER-8-19911125",
+			"type": "Cheque/Check",
+			"address": {
+				"city": "City9",
+				"zone": "EET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "BR"
+			},
+			"balance": 79245.58,
+			"srcRefId": "SUBJ-ORIGINATOR-ACC-AML18-ACC-8-2023-12-16",
+			"typeCode": "AT0003",
+			"branchDetail": [
+				{
+					"id": "000008",
+					"name": "BRANCH 0008",
+					"sortCode": "876908"
+				}
+			]
+		},
+		"address": {
+			"city": "City8",
+			"zone": "EET",
+			"postalCode": "19065",
+			"addressLine": "7666 TOILS BOULEVARD",
+			"countryCode": "MY"
+		},
+		"segment": "SME",
+		"srcRefId": "AUTO_SUBJ_14"
+	},
+	"beneficiary": {
+		"id": "AUTO_SUBJ_14",
+		"name": "Fae Ackerly",
+		"role": "CounterParty",
+		"account": {
+			"id": "ACC-FA-18-2023-12-16",
+			"bic": null,
+			"bank": {
+				"name": "MELLON UNITED NATIONAL BANK",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "1448 LUSTINESS LANE",
+					"countryCode": "FI"
+				}
+			},
+			"iban": null,
+			"name": "FAE ACKERLY-ACC-18-2023-12-16",
+			"type": null,
+			"srcRefId": "ACC-18-2023-12-16",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "MELLON UNI"
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "4486 CONTEST LANE",
+			"countryCode": "YT"
+		},
+		"segment": "N/A",
+		"srcRefId": "AUTO_SUBJ_14"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-18-2023-12-16",
+	"localTimestamp": "2015-09-15T06:28:32",
+	"txnSrcUniqueId": "TXN-18-2023-12-16",
+	"creditDebitCode": "Debit",
+	"originationDate": "2015-01-22T06:57:41",
+	"transactionDate": "2016-01-05T06:28:38",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "BIF",
+	"txnAmountInBaseCurrency": 23385.34,
+	"txnAmountInOriginCurrency": 19861.78,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-99-2023-12-16",
+	"cardId": "000010",
+	"account": {
+		"id": "ACC-UNIQ-99-2023-12-16",
+		"srcRefId": "ACC-99-2023-12-16"
+	},
+	"channel": {
+		"code": "0002",
+		"group": "PAYPAL GROUP",
+		"description": "PAYPAL"
+	},
+	"txnType": {
+		"code": "TT0006",
+		"name": null,
+		"scope": "EXTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "CARD",
+		"description": "Debit Card"
+	},
+	"deviceId": "0006",
+	"location": null,
+	"tellerId": "81",
+	"employeeId": null,
+	"originator": {
+		"id": "N/A",
+		"name": "Miriam Markland",
+		"role": "CounterParty",
+		"account": {
+			"id": "ORIG-ACC-ID-99-2023-12-16",
+			"bic": null,
+			"bank": {
+				"name": "BEDFORD NATIONAL BANK (BANK ONE -> JPMORGANCHASE)",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "4689 PEGS LANE",
+					"countryCode": "BW"
+				}
+			},
+			"iban": null,
+			"name": "MIRIAM MARKLAND-ACC-521-20041211",
+			"type": null,
+			"srcRefId": "ORIG-ACC-SRC-REF-99-2023-12-16",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "BEDFORD NA"
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "7812 RUMMY LANE",
+			"countryCode": "SM"
+		},
+		"segment": "N/A",
+		"srcRefId": "N/A"
+	},
+	"beneficiary": {
+		"id": "AUTO_SUBJ_13",
+		"name": "RABAH ABOU",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-99-2023-12-16",
+			"bic": null,
+			"iban": null,
+			"name": "ARTHUR LEIN-99-2023-12-16",
+			"type": "Unknown",
+			"address": {
+				"city": "City2",
+				"zone": "CET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "TL"
+			},
+			"balance": 65874.69,
+			"srcRefId": "ACC-99-2023-12-16",
+			"typeCode": "AT0013",
+			"branchDetail": [
+				{
+					"id": "000011",
+					"name": "BRANCH 0011",
+					"sortCode": "103433"
+				}
+			]
+		},
+		"address": {
+			"city": "City1",
+			"zone": "EET",
+			"postalCode": "555000",
+			"addressLine": "Kolola Pushta Street",
+			"countryCode": "AF"
+		},
+		"segment": "CORP",
+		"srcRefId": "AUTO_SUBJ_13"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-99-2023-12-16",
+	"localTimestamp": "2011-11-13T06:18:10",
+	"txnSrcUniqueId": "TXN-99-2023-12-16",
+	"creditDebitCode": "Credit",
+	"originationDate": "2015-12-13T06:11:24",
+	"transactionDate": "2016-01-05T06:03:58",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "UZS",
+	"txnAmountInBaseCurrency": 58741.54,
+	"txnAmountInOriginCurrency": 2697.35,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

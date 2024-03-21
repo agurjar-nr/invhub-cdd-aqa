@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-52-2023-12-16",
+	"cardId": null,
+	"account": {
+		"id": "ACC-UNIQ-52-2023-12-16",
+		"srcRefId": "ACC-52-2023-12-16"
+	},
+	"channel": {
+		"code": "0004",
+		"group": "CREDITCARD GROUP",
+		"description": "CREDITCARD"
+	},
+	"txnType": {
+		"code": "TT0022",
+		"name": null,
+		"scope": "EXTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "CHEQUE",
+		"description": "CHEQUE PAYMENT"
+	},
+	"deviceId": "0002",
+	"location": null,
+	"tellerId": "351",
+	"employeeId": null,
+	"originator": {
+		"id": "N/A",
+		"name": "Stanilaus Handkins",
+		"role": "CounterParty",
+		"account": {
+			"id": "ACC-52-2023-12-16",
+			"bic": null,
+			"bank": {
+				"name": "COMMUNITY BANK OF FLORIDA",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "9404 VOTERS STREET",
+					"countryCode": "GN"
+				}
+			},
+			"iban": null,
+			"name": "STANILAUS HANDKINS-ACC-369-20071017",
+			"type": null,
+			"srcRefId": "SUBJ-ORIG-ACC-52-2023-12-16",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "COMMUNITY "
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "10195 SHEAF STREET",
+			"countryCode": "FR"
+		},
+		"segment": "N/A",
+		"srcRefId": "N/A"
+	},
+	"beneficiary": {
+		"id": "AUTO_SUBJ_13",
+		"name": "Wonder Woman",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-52-2023-12-16",
+			"bic": null,
+			"iban": null,
+			"name": "ARTHUR LEIN-52-2023-12-16",
+			"type": "Unknown",
+			"address": {
+				"city": "City12",
+				"zone": "EET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "TL"
+			},
+			"balance": 63214.54,
+			"srcRefId": "SUBJ-BENE-ACC-52-2023-12-16",
+			"typeCode": "AT0013",
+			"branchDetail": [
+				{
+					"id": "000011",
+					"name": "BRANCH 0011",
+					"sortCode": "103433"
+				}
+			]
+		},
+		"address": {
+			"city": "London",
+			"zone": "EEST",
+			"postalCode": "85-14",
+			"addressLine": "99-66-50 Hungry Road",
+			"countryCode": "UK"
+		},
+		"segment": "CORP",
+		"srcRefId": "AUTO_SUBJ_13"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-52-2023-12-16",
+	"localTimestamp": "2019-09-17T10:10:10",
+	"txnSrcUniqueId": "TXN-52-2023-12-16",
+	"creditDebitCode": "Credit",
+	"originationDate": "2015-10-06T06:21:52",
+	"transactionDate": "2016-01-05T07:25:39",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "EUR",
+	"txnAmountInBaseCurrency": 32536.35,
+	"txnAmountInOriginCurrency": 325.14,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

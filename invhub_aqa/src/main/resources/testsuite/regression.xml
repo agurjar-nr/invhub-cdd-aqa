@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" name="Regression TestSuite"> <!--parallel="tests" - for future usage-->
+    <test name="All Open Investigations">
+        <classes>
+            <class name="investigation.hub.test.AllOpenInvestigationsTest"/>
+        </classes>
+    </test>
+
+    <test name="Accounts">
+        <classes>
+            <class name="investigation.hub.test.AccountsTest"/>
+        </classes>
+    </test>
+    <test name="Data Access">
+        <classes>
+            <class name="investigation.hub.test.DataAccessTest"/>
+        </classes>
+    </test>
+    <test name="Organization Units">
+        <classes>
+            <class name="investigation.hub.test.OrganisationUnitsTest"/>
+        </classes>
+    </test>
+
+    <test name="Content">
+        <classes>
+            <class name="investigation.hub.test.ContentTest"/>
+        </classes>
+    </test>
+    <test name="Event Log">
+        <classes>
+            <class name="investigation.hub.test.EventLogTest"/>
+        </classes>
+    </test>
+    <test name="Historical Detections">
+        <classes>
+            <class name="investigation.hub.test.HistoricalDetectionsTest"/>
+        </classes>
+    </test>
+    <test name="Investigation">
+        <classes>
+            <class name="investigation.hub.test.InvestigationTest"/>
+        </classes>
+    </test>
+    <test name="Log History">
+        <classes>
+            <class name="investigation.hub.test.LogHistoryTest"/>
+        </classes>
+    </test>
+    <test name="Login">
+        <classes>
+            <class name="investigation.hub.test.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Narratives">
+        <classes>
+            <class name="investigation.hub.test.NarrativesTest"/>
+        </classes>
+    </test>
+    <test name="Open Detections">
+        <classes>
+            <class name="investigation.hub.test.OpenDetectionsTest"/>
+        </classes>
+    </test>
+    <test name="SAML Settings">
+        <classes>
+            <class name="investigation.hub.test.SAMLSettingsUITest"/>
+        </classes>
+    </test>
+    <test name="SMTP Settings">
+        <classes>
+            <class name="investigation.hub.test.SMTPSettingsTest"/>
+        </classes>
+    </test>
+    <test name="Subject Details">
+        <classes>
+            <class name="investigation.hub.test.SubjectDetailsTest"/>
+        </classes>
+    </test>
+    <test name="Transactions">
+        <classes>
+            <class name="investigation.hub.test.TransactionsTest"/>
+        </classes>
+    </test>
+    <test name="Users and Roles">
+        <classes>
+            <class name="investigation.hub.test.UsersAndRolesTest"/>
+        </classes>
+    </test>
+    <test name="Web search">
+        <classes>
+            <class name="investigation.hub.test.WebSearchTest"/>
+        </classes>
+    </test>
+    <test name="Work Summary">
+        <classes>
+            <class name="investigation.hub.test.WorkSummaryTest"/>
+        </classes>
+    </test>
+    <test name="Validate `Open Detections` field values">
+        <classes>
+            <class name="investigation.hub.test.DetectionsValidationTest">
+                <methods>
+                    <include name=".*validateOpenDetectionValues.*"/>
+                    <exclude name=".*validateHistoricalDetectionValues.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Validate `Historical Detections` field values">
+        <classes>
+            <class name="investigation.hub.test.DetectionsValidationTest">
+                <methods>
+                    <include name=".*validateHistoricalDetectionValues.*"/>
+                    <exclude name=".*validateOpenDetectionValues.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Team Management">
+        <classes>
+            <class name="investigation.hub.test.TeamsManagementTest"/>
+            <class name="investigation.hub.test.TeamDetailsTest"/>
+        </classes>
+    </test>
+</suite>

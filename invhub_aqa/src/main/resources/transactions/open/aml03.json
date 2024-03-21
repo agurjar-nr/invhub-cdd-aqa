@@ -1,0 +1,114 @@
+{
+	"txnId": "TXN-03-2023-12-16",
+	"cardId": "000010",
+	"account": {
+		"id": "ACC-UNIQ-03-2023-12-16",
+		"srcRefId": "ACC-03-2023-12-16"
+	},
+	"channel": {
+		"code": "0002",
+		"group": "PAYPAL GROUP",
+		"description": "PAYPAL"
+	},
+	"txnType": {
+		"code": "TT0050",
+		"name": null,
+		"scope": "EXTERNAL",
+		"region": "DOMESTIC",
+		"instrument": "CASH",
+		"description": "OWN FOREIGN CURRENCY DEPOSIT"
+	},
+	"deviceId": "0006",
+	"location": null,
+	"tellerId": "81",
+	"employeeId": null,
+	"originator": {
+		"id": "ORIG-ACC-ID-03-2023-12-16",
+		"name": "Miriam Markland",
+		"role": "CounterParty",
+		"account": {
+			"id": "ACC-521-20041211",
+			"bic": null,
+			"bank": {
+				"name": "BEDFORD NATIONAL BANK (BANK ONE -> JPMORGANCHASE)",
+				"address": {
+					"city": "London",
+					"zone": "CET",
+					"postalCode": "78-100",
+					"addressLine": "4689 PEGS LANE",
+					"countryCode": "BW"
+				}
+			},
+			"iban": null,
+			"name": "MIRIAM MARKLAND-ACC-521-20041211",
+			"type": null,
+			"srcRefId": "ACC-521-20041211",
+			"typeCode": "N/A",
+			"branchDetail": {
+				"sortCode": "BEDFORD NA"
+			}
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "7812 RUMMY LANE",
+			"countryCode": "SM"
+		},
+		"segment": "N/A",
+		"srcRefId": "N/A"
+	},
+	"beneficiary": {
+		"id": "AUTO_SUBJ_13",
+		"name": "Wilmot Williams",
+		"role": "FirstParty",
+		"account": {
+			"id": "ACC-UNIQ-03-2023-12-16",
+			"bic": null,
+			"iban": null,
+			"name": "ARTHUR LEIN-03-2023-12-16",
+			"type": "Unknown",
+			"address": {
+				"city": "City3",
+				"zone": "EET",
+				"postalCode": null,
+				"addressLine": null,
+				"countryCode": "TL"
+			},
+			"balance": 26516.51,
+			"srcRefId": "ACC-03-2023-12-16",
+			"typeCode": "AT0013",
+			"branchDetail": [
+				{
+					"id": "000011",
+					"name": "BRANCH 0011",
+					"sortCode": "103433"
+				}
+			]
+		},
+		"address": {
+			"city": "London",
+			"zone": "CET",
+			"postalCode": "78-100",
+			"addressLine": "3874 SAGES AVENUE",
+			"countryCode": "IT"
+		},
+		"segment": "CORP",
+		"srcRefId": "AUTO_SUBJ_13"
+	},
+	"description": "Lorem ipsum dolor sit amet.",
+	"txnSrcRefId": "TXN-NUM-03-2023-12-16",
+	"localTimestamp": "2012-12-17T06:15:10",
+	"txnSrcUniqueId": "TXN-03-2023-12-16",
+	"creditDebitCode": "Credit",
+	"originationDate": "2015-12-13T06:25:02",
+	"transactionDate": "2016-01-05T06:38:08",
+	"currencyCodeBase": "EUR",
+	"organisationUnit": "EUR",
+	"currencyCodeOrigin": "UZS",
+	"txnAmountInBaseCurrency": 3652.21,
+	"txnAmountInOriginCurrency": 12756.12,
+	"investigation": {
+		"includedInNarrative": false
+	}
+}

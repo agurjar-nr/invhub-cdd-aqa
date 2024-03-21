@@ -1,0 +1,8 @@
+mutation ( $teamId: ID!,$userIds: [String!]! = []) {
+    assignUsersToTeam( input: { teamId: $teamId, userIds: $userIds }) {
+        assignedUsers{
+            email
+            id
+        }
+    }
+}

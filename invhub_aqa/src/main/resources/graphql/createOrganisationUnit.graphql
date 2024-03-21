@@ -1,0 +1,6 @@
+mutation createOrganisationUnit ($id: String!, $name: String!, $parentId: String!) {
+    createOrganisationUnit (input: { id: $id, name: $name, parentId: $parentId })
+    {
+        id
+    }
+}

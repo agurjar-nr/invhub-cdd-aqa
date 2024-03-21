@@ -1,0 +1,6 @@
+**/.allure/
+**/.idea/
+**/target/
+*/smile.iml
+*/allure-results/
+*/invhub_aqa.iml

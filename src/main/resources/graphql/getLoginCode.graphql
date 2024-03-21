@@ -1,0 +1,5 @@
+query getLoginCode($email: String!) {
+    getLoginCode(query: {email: $email }) {
+       code
+    }
+}

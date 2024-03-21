@@ -1,0 +1,8063 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Input type to order by column/field."""
+input AccessControlOrderByInput {
+  """Direction to order by. `ASC` for ascending and `DESC` for descending."""
+  direction: Sort! = DESC
+
+  """Model's attribute to order by."""
+  field: String
+
+  """Set the sort order for requests records of Model."""
+  sort: Sort = DESC
+}
+
+"""Access Policy"""
+type AccessPolicy {
+  """ID of `Access Policy`."""
+  id: ID!
+
+  """Access Policy`."""
+  name: String!
+}
+
+"""AccessPolicy"""
+type AccessPolicyOutputDto {
+  """Created on DateTime."""
+  createdOn: DateTime!
+
+  """Description of `AccessPolicy`."""
+  description: String
+
+  """ID of `AccessPolicy`."""
+  id: ID!
+
+  """Name of `AccessPolicy`."""
+  name: String!
+
+  """Resource key of `AccessPolicy`."""
+  resourceKey: String!
+
+  """Scopes for `AccessPolicy`."""
+  scopes: ScopesOutput!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime!
+}
+
+"""Represents an `Object` of subtype account."""
+type AccountObject {
+  """Account number."""
+  accountNumber: String!
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """File associated with object."""
+  file: File
+
+  """ID of `Object`."""
+  id: String!
+
+  """Label of `Object`."""
+  label: String
+
+  """pipeline family name of `Object`."""
+  pipelineFamilyName: String
+
+  """source id of `Object`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """source table name of `Object`."""
+  sourceTable: String
+
+  """Subtype of `Object`."""
+  subtype: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Represents Risk Score Trends for month in provided year."""
+type ActiveAlertedEntity {
+  """Represents the month of provided entities."""
+  month: Int!
+
+  """Total Active Entities."""
+  totalActive: Int!
+
+  """Total Alerted Entities."""
+  totalAlerted: Int!
+
+  """Represents the year of provided entities."""
+  year: Int!
+}
+
+"""Object type for `Activity`."""
+type ActivityModel {
+  """Attributes of `Activity`."""
+  activityAttributes: JSONObject
+
+  """Type of `Activity`."""
+  activityType: ActivityType
+
+  """`User` assigned to `Detection`."""
+  assignedUser: UserEntity
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """`User` associated with `Activity`."""
+  creator: UserEntity
+
+  """ID of `User` associated with `Activity`."""
+  creatorId: String
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `Activity`."""
+  id: String!
+
+  """IP"""
+  ip: String
+
+  """Message of `Activity`."""
+  message: String
+
+  """Message type of `Activity`."""
+  messageType: String
+
+  """ID of activity source (i.e., `Rule` or `Alert`)."""
+  referenceId: String!
+
+  """`User` unassigned from `Detection`."""
+  unassignedUser: UserEntity
+}
+
+enum ActivityType {
+  Alert
+  Detection
+  Entity
+  Rule
+}
+
+"""Response type for getting activities by reference ID."""
+type ActivityWithNoteAttachments {
+  """Attributes of `Activity`."""
+  activityAttributes: JSONObject
+
+  """Type of `Activity`."""
+  activityType: ActivityType
+
+  """`User` assigned to `Detection`."""
+  assignedUser: UserEntity
+
+  """List of attachments belonging to an `Activity` comment."""
+  attachments: [AttachmentWithNote!]
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """`User` associated with `Activity`."""
+  creator: UserEntity
+
+  """ID of `User` associated with `Activity`."""
+  creatorId: String
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `Activity`."""
+  id: String!
+
+  """IP"""
+  ip: String
+
+  """Message of `Activity`."""
+  message: String
+
+  """Message type of `Activity`."""
+  messageType: String
+
+  """ID of activity source (i.e., `Rule` or `Alert`)."""
+  referenceId: String!
+
+  """`User` unassigned from `Detection`."""
+  unassignedUser: UserEntity
+}
+
+input AdditionalPropInput {
+  expression: String!
+  fieldClassName: String
+  iconName: String
+  order: Float!
+}
+
+"""
+Feature list item of `Alert`.
+@deprecated(reason: "Replaced by `DetectionFeatureList`. Removal on v5.0.0.")
+"""
+type AlertFeatureListItem {
+  """Description of `AlertFeatureListItem`."""
+  description: String
+
+  """Type of input for `AlertFeatureListItem`."""
+  inputType: String
+
+  """Key of `AlertFeatureListItem`."""
+  key: String
+}
+
+"""Note on `Alert` recorded by `User`."""
+type AlertNote {
+  """ID of `Alert` associated to `AlertNote`."""
+  alertId: String!
+
+  """`File`(s) provided with `AlertNote`."""
+  attachments: [AttachmentWithNote!]
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `AlertNote`."""
+  id: String!
+
+  """IP address."""
+  ip: String
+
+  """Message of `AlertNote`."""
+  message: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User` that created `AlertNote`."""
+  user: UserEntity
+
+  """ID of `User` that created `AlertNote`."""
+  userId: String!
+}
+
+"""An `AlertQueue`."""
+type AlertQueue {
+  """Alert types of `AlertQueue`."""
+  alertTypes: [AlertType!]
+
+  """Created `AlertQueue` on DateTime."""
+  createdOn: DateTime!
+
+  """`User` that created this `AlertQueue`."""
+  creator: UserEntity
+
+  """ID of `User` that created `AlertQueue`."""
+  creatorId: String
+
+  """Deleted `AlertQueue` on DateTime."""
+  deletedOn: DateTime
+
+  """Filters of `AlertQueue`."""
+  filters: JSONObject
+
+  """ID of `AlertQueue`."""
+  id: String!
+
+  """Label of `AlertQueue`."""
+  label: String
+
+  """Name of `AlertQueue`."""
+  name: String
+
+  """Pipeline family name of AlertQueue."""
+  pipelineFamilyName: String
+
+  """Updated `AlertQueue` on DateTime."""
+  updatedOn: DateTime!
+
+  """List of `User`s."""
+  users: [UserEntity!]
+}
+
+"""Represents assigned `AlertQueue`."""
+type AlertQueueAssigned {
+  """`AlertQueue`."""
+  alertQueue: AlertQueue!
+
+  """ID of `AlertQueue`."""
+  alertQueueId: String!
+
+  """ID of `User` that created `AlertQueue`."""
+  usersId: String!
+}
+
+"""An `AlertQueueAssignedUsers`."""
+type AlertQueueAssignedUsers {
+  """`AlertQueue`."""
+  alertQueue: AlertQueue!
+
+  """ID of `AlertQueue`."""
+  alertQueueId: String!
+
+  """`User` that created `AlertQueue`."""
+  user: UserEntity
+
+  """ID of `User` that created `AlertQueue`."""
+  usersId: String!
+}
+
+"""Base Input type for an `AlertQueue`'s ID."""
+input AlertQueueIdInput {
+  """ID of `AlertQueue`."""
+  id: String!
+}
+
+"""Response type for getting alert queues."""
+type AlertQueueSummary {
+  """Alert types of `AlertQueue`."""
+  alertTypes: [AlertType!]
+
+  """Alert summary"""
+  alerts: AlertSummary
+
+  """Created `AlertQueue` on DateTime."""
+  createdOn: DateTime!
+
+  """`User` that created this `AlertQueue`."""
+  creator: UserEntity
+
+  """ID of `User` that created `AlertQueue`."""
+  creatorId: String
+
+  """Deleted `AlertQueue` on DateTime."""
+  deletedOn: DateTime
+
+  """Filters of `AlertQueue`."""
+  filters: JSONObject
+
+  """ID of `AlertQueue`."""
+  id: String!
+
+  """Label of `AlertQueue`."""
+  label: String
+
+  """Name of `AlertQueue`."""
+  name: String
+
+  """Pipeline family name of AlertQueue."""
+  pipelineFamilyName: String
+
+  """Updated `AlertQueue` on DateTime."""
+  updatedOn: DateTime!
+
+  """List of `User`s."""
+  users: [UserEntity!]
+}
+
+"""Query response from `GetAlertCountsBy{Status|Type}`."""
+type AlertStatusCount {
+  """Count of `Alert`s by day."""
+  day: Float!
+
+  """Count of `Alert`s with escalatedExternally status."""
+  escalatedExternally: Float!
+
+  """Count of `Alert`s with notRisk status."""
+  notRisk: Float!
+
+  """Count of `Alert`s with pending status."""
+  pending: Float!
+
+  """Count of `Alert`s with risk status."""
+  risk: Float!
+}
+
+"""Represents an `Alerts`'s status"""
+type AlertStatusFilter {
+  """Status of `Alert`."""
+  status: String
+}
+
+"""Represents assigned `AlertSummary`."""
+type AlertSummary {
+  """Number of closed alerts."""
+  closed: Float
+
+  """Number of pending alerts."""
+  pending: Float
+}
+
+"""AlertType."""
+type AlertType {
+  """Created `AlertType` on DateTime."""
+  createdOn: DateTime
+
+  """`User` that created this `AlertType`."""
+  creator: UserEntity
+
+  """Deleted `AlertType` on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `AlertType`."""
+  id: String!
+
+  """Name of `AlertType`."""
+  name: String
+
+  """Query of `AlertType`."""
+  query: String
+
+  """Score of `AlertType`."""
+  score: Float
+
+  """Updated `AlertType` on DateTime."""
+  updatedOn: DateTime
+
+  """Version of `AlertType`."""
+  version: Float
+}
+
+"""Alert type count."""
+type AlertTypeCount {
+  """`AlertType` of `Alert`."""
+  alert_type: String!
+
+  """Count of `Alert`s by `AlertType`."""
+  count: Float!
+}
+
+"""Alert type counts."""
+type AlertTypeCounts {
+  """List of `AlertType` count."""
+  alert_types: [AlertTypeCount!]!
+
+  """Day for `AlertType`."""
+  day: Float!
+}
+
+"""All feature toggles."""
+type AllFeatureTogglesDto {
+  toggles: [FeatureToggleDto!]!
+}
+
+"""Input type of `ApiLogin`."""
+input ApiLoginInput {
+  """API Key for persistent authorized access."""
+  apiKey: String!
+
+  """Email address of `User`."""
+  email: String!
+}
+
+"""App version details."""
+type AppVersionDetails {
+  """Git Ref."""
+  ref: String
+
+  """Git SHA."""
+  sha: String
+}
+
+input AssignDetectionsInput {
+  """Id of user to assign detections to."""
+  assignToUserId: String!
+
+  """Detections to assign to user."""
+  detectionIds: [String!]!
+}
+
+"""Input type to assign users to a team"""
+input AssignUsersToTeamInput {
+  """Id of `Team`."""
+  teamId: ID!
+
+  """User IDs to add to a `Team`."""
+  userIds: [String!]! = []
+}
+
+"""Response type for batch assign of users to a team."""
+type AssignUsersToTeamOutputDto {
+  """List of assigned users"""
+  assignedUsers: [UserAssignedToTeam!]!
+}
+
+"""User assigned to Detection"""
+type AssignedTo {
+  """Email of `User`."""
+  email: String!
+
+  """First name of `User`."""
+  first_name: String
+
+  """ID of `User`."""
+  id: String!
+
+  """ImageId of `User`."""
+  imageId: String
+
+  """Last name of `User`."""
+  last_name: String
+}
+
+"""Object type for note's attachment on `Alert`."""
+type AttachmentWithNote {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """File."""
+  file: File
+
+  """ID of `File` associated with note's attachment on `Alert`."""
+  fileId: String!
+
+  """Name of `File` associated with note's attachment on `Alert`."""
+  fileName: String
+
+  """ID of attachment associated with a note on `Alert`."""
+  id: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Audit Log Actor."""
+type AuditLogActor {
+  """E-mail address of the `Audit Log Actor`."""
+  email: String!
+
+  """First name of the `Audit Log Actor`."""
+  firstName: String
+
+  """ID of `Audit Log Actor`."""
+  id: String
+
+  """Last name of the `Audit Log Actor`."""
+  lastName: String
+}
+
+"""Audit Log Audited Attribute."""
+type AuditLogAuditedAttribute {
+  """ID of `Audit Log Audited Attribute`."""
+  key: String!
+
+  """New value of `Audit Log Audited Attribute`."""
+  newValue: String
+
+  """Old value of `Audit Log Audited Attribute`."""
+  oldValue: String
+}
+
+"""Audit Log."""
+type AuditLogDto {
+  """Name of the activity being logged."""
+  activity: String!
+
+  """Identifier of the user whose activity is being logged."""
+  actor: AuditLogActor!
+
+  """The object of the activity being logged."""
+  auditedObject: AuditLogObject!
+
+  """The captured change in values for the object."""
+  auditedValues: [AuditLogAuditedAttribute!]!
+
+  """Date the log was created."""
+  createdOn: DateTime!
+
+  """ID of `Audit Log`."""
+  id: String!
+}
+
+"""Audit Log Object."""
+type AuditLogObject {
+  """ID of `Audit Log Object`."""
+  id: String!
+
+  """Name of the `Audit Log Object` to be displayed."""
+  label: String!
+
+  """Type of the `Audit Log Object` to be displayed."""
+  type: String!
+}
+
+"""Audit Log Object."""
+input AuditLogObjectInput {
+  """ID of `Audit Log Object`."""
+  id: String!
+
+  """Name of the `Audit Log Object` to be displayed."""
+  label: String!
+
+  """Type of the `Audit Log Object` to be displayed."""
+  type: String!
+}
+
+"""Response type for `GetAuditLogs`."""
+type AuditLogsPage {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `AuditLogDto`s."""
+  records: [AuditLogDto!]!
+
+  """Total number of `AuditLogDto` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Authenticated `User`'s credentials."""
+type Auth {
+  """`User`'s Access token for OAuth2 flow."""
+  accessToken: String!
+
+  """ID of `User`."""
+  id: String!
+
+  """`User`'s refresh token for OAuth2 flow."""
+  refreshToken: String!
+}
+
+"""`BinaryObject` persisted in Minio/S3 `ObjectStore`."""
+type BinaryObject {
+  """Bucket for `File`."""
+  bucket: String!
+
+  """Modified timestamp of `BinaryObject`."""
+  createdOn: DateTime!
+
+  """ID of `File`."""
+  id: String!
+
+  """Modified timestamp of `BinaryObject`."""
+  lastModified: DateTime! @deprecated(reason: "Replaced with `createdOn`. Removal on v5.0.0.")
+
+  """Name of `BinaryObject`."""
+  name: String!
+
+  """Relative path to `BinaryObject`."""
+  relativePath: String!
+
+  """Size of `BinaryObject` in bytes."""
+  size: Float!
+}
+
+"""`Bucket` in `ObjectStore`."""
+type Bucket {
+  """`Bucket` name in Object Store."""
+  bucket: String!
+
+  """Landing zone of type `BinaryObject` for a given `DataSource` group."""
+  landingZone: BinaryObject
+
+  """Name of `Bucket`."""
+  name: String! @deprecated(reason: "Replaced by `bucket`. Removal on v5.0.0.")
+
+  """List of all `BinaryObject` in `Bucket`."""
+  objects: [BinaryObject!] @deprecated(reason: "No longer supported and will be removed in the near future in favor of landingZone. Removal on v5.0.0.")
+
+  """Name of pipeline family associated with `Bucket`."""
+  pipelineFamilyName: String!
+
+  """Size of `Bucket` in bytes."""
+  size: Float!
+}
+
+"""Error report on failed batch upsert request."""
+type BulkInsertError {
+  """Serialized JSON representation of record."""
+  input: JSON!
+
+  """Error message."""
+  message: String!
+}
+
+"""Response type for bulk inserts."""
+type BulkInsertResponse {
+  """List of error metadata on failed batch request."""
+  errors: [BulkInsertError!]
+
+  """Status of bulk insert request."""
+  success: Boolean!
+
+  """Total records inserted."""
+  totalRecords: Float!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type Button {
+  """Suggestions for a field"""
+  displayName: String!
+
+  """Suggestions for a field"""
+  icon: String
+
+  """Suggestions for a field"""
+  name: String!
+
+  """Suggestions for a field"""
+  order: Float!
+
+  """Suggestions for a field"""
+  taskType: String
+
+  """Suggestions for a field"""
+  type: String!
+}
+
+input ButtonInput {
+  displayName: String!
+  icon: String
+  name: String!
+  order: Float!
+  taskType: String!
+  type: String!
+}
+
+"""Represents the category total of `Alert`s by `RiskRating`."""
+type CategoryTotalAlertsByRiskRating {
+  """Category of `Alert`s."""
+  category: String
+
+  """`RiskRating` associated with `Alert`s."""
+  riskRating: String
+
+  """ID of `RiskRating` associated with `Alert`s."""
+  riskRatingId: String
+
+  """Count of total `Alert`s by `RiskRating`."""
+  totalAlerts: Float
+}
+
+"""Represents the category total for `Alert`s by status."""
+type CategoryTotalAlertsByStatus {
+  """Category of `Alert`s."""
+  category: String
+
+  """Status of `Alert`s."""
+  status: String
+
+  """Count of total `Alert`s by status."""
+  totalAlerts: Float
+}
+
+input CddAlertIdsMappingInput {
+  cddAlertId: String!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type Chart {
+  """Suggestions for a field"""
+  componentType: String!
+
+  """Suggestions for a field"""
+  displayName: String!
+
+  """Suggestions for a field"""
+  filterMetricsLabel: String
+
+  """Suggestions for a field"""
+  filterMetricsValue: String
+
+  """Suggestions for a field"""
+  filterOn: String
+
+  """Suggestions for a field"""
+  order: Float!
+}
+
+input ChartInput {
+  componentType: String!
+  displayName: String!
+  filterMetricsLabel: String
+  filterMetricsValue: String
+  filterOn: String
+  order: Float!
+}
+
+"""Input type of `CheckUsername`."""
+input CheckUsernameInput {
+  """Username of `User`."""
+  username: String!
+}
+
+"""Input type of `Creation`."""
+input Condition {
+  operator: String!
+  value: ConditionValue!
+}
+
+"""Input type of `ConditionValue`."""
+input ConditionValue {
+  category: String!
+  tag: String!
+}
+
+"""
+Attributes of `Event` with subtype transaction (correspondent banking).
+"""
+type CorrespondentBankingAttributes {
+  """Date of subtype event."""
+  eventDate: String!
+
+  """Amount of functional transaction."""
+  functionalTransactionAmount: Float
+
+  """Currency of functional transaction."""
+  functionalTransactionCurrency: String
+
+  """Account number of Intermediary."""
+  intermediaryAccountNumber: String
+
+  """ID of Intermediary."""
+  intermediaryId: String
+
+  """Amount of original transaction."""
+  originalTransactionAmount: Float
+
+  """Currency of original transaction."""
+  originalTransactionCurrency: String
+
+  """Unique identifier of transaction."""
+  referenceNumber: String!
+
+  """Type of transaction (e.g., wire, card, cash, etc)."""
+  transactionType: String
+
+  """Account number of Beneficiary."""
+  ultimateBeneficiaryAccountNumber: String
+
+  """ID of Beneficiary."""
+  ultimateBeneficiaryId: String
+
+  """Account number of Originator."""
+  ultimateOriginatorAccountNumber: String
+
+  """ID of Originator."""
+  ultimateOriginatorId: String
+}
+
+"""Counterparty `Transaction` group object type."""
+type CounterpartyTransactionGroup {
+  """ID of Counterparty's `Account`."""
+  accountId: String!
+
+  """Name of `LegalEntity`."""
+  legalEntityName: String!
+
+  """
+  Aggregation of `Transaction` functional amount by type of transaction for all credit-type transactions from Counterparty perspective.
+  """
+  transactionsByCreditType: [TransactionsByCreditOrDebitType!]!
+
+  """
+  Aggregation of `Transaction` functional amount by type of transaction for all debit-type transactions from Counterparty perspective.
+  """
+  transactionsByDebitType: [TransactionsByCreditOrDebitType!]!
+}
+
+"""Represents an `Entity`'s country of residence."""
+type Country {
+  """Country abbreviation for the `Entity` related to `Alert`."""
+  abbreviation: String
+}
+
+"""Input type to create an access policy"""
+input CreateAccessPolicyInput {
+  """AccessPolicy description"""
+  description: String
+
+  """AccessPolicy name"""
+  name: String!
+
+  """AccessPolicy resource key"""
+  resourceKey: String!
+
+  """Scopes for `AccessPolicy`."""
+  scopes: ScopesInput!
+}
+
+"""Created AccessPolicy"""
+type CreateAccessPolicyOutputDto {
+  """ID of `AccessPolicy`."""
+  id: ID!
+}
+
+"""Input type of `CreateAlertQueue`."""
+input CreateAlertQueueInput {
+  """Filters of `AlertQueue`."""
+  filters: JSONObject
+
+  """Label of `AlertQueue`."""
+  label: String
+
+  """Name of `AlertQueue`."""
+  name: String
+
+  """Pipeline family name of AlertQueue."""
+  pipelineFamilyName: String
+
+  """List of `User`s' IDs."""
+  queueUsers: [String!]
+}
+
+"""Input type of `CreateAlertType`."""
+input CreateAlertTypeInput {
+  """Display Name of the Alert Type."""
+  name: String!
+
+  """Query of `AlertType`."""
+  query: String
+
+  """Score of `AlertType`."""
+  score: Float
+}
+
+"""Response type for `CreateApiKey`."""
+type CreateApiKeyResponse {
+  """API Key for `User`."""
+  apiKey: String!
+}
+
+"""Input type for creating a attachment within a note."""
+input CreateAttachmentInput {
+  """ID of `File` associated with note's attachment on `Alert`."""
+  fileId: String!
+
+  """Name of `File` associated with note's attachment on `Alert`."""
+  fileName: String
+}
+
+"""Input type of `CreateAuditLog`."""
+input CreateAuditLogInput {
+  """Name of the activity being logged."""
+  activity: String!
+
+  """`ID` of `User` whose activity is being logged."""
+  actorUserId: String!
+
+  """Actor whose activity is being logged."""
+  auditedObject: AuditLogObjectInput!
+
+  """The new values in the audited object."""
+  newData: JSONObject
+
+  """The old values in the audited object."""
+  oldData: JSONObject
+}
+
+"""Create data mapping column input"""
+input CreateDataMappingColumnInput {
+  """Column position of `DataMappingColumn`."""
+  columnPosition: Float!
+
+  """Data type of datamappingcolumn."""
+  dataType: String!
+
+  """Default of datamappingcolumn."""
+  default: String!
+
+  """Example data of `DataMappingColumn`."""
+  exampleData: String
+
+  """Source of `DataMappingColumn`."""
+  source: String!
+
+  """Template property ID."""
+  templatePropertyId: String!
+}
+
+"""Input type of `CreateDataMapping`."""
+input CreateDataMappingInput {
+  """Column delimeter of `DataMapping`."""
+  columnDelimeter: String
+
+  """Data mapping columns."""
+  dataMappingColumns: [CreateDataMappingColumnInput!]
+
+  """Name of `DataMapping`."""
+  name: String!
+
+  """Quote delimeter of `DataMapping`."""
+  quoteDelimeter: String
+
+  """Source fields of `DataMapping`."""
+  sourceFields: String
+
+  """Template ID."""
+  templateId: String!
+}
+
+"""Input for `CreateDefaultDefinition`"""
+input CreateDefaultDefinitionInput {
+  name: String!
+  notifications: [NotificationInput!]
+  sectionNavigator: Boolean
+  sections: [SectionInput!]!
+  title: String!
+  version: Float
+}
+
+"""Input type of `CreateFile`."""
+input CreateFileInput {
+  """Bucket for `File`."""
+  bucket: String
+
+  """ID of `File`."""
+  id: String
+
+  """Mimetype of `File`."""
+  mimetype: String
+
+  """Name of `File`."""
+  name: String
+
+  """Size of `File`."""
+  size: Float
+}
+
+"""Query response from `CreateFile`."""
+type CreateFileResponseDto {
+  """Bucket for `File`."""
+  bucket: String!
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `File`."""
+  id: String!
+
+  """Mimetype of `File`."""
+  mimetype: String
+
+  """Name of `File`."""
+  name: String!
+
+  """Size of `File`."""
+  size: Float
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type of `CreateFileStatus`."""
+input CreateFileStatusInput {
+  """File for `File Status`."""
+  file: FileInput
+
+  """ID of `FileStatus`."""
+  id: String
+
+  """
+  Info is a JSON object where more details or log messages can be supplied for a file status`.
+  """
+  info: JSONObject
+
+  """Record count"""
+  recordCount: Float
+
+  """status for file"""
+  status: String
+}
+
+"""Response for creating a file."""
+type CreateFileStatusMessage {
+  """Create file status message."""
+  message: String!
+}
+
+"""Input type of `CreateKeyValue`."""
+input CreateKeyValueInput {
+  """Permissions that have access to update a `KeyValue`."""
+  editPermissions: JSONObject
+
+  """Values to encrypt."""
+  encryptedValues: JSON
+
+  """Indiciates whether value of `KeyValue` is an environment variable."""
+  isEnv: Boolean
+
+  """Key of `KeyValue`."""
+  key: String!
+
+  """Value of `KeyValue`."""
+  value: JSON
+}
+
+"""Input type of `CreateLoginCode`."""
+input CreateLoginCodeInput {
+  """Email address associated with `LoginCode`."""
+  email: String!
+}
+
+"""Input type for creating a `Note`."""
+input CreateNoteInput {
+  """ID of `Alert`."""
+  alertId: String!
+
+  """Attachments"""
+  attachments: [CreateAttachmentInput!]
+
+  """Message of `AlertNote`."""
+  message: String!
+}
+
+"""Input type to create an organisation unit"""
+input CreateOrganisationUnitInput {
+  """OrganisationUnit description"""
+  description: String
+
+  """OrganisationUnit ID"""
+  id: String!
+
+  """OrganisationUnit name"""
+  name: String!
+
+  """OrganisationUnit parent id"""
+  parentId: String!
+
+  """OrganisationUnit resource key"""
+  resourceKey: String
+}
+
+"""Created OrganisationUnit"""
+type CreateOrganisationUnitOutputDto {
+  """ID of `OrganisationUnit`."""
+  id: ID!
+}
+
+"""Input type to create a queue"""
+input CreateQueueInputDto {
+  """Queue description"""
+  description: String
+
+  """Queue logic: filtering and sorting"""
+  logic: JSONObject!
+
+  """Queue name"""
+  name: String!
+}
+
+"""Created queue"""
+type CreateQueueOutputDto {
+  """Queue id"""
+  id: ID!
+}
+
+"""Input for creating a `RiskRating`."""
+input CreateRiskRatingInput {
+  """Color for `RiskRating`."""
+  color: String!
+
+  """Display order for `RiskRating`."""
+  displayOrder: Float!
+
+  """Label for `RiskRating`."""
+  label: String!
+}
+
+"""Input type to create a role"""
+input CreateRoleInput {
+  """Name of `Role`."""
+  name: String!
+
+  """Permissions of `Role`."""
+  permissions: JSONObject!
+}
+
+"""Created role"""
+type CreateRoleOutputDto {
+  """ID of `Role`."""
+  id: ID!
+}
+
+"""Input for creating a rule action"""
+input CreateRuleActionInput {
+  """ID of `RuleAction` as `KeyValue`."""
+  id: String!
+
+  """ID of associated `Rule` with `RuleAction`."""
+  ruleId: String!
+}
+
+"""Input type of `CreateRuleFlagsInput`."""
+input CreateRuleFlagsInput {
+  """List of `RuleFlag` objects for batch creation."""
+  ruleFlags: [RuleFlagInput!]!
+}
+
+"""Input for creating a `Rule`."""
+input CreateRuleInput {
+  """Indicates whether `Rule` is active."""
+  active: Boolean!
+
+  """Description of `Rule`."""
+  description: String!
+
+  """Event type."""
+  eventType: String
+
+  """Name of `Rule`."""
+  name: String
+
+  """Logic for `Rule`."""
+  rule: JSONObject!
+
+  """IDs of `RuleAction` that are associated to a Rule."""
+  ruleActionIds: [String!]
+
+  """ID of `RuleSet`."""
+  ruleSetId: String!
+
+  """Score of `Rule`."""
+  score: Float!
+
+  """Type of `Rule`."""
+  type: String
+}
+
+"""Input type of `CreateRuleSets`."""
+input CreateRuleSetsInput {
+  """Description of `RuleSet`."""
+  description: String
+
+  """Indicates whether `RuleSet` is enabled."""
+  enabled: Boolean
+
+  """Name of `RuleSet`."""
+  name: String!
+
+  """Pipeline ID associated to the RuleSet."""
+  pipelineId: String
+
+  """Precondition of RuleSet."""
+  preconditions: String
+}
+
+"""Input for `CreateSystemPreferences`."""
+input CreateSystemPreferencesInput {
+  """Currency for `SystemPreferences`."""
+  currency: String!
+
+  """Date format for `SystemPreferences`."""
+  dateFormat: String!
+}
+
+"""Input type of `CreateTaskType`."""
+input CreateTaskTypeInputDto {
+  actions: [TaskAction!]
+  category: TaskTypeCategory!
+
+  """The Task Type code. This is an Unique Identifier of a given Task Type"""
+  code: String!
+  creationRuleCondition: CreationRuleCondition
+
+  """
+  The default SLA in days used to calculate the Due Date (dueOn attribute)
+  """
+  defaultSLA: Float!
+
+  """The instruction text in English which tells the user what to do."""
+  description: String!
+
+  """The Due date calculation formula"""
+  dueDateFormula: String!
+  investigationProgress: InvestigationProgress
+
+  """The tasks action link indicator"""
+  isLinkShown: Boolean = false
+
+  """
+  The flag indicating if a given task can be completed by a user (false == No option to complete manually)
+  """
+  isUserCompletable: Boolean! = false
+
+  """The flag indicating if a given task type is a user defined one."""
+  isUserDefined: Boolean = false
+
+  """Task name in plain English"""
+  name: String!
+
+  """
+  The resource key prefix which is used to build a resource key by appending the `code` value to this prefix. The resource key can be expanded to a localized description.
+  """
+  resourceKeyPrefix: String = "subject.task.type"
+  tags: [Tag!]
+
+  """The Event name which triggers a given task type"""
+  triggeringEventName: String!
+}
+
+"""Input type to create a team"""
+input CreateTeamInput {
+  """Access policy Id of `Team`."""
+  accessPolicyId: String
+
+  """Description of `Team`."""
+  description: String
+
+  """Name of `Team`."""
+  name: String!
+
+  """List of `Queue` IDs"""
+  queuesIds: [String!]!
+
+  """Role IDs of `Team`."""
+  roleIds: [String!]!
+}
+
+"""Created Team"""
+type CreateTeamOutputDto {
+  """ID of `Team`."""
+  id: ID!
+}
+
+"""Input type of `CreateTemplateProperty."""
+input CreateTemplatePropertyInput {
+  """Data type of `TemplateProperty`."""
+  dataType: String!
+
+  """Description of `TemplateProperty`."""
+  description: String
+
+  """Display name of `TemplateProperty`."""
+  displayName: String
+
+  """Name of `TemplateProperty`."""
+  name: String!
+
+  """ID of `Template`."""
+  templateId: String!
+}
+
+"""Input type of `CreateTrainingModel`."""
+input CreateTrainingModelInput {
+  """Model data for `TrainingModel`."""
+  modelData: JSONObject
+
+  """Model name of `TrainingModel`."""
+  modelName: String!
+}
+
+"""Input type of `CreateUserApiKey`."""
+input CreateUserApiKeyInput {
+  """Email of the user to create API key for."""
+  userEmail: String!
+}
+
+"""Input type of `CreateUser`."""
+input CreateUserInput {
+  """Email of `User`."""
+  email: String!
+
+  """Indicates whether `User` is enabled."""
+  enabled: Boolean
+
+  """First name of `User`."""
+  first_name: String
+
+  """ImageId of `User`."""
+  imageId: String
+
+  """Language of `User`."""
+  language: String
+
+  """Last name of `User`."""
+  last_name: String
+
+  """Permissions of `User`."""
+  permissions: JSONObject
+
+  """Preferences of `User`."""
+  preferences: JSONObject
+
+  """Role of `User`."""
+  role: String
+
+  """Time zone of `User`."""
+  time_zone: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Username of `User`."""
+  username: String
+
+  """The first day of the week `User`."""
+  weekStartsOn: String
+}
+
+"""Input type of `CreateUserPreferences`"""
+input CreateUserPreferencesInput {
+  """ImageId of `User` to be created"""
+  imageId: String
+
+  """Language of `User` to be created"""
+  language: String
+
+  """Timezone of `User` to be created"""
+  timeZone: String
+}
+
+"""Input type of `CreateUsers`."""
+input CreateUsersInput {
+  """List of `CreateUserInput`s."""
+  records: [CreateUserInput!]!
+}
+
+"""Response for `CreateUsers`."""
+type CreateUsersResponse {
+  """Users created."""
+  createdUsers: [User!]!
+
+  """Errors encountered."""
+  errors: [String!]!
+
+  """Indicates whether the process encountered no errors."""
+  success: Boolean!
+}
+
+"""Input type of `CreationRuleCondition`."""
+input CreationRuleCondition {
+  conditions: [Condition!]!
+  operator: String!
+  version: String!
+}
+
+"""
+Input type to support Cursor Pagination requests for RelationshipNodes.
+@deprecated(reason: "Pagination replaced by `GetRelationshipsLinks`. Removal on v5.0.0.")
+"""
+input CursorPaginationForRelationshipNodes {
+  """ID of the last `Relationship` record provided."""
+  after: RelationshipCursorTypeInput
+
+  """Limit number of records to this non-negative value."""
+  first: Int = 10
+}
+
+"""AML rule data list."""
+type DataList {
+  """Created `KeyValue` on DateTime."""
+  createdOn: DateTime
+
+  """Key of `KeyValue`."""
+  key: String!
+
+  """List of AML rules."""
+  value: RuleList!
+
+  """Version of `KeyValue` as determined by updates on key."""
+  version: String
+}
+
+"""Input type to filter data lists."""
+input DataListFilter {
+  """Key of `KeyValue`."""
+  key: String!
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Version of `KeyValue` as determined by updates on key."""
+  version: String = "latest"
+}
+
+"""Paginated request for AML rules from list."""
+type DataListPayload {
+  """Collection of AML rules."""
+  data: [JSONObject!]!
+
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """Total number of records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Paginated request for AML data lists."""
+type DataListsPayload {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `DataList`s."""
+  records: [DataList!]!
+
+  """Total number of `DataList` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Data Mapping."""
+type DataMapping {
+  """Bucket name for data files that are part of this `DataMapping`."""
+  bucket: String
+
+  """Column delimeter of `DataMapping`."""
+  columnDelimeter: String
+
+  """Created `DataMapping` on DateTime."""
+  createdOn: DateTime!
+
+  """`User` associated with `DataMapping`."""
+  creator: UserEntity
+
+  """Data mapping columns of `DataMapping`."""
+  dataMappingColumns: [DataMappingColumn!]
+
+  """Deleted `DataMapping` on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `DataMapping`."""
+  id: String!
+
+  """Name of `DataMapping`."""
+  name: String!
+
+  """Quote delimeter of `DataMapping`."""
+  quoteDelimeter: String
+
+  """Source fields of `DataMapping`."""
+  sourceFields: String
+
+  """`Template` for this `DataMapping`."""
+  template: Template
+
+  """Updated `DataMapping` on DateTime."""
+  updatedOn: DateTime
+
+  """Version of `DataMapping`."""
+  version: String
+}
+
+"""DataMappingColumn."""
+type DataMappingColumn {
+  """Column position of `DataMappingColumn`."""
+  columnPosition: Float!
+
+  """Created `DataMappingColumn` on DateTime."""
+  createdOn: DateTime
+
+  """Data Mapping associated with `DataMappingColumn`."""
+  dataMapping: DataMapping
+
+  """Data type of datamappingcolumn."""
+  dataType: String!
+
+  """Default of datamappingcolumn."""
+  default: String!
+
+  """Deleted `DataMappingColumn` on DateTime."""
+  deletedOn: DateTime
+
+  """Example data of `DataMappingColumn`."""
+  exampleData: String
+
+  """ID of `DataMappingColumn`."""
+  id: String!
+
+  """Source of `DataMappingColumn`."""
+  source: String!
+
+  """Template property of `DataMappingColumn`."""
+  templateProperty: TemplateProperty
+
+  """Updated `DataMappingColumn` on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Data mapping with extended metadata"""
+type DataMappingsFilePulse {
+  """Bucket name for data files that are part of this `DataMapping`."""
+  bucket: String
+
+  """Column delimeter of `DataMapping`."""
+  columnDelimeter: String
+
+  """Created `DataMapping` on DateTime."""
+  createdOn: DateTime!
+
+  """`User` associated with `DataMapping`."""
+  creator: UserEntity
+
+  """Data mapping columns of `DataMapping`."""
+  dataMappingColumns: [DataMappingColumn!]
+
+  """Deleted `DataMapping` on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `DataMapping`."""
+  id: String!
+
+  """Name of `DataMapping`."""
+  name: String!
+
+  """Quote delimeter of `DataMapping`."""
+  quoteDelimeter: String
+
+  """Record count of records processed"""
+  records: Float
+
+  """Source fields of `DataMapping`."""
+  sourceFields: String
+
+  """Filepulse status"""
+  status: String
+
+  """`Template` for this `DataMapping`."""
+  template: Template
+
+  """Updated `DataMapping` on DateTime."""
+  updatedOn: DateTime
+
+  """Version of `DataMapping`."""
+  version: String
+}
+
+"""Edge to connect `LinkedNodeData` nodes."""
+type DataModelEdge {
+  """Cursor for current `LinkedNodeData` node."""
+  cursor: String!
+
+  """`LinkedNodeData` node details."""
+  node: LinkedNodeData!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type DataSource {
+  """Suggestions for a field"""
+  path: String!
+
+  """Suggestions for a field"""
+  serviceName: String!
+
+  """Suggestions for a field"""
+  type: String!
+}
+
+input DataSourceFilterRequest {
+  """ID of `File`."""
+  id: String!
+}
+
+input DataSourceInput {
+  path: String!
+  serviceName: String!
+  type: String!
+}
+
+"""Date type for cached queries"""
+scalar Date
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+"""Summarized Transaction DTO."""
+type DebitCreditSummarizedTransaction {
+  """Date of `DebitCreditSummarizedTransaction`."""
+  date: DateTime!
+
+  """Summary of `DebitCreditSummarizedTransaction`."""
+  summary: [SummarizedTransaction!]!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type Definition {
+  """Name of Definition"""
+  name: String!
+
+  """Suggestions for a field"""
+  notifications: [Notification!]
+
+  """title of Definition"""
+  sectionNavigator: Boolean
+
+  """Suggestions for a field"""
+  sections: [Section!]!
+
+  """title of Definition"""
+  title: String!
+
+  """user of Definition"""
+  user: String!
+
+  """version of Definition"""
+  version: Float
+}
+
+"""Input type for deleting an activity."""
+input DeleteActivityInput {
+  """ID of `Activity`."""
+  id: String!
+}
+
+"""Input type of `DeleteAlertType`."""
+input DeleteAlertTypeInput {
+  """ID of `AlertType`."""
+  id: String!
+}
+
+"""Input for deleting a data mapping"""
+input DeleteDataMappingInput {
+  """ID of `DataMapping`."""
+  id: String!
+}
+
+input DeleteFeatureToggleInput {
+  key: FeatureToggleKey!
+}
+
+"""Response for deleting a file."""
+type DeleteFileMessage {
+  """Delete file message."""
+  message: String!
+}
+
+"""Input type of `Delete Key Value`."""
+input DeleteKeyValueInput {
+  """Key of `KeyValue`."""
+  key: String!
+}
+
+"""Input type for DeleteRule."""
+input DeleteRuleInput {
+  """ID of `Rule`."""
+  id: String!
+}
+
+"""Input type of `DeleteRuleSet`."""
+input DeleteRuleSetInput {
+  """ID of `RuleSet`."""
+  id: String!
+}
+
+"""Deleted `Team` response object."""
+type DeleteTeamDto {
+  """Deleted `Team`."""
+  success: Boolean!
+}
+
+"""Input type to delete a team"""
+input DeleteTeamInput {
+  """ID of the `Team`."""
+  id: ID!
+}
+
+"""Input type of `DeleteUser`."""
+input DeleteUserInput {
+  """ID of `User`."""
+  id: String!
+}
+
+"""Response type for `GetDetectedEntitiesBreakdown`."""
+type DetectedEntitiesBreakdown {
+  """
+  Total rule `Detection`s triggered by `Entity` without any associated "score" `Detection`s.
+  """
+  detectedAtLeastOneRuleAndNoScore: Float!
+
+  """
+  Total score `Detection`s triggered by `Entity` without any associated "rule" `Detection`s.
+  """
+  detectedAtLeastOneScoreAndNoRule: Float!
+
+  """
+  Total `Detection`s triggered by `Entity` that are associated with at least one "rule" and "score" `Detection`.
+  """
+  detectedAtLeastOneScoreAndRule: Float!
+
+  """
+  Total `Detection`s triggered by `Entity` that are neither "rule" or "score".
+  """
+  detectedNoScoreAndNoRule: Float!
+}
+
+"""`Detection`."""
+type Detection {
+  """System created `Detection` on DateTime."""
+  alertDate: Date!
+
+  """Anomaly score of `Detection`."""
+  anomalyScore: Float
+
+  """User assigned to Detection."""
+  assignedTo: AssignedTo
+
+  """User Id of the user assigned to the detection."""
+  assignedToUserId: String
+
+  """Category of `Detection`."""
+  category: String
+
+  """CIB score of `Detection`."""
+  cibScore: Float
+
+  """Composite score of `Detection`."""
+  compositeScore: Float
+
+  """`RiskRating` associated with `Detection`."""
+  decision: RiskRating
+
+  """Type of `Detection`."""
+  detectionType: String
+
+  """`Entity` associated with `Detection`."""
+  entity: Entity!
+
+  """List of detection types on `Entity` in given month."""
+  entityDetectionTypesForMonth: [String!] @deprecated(reason: "This field is no longer supported. Removal on v5.0.0.")
+
+  """Hotspot score of `Detection`."""
+  hotspotScore: Float
+
+  """ID of `Detection`."""
+  id: String!
+
+  """Overall score of `Detection`."""
+  overallScore: Float
+
+  """Pipeline family name of `Detection`."""
+  pipelineFamilyName: String
+
+  """List of `Rule` IDs responsible for `Detection` creation."""
+  ruleIds: [String!]
+
+  """List of `Rule`s responsible for `Detection` creation."""
+  rules: [Rule!]
+
+  """Source ID of `Detection`."""
+  sourceId: String
+
+  """Source table name of `Detection`."""
+  sourceTable: String
+
+  """Status of `Detection`."""
+  status: String
+
+  """Subtype of `Detection`."""
+  subtype: String!
+
+  """Supervised score of `Detection`."""
+  supervisedScore: Float
+}
+
+"""Detection Details Admin Settings"""
+type DetectionDetailsAdminSettings {
+  id: String!
+  visibility: Float!
+}
+
+"""Feature list item of `Detection`."""
+type DetectionFeatureList {
+  """Description of `DetectionFeatureList`."""
+  description: String
+
+  """Type of input for `DetectionFeatureList`."""
+  inputType: String
+
+  """Key of `DetectionFeatureList`."""
+  key: String
+}
+
+"""Input type to support search queries for `Detection`s."""
+input DetectionQueueFilter {
+  """System created `Detection` on DateTime."""
+  alertDate: Date
+
+  """Anomaly score of `Detection`."""
+  anomalyScore: Float
+
+  """Category of `Detection`."""
+  category: String
+
+  """CIB score of `Detection`."""
+  cibScore: Float
+
+  """Composite score of `Detection`."""
+  compositeScore: Float
+
+  """Latest `RiskRating` label for `Detection`."""
+  decision: String
+
+  """External entity id of associated `Entity`."""
+  externalEntityId: String
+
+  """Full name of `Entity`."""
+  fullName: String
+
+  """Hotspot score of `Detection`."""
+  hotspotScore: Float
+
+  """Subtype of `Detection`."""
+  subtype: String
+
+  """Supervised score of `Detection`."""
+  supervisedScore: Float
+}
+
+"""Represents a unique type of `Detection`."""
+type DetectionTypesFilter {
+  """Type of `Detection`."""
+  detectionType: String!
+}
+
+"""Response type for `GetAllDetections`."""
+type DetectionsPage {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `Detection`s."""
+  records: [Detection!]!
+
+  """Total number of `Detection` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Response type for `GetEntities`."""
+type EntitiesPayload {
+  """List of `Entity`s."""
+  records: [Entity!]!
+
+  """Total number of `Entity` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Object type for `Entity`."""
+type Entity {
+  """Retrieve any active exemption list item for this entity"""
+  activeExemption: ExemptionList
+
+  """Annual income of `Event`."""
+  annualIncome: Float
+
+  """Business unit for `Entity`."""
+  businessUnit: String
+
+  """Country of residence for `Entity`."""
+  countryOfResidence: String
+
+  """Email address of `Entity`."""
+  email: String
+
+  """Type of `Entity`."""
+  entityType: String
+
+  """External entity id of associated `Entity`."""
+  externalEntityId: String
+
+  """`File` associated with `Entity`."""
+  file: File
+
+  """Full address of `Entity`."""
+  fullAddress: String
+
+  """Full name of `Entity`."""
+  fullName: String
+
+  """Further information of `Entity`."""
+  furtherInformation: String
+
+  """ID of `Entity`."""
+  id: String!
+
+  """Label of `Entity`."""
+  label: String
+
+  """Onboard date of `Entity`."""
+  onboardDate: DateTime
+
+  """Phone number of `Entity`."""
+  phone: String
+
+  """pipeline family name of `Entity`."""
+  pipelineFamilyName: String
+
+  """source id of `Entity`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """Source table name of `Entity`."""
+  sourceTable: String
+
+  """Subtype of `Entity`."""
+  subtype: String!
+}
+
+"""Object type for `Entity`."""
+type EntityModel {
+  """Annual income of `Event`."""
+  annualIncome: Float
+
+  """Business unit for `Entity`."""
+  businessUnit: String
+
+  """Country of residence for `Entity`."""
+  countryOfResidence: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Email address of `Entity`."""
+  email: String
+
+  """Type of `Entity`."""
+  entityType: String
+
+  """External entity id of associated `Entity`."""
+  externalEntityId: String
+
+  """`File` associated with `Entity`."""
+  file: File
+
+  """Full address of `Entity`."""
+  fullAddress: String
+
+  """Full name of `Entity`."""
+  fullName: String
+
+  """Further information of `Entity`."""
+  furtherInformation: String
+
+  """ID of `Entity`."""
+  id: String!
+
+  """Label of `Entity`."""
+  label: String
+
+  """Onboard date of `Entity`."""
+  onboardDate: DateTime
+
+  """Phone number of `Entity`."""
+  phone: String
+
+  """pipeline family name of `Entity`."""
+  pipelineFamilyName: String
+
+  """source id of `Entity`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """Source table name of `Entity`."""
+  sourceTable: String
+
+  """Subtype of `Entity`."""
+  subtype: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+enum EntitySubtypes {
+  Customer
+  LegalEntity
+}
+
+union Event = WithCorrespondentBankingAttributes | WithRetailBankingAttributes
+
+"""The filters that are available when fetching events."""
+input EventFilter {
+  """Filter events by these functional currency."""
+  functionalCurrencies: [String!]
+
+  """Filter events by these original currency."""
+  originalCurrencies: [String!]
+
+  """Filter events by these originator ids."""
+  originatorIds: [String!]
+
+  """Filter events by these transaction types."""
+  transactionType: [String!]
+
+  """Filter events by these transaction ids."""
+  txnIds: [String!]
+}
+
+"""Object type for `Event`."""
+type EventModel {
+  """Associated beneficiary `Entity`."""
+  beneficiaries: [EntityModel!]
+
+  """beneficiary id of `Event`."""
+  beneficiaryId: String
+
+  """Book ID."""
+  bookId: String
+
+  """Buy/Sell."""
+  buySell: String
+
+  """Clearing Broker ID."""
+  clearerId: String
+
+  """Country of Residence."""
+  countryOfResidence: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Credit or Debit for `Event`."""
+  creditDebitFlag: String
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Destination country."""
+  destinationCountry: String
+
+  """Date of event."""
+  eventDate: DateTime
+
+  """File associated with event."""
+  file: File
+
+  """Functional amount of `Event`."""
+  functionalAmount: Float
+
+  """Functional currency of `Event`."""
+  functionalCurrency: String
+
+  """ID of `Event`."""
+  id: String!
+
+  """Internal Trade Flag."""
+  internalTrade: String
+
+  """ISIN."""
+  isin: String
+
+  """Label of `Event`."""
+  label: String
+
+  """Last Trade Event."""
+  lastTradeEvent: String
+
+  """Maturity Date."""
+  maturityDate: DateTime
+
+  """Net Present Value."""
+  netPresentValue: Float
+
+  """Origin country."""
+  originCountry: String
+
+  """Original amount of `Event`."""
+  originalAmount: Float
+
+  """Original currency of `Event`."""
+  originalCurrency: String
+
+  """originator id of `Event`."""
+  originatorId: String
+
+  """Associated originator `Entity`."""
+  originators: [EntityModel!]
+
+  """pipeline family name of `Event`."""
+  pipelineFamilyName: String
+
+  """Product Type."""
+  productType: String
+
+  """Settlement Amount."""
+  settlementAmount: Float
+
+  """Settlement Date."""
+  settlementDate: DateTime
+
+  """source id of `Event`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """source table name of `Event`."""
+  sourceTable: String
+
+  """Stock Exchange."""
+  stockExchange: String
+
+  """Stock Quantity."""
+  stockQuality: Float
+
+  """Subtype of `Event`."""
+  subtype: String!
+
+  """Termination Date."""
+  terminationDate: DateTime
+
+  """Ticker."""
+  ticker: String
+
+  """Trade ID."""
+  tradeId: String
+
+  """Trade Status."""
+  tradeStatus: String
+
+  """Trade Type."""
+  tradeType: String
+
+  """Transaction Time."""
+  transactionTime: String
+
+  """Type of transaction (e.g., wire, card, cash, etc)."""
+  transactionType: String
+
+  """txn id of `Event`."""
+  txnId: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Trader Code or Dealer Name."""
+  workerCode: String
+}
+
+enum EventSubtypes {
+  TradeTransaction
+  Transaction
+}
+
+"""`ExemptionList` object."""
+type ExemptionList {
+  """Created on."""
+  createdOn: DateTime!
+
+  """End data to exempt `Entity`."""
+  endsOn: DateTime!
+
+  """ID of `Entity`."""
+  entityId: String!
+
+  """Pipeline family name for `Entity`."""
+  pipelineFamilyName: String!
+
+  """ID of `Rule`."""
+  ruleId: String!
+
+  """ID of `RuleSet`."""
+  ruleSetId: String!
+}
+
+"""Input type for exemptions."""
+input ExemptionsInput {
+  """Active on date for exemptions."""
+  activeOn: DateTime!
+
+  """Pipeline family name for exemptions."""
+  pipelineFamilyName: String!
+
+  """Rule id for exemptions."""
+  ruleId: String = "*all"
+
+  """Rule set id for exemptions."""
+  ruleSetId: String = "*all"
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type ExpandedPanel {
+  """Suggestions for a field"""
+  mappings: JSON
+
+  """Suggestions for a field"""
+  panelName: String!
+
+  """Suggestions for a field"""
+  params: [String!]!
+}
+
+input ExpandedPanelInput {
+  mappings: CddAlertIdsMappingInput!
+  panelName: String!
+  params: [String!]
+}
+
+"""Object type for `Feature`."""
+type Feature {
+  """Created `Feature` on DateTime."""
+  createdOn: DateTime
+
+  """Deleted `Feature` on DateTime."""
+  deletedOn: DateTime
+
+  """Entity."""
+  entity: String
+
+  """features of `Feature`."""
+  features: JSONObject
+
+  """ID of `Feature`."""
+  id: String!
+
+  """Pipeline of `Feature`."""
+  pipeline: String!
+
+  """Run date `Feature` on DateTime."""
+  runDate: DateTime
+
+  """Updated `Feature` on DateTime."""
+  updatedOn: DateTime
+}
+
+"""A `FeatureHistory` object."""
+type FeatureHistory {
+  """Created `FeatureHistory` on DateTime."""
+  createDate: DateTime!
+
+  """ID of Entity associated with `FeatureHistory`."""
+  entityId: String!
+
+  """Name of `FeatureHistory`."""
+  featureName: String!
+
+  """Value of `FeatureHistory`."""
+  value: Float!
+}
+
+"""Feature toggle."""
+type FeatureToggleDto {
+  key: FeatureToggleKey!
+
+  """Value of `Feature toggle`."""
+  value: Boolean!
+}
+
+enum FeatureToggleKey {
+  AttachmentVirusScan
+  Copilot
+  EntityLinksExplorer
+  ExcelTransactions
+  ExportToPdf
+  ListManagement
+  TransactionFilters
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type FieldFilter {
+  """Suggestions for a field"""
+  defaultValue: String
+
+  """Suggestions for a field"""
+  disabled: Boolean
+
+  """Suggestions for a field"""
+  type: String
+}
+
+"""Input type for filtering by field."""
+input FieldFilterInput {
+  """Field for the filter criteria"""
+  field: String!
+
+  """Operator for the filter criteria"""
+  operator: String!
+
+  """Value of the filter criteria"""
+  value: String!
+}
+
+input FieldInput {
+  componentType: String!
+  displayName: String!
+  filter: ScreenDefinitionFilterInput
+  isVisible: Boolean!
+  mapping: String
+  name: String!
+  order: Float!
+  sort: FieldSort
+}
+
+enum FieldSort {
+  asc
+  desc
+  disabled
+  none
+}
+
+"""`GetFieldSuggestions` response object."""
+type FieldSuggestionResponse {
+  """Suggestions for a field"""
+  suggestions: [String!]
+}
+
+"""Object type for `File`."""
+type File {
+  """Bucket for `File`."""
+  bucket: String!
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `File`."""
+  id: String!
+
+  """Mimetype of `File`."""
+  mimetype: String
+
+  """Name of `File`."""
+  name: String!
+
+  """Size of `File`."""
+  size: Float
+
+  """Type of `File`."""
+  type: FileType!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type to get a file."""
+input FileInput {
+  """ID of `File`"""
+  id: String!
+}
+
+"""Object type for file status."""
+type FileStatus {
+  """Created `FileStatus` on DateTime."""
+  createdOn: DateTime!
+
+  """Deleted `FileStatus` on DateTime."""
+  deletedOn: DateTime
+
+  """File for `FileStatus`."""
+  file: File
+
+  """ID of `FileStatus`."""
+  id: String
+
+  """
+  Info is a JSON object where more details or log messages can be supplied for a file status`.
+  """
+  info: JSONObject
+
+  """Record count"""
+  recordCount: Float
+
+  """status for file"""
+  status: String
+
+  """Updated `FileStatus` on DateTime."""
+  updatedOn: DateTime!
+}
+
+enum FileType {
+  DataSource
+  Generic
+}
+
+"""File With status"""
+type FileWithLatestStatus {
+  """Bucket for `File`."""
+  bucket: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Latest status of `File`."""
+  fileStatus: [FileStatus!]
+
+  """ID of `File`."""
+  id: String
+
+  """Mimetype of `File`."""
+  mimetype: String
+
+  """Name of `File`."""
+  name: String
+
+  """Size of `File`."""
+  size: Float
+
+  """Type of `File`."""
+  type: FileType
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type to support Filter requests for `Alert`s."""
+input FilterAlertsInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime = null
+
+  """List of Model's attributes to filter by."""
+  fields: [String!]
+
+  """Term to search through `Alert`s by `Entity` field."""
+  searchTerm: String
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime = null
+}
+
+"""Input type to support Filter requests."""
+input FilterInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime = null
+
+  """List of Model's attributes to filter by."""
+  fields: [String!]
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime = null
+}
+
+"""Input type to support Filter requests for `NonTeamMember`s."""
+input FilterNonTeamMembersInput {
+  """
+  Term to search through `NonTeamMember`s by `first_name` and `last_name` fields.
+  """
+  searchTerm: String
+}
+
+"""
+Input type to support Pagination requests with search queries for `User`s.
+"""
+input FilterUsersInput {
+  """Field to search through `User`s by `role` field."""
+  role: String
+
+  """Term to search through `User`s by `first and last name` field."""
+  searchTerm: String
+
+  """Field to search through `User`s by `username` field."""
+  username: String
+}
+
+"""Input filters for Entity Links Explorer queries."""
+input FlowOfFundsFiltersInput {
+  """Filter records from fromAmount."""
+  fromAmount: Float = 0
+
+  """Filter records to higherScore."""
+  higherScore: Float
+
+  """Filter records from lowerScore."""
+  lowerScore: Float
+
+  """Filter records to toAmount."""
+  toAmount: Float
+}
+
+"""Input type of `flowOfFundsLinks`."""
+input FlowOfFundsLinksInput {
+  """ID of `Alert`."""
+  alertId: String!
+
+  """ID of `Entity` with `Relationship`s."""
+  entityId: String!
+
+  """Filters for Entity Links Explorer."""
+  filterBy: FlowOfFundsFiltersInput!
+}
+
+"""Response type for `FlushSearch`."""
+type FlushSearchPayload {
+  """Error message if request failed."""
+  error: String
+
+  """Message describes the status of request."""
+  message: String!
+
+  """Indicates whether request was successful."""
+  success: Boolean!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type FormField {
+  """Suggestions for a field"""
+  componentType: String!
+
+  """Suggestions for a field"""
+  displayName: String!
+
+  """title of Definition"""
+  hidden: Boolean
+
+  """Suggestions for a field"""
+  mapping: String
+
+  """Name of Definition"""
+  maxLength: Float
+
+  """Suggestions for a field"""
+  name: String!
+
+  """Name of Definition"""
+  order: Float!
+
+  """title of Definition"""
+  required: Boolean!
+}
+
+input FormFieldInput {
+  componentType: String!
+  displayName: String!
+  hidden: Boolean
+  mapping: String
+  maxLength: Float
+  name: String!
+  order: Float!
+  required: Boolean!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type FormSubmit {
+  """Suggestions for a field"""
+  path: String
+
+  """Suggestions for a field"""
+  serviceName: String!
+
+  """Suggestions for a field"""
+  updatesPanels: [String!]
+}
+
+input FormSubmitInput {
+  path: String
+  serviceName: String!
+  updatesPanels: [String!]!
+}
+
+"""Input type for `GetActiveAlertedEntities`."""
+input GetActiveAlertedEntitiesInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime = null
+
+  """`Pipeline`'s Family name."""
+  pipelineFamilyName: String
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime = null
+}
+
+"""Input type for getting activities by reference ID."""
+input GetActivitiesInput {
+  """ID of activity source (i.e., `Rule` or `Alert`)."""
+  referenceId: String!
+}
+
+"""Input type of `GetAlertFeatures`."""
+input GetAlertFeaturesInput {
+  """ID of `Entity`."""
+  entityId: String!
+
+  """DateTime of `Feature`."""
+  featureDate: DateTime!
+}
+
+"""Input type for `GetAlertsBy*`."""
+input GetAlertsByInput {
+  """Query for `Alert`s by month."""
+  month: Float!
+
+  """Query for `Alert`s by year."""
+  year: Float!
+}
+
+"""Generated Alerts Summary response."""
+type GetAlertsGeneratedSummary {
+  """Alerts generated by risk rating"""
+  byRiskRating: [ReportSummaryObject!]
+
+  """Alerts generated by source"""
+  bySource: [ReportSummaryObject!]
+
+  """Alerts generated by status"""
+  byStatus: [ReportSummaryObject!]
+}
+
+"""Input type of `GetAlertsGeneratedSummary`."""
+input GetAlertsGeneratedSummaryInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime = null
+
+  """`Pipeline`'s Family name."""
+  pipelineFamilyName: String
+
+  """Interval of report. Options are weekly, monthly, daily"""
+  reportInterval: String!
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime = null
+}
+
+"""Input type of `GetAllDetections`."""
+input GetAllDetectionsInput {
+  """All assigned/unassigned users of `Detection`."""
+  assigned: Boolean
+
+  """Specific assigned user/users of `Detection`."""
+  assignedToUserId: [String!] = []
+
+  """Set maximum composite score value for `Detection`."""
+  compositeScoreMax: Float = 100
+
+  """Set minimum composite score value for `Detection`."""
+  compositeScoreMin: Float = 0
+
+  """Type of `Detection`."""
+  detectionTypes: [String!] = []
+
+  """ID of associated `Entity`."""
+  entityId: String = ""
+
+  """External entity id of associated `Entity`."""
+  externalEntityId: String
+
+  """Filter for `Alert`s."""
+  filter: FilterAlertsInput
+
+  """List of `Detection` IDs to filter results."""
+  ids: [String!] = []
+
+  """Specify the ordering of records in `DetectionsPage` response."""
+  orderBy: OrderByInput = {field: "alertDate", sort: DESC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Status of `Detection`."""
+  status: [String!] = []
+}
+
+"""Input type to get all files from a bucket."""
+input GetAllFilesInput {
+  """Bucket name."""
+  bucketName: String!
+}
+
+"""Input type of `GetAllRiskScores`."""
+input GetAllRiskScoresInput {
+  """Set maximum anomaly score value for `RiskScore`."""
+  anomalyScoreMax: Float
+
+  """Set minimum anomaly score value for `RiskScore`."""
+  anomalyScoreMin: Float
+
+  """Set maximum CIB score value for `RiskScore`."""
+  cibScoreMax: Float
+
+  """Set minimum CIB score value for `RiskScore`."""
+  cibScoreMin: Float
+
+  """Set maximum composite score value for `RiskScore`."""
+  compositeScoreMax: Float
+
+  """Set minimum composite score value for `RiskScore`."""
+  compositeScoreMin: Float
+
+  """ID of `LegalEntity`."""
+  entityId: String
+
+  """Set maximum hotspot score value for `RiskScore`."""
+  hotspotScoreMax: Float
+
+  """Set minimum hotspot score value for `RiskScore`."""
+  hotspotScoreMin: Float
+
+  """Limit number of records."""
+  limit: Int = 25
+
+  """Specify the ordering of records in `GetAllRiskScores` response."""
+  orderBy: OrderByInput = {field: "entityid", sort: ASC}
+
+  """Page number for pagination of Model."""
+  pageNumber: Int = 0
+
+  """Risk Score Source of `RiskScore`."""
+  riskScoreSource: String
+
+  """Date when the score occurred."""
+  scoreDate: DateTime
+
+  """Set maximum similarity score value for `RiskScore`."""
+  similarityScoreMax: Float
+
+  """Set minimum similarity score value for `RiskScore`."""
+  similarityScoreMin: Float
+}
+
+"""Input type of `GetAllServiceInstances`."""
+input GetAllServiceInstancesInput {
+  """Limit number of records."""
+  limit: Int = 25
+
+  """Page number for pagination of Model."""
+  pageNumber: Int = 0
+}
+
+"""Input type to get all teams"""
+input GetAllTeamsInput {
+  """Order by Model's column/field."""
+  orderBy: [AccessControlOrderByInput!]
+}
+
+"""Response type for getting app version."""
+type GetAppVersionResponse {
+  """API Version details."""
+  api: AppVersionDetails!
+
+  """Hermes Version details."""
+  hermes: AppVersionDetails!
+
+  """Git Ref."""
+  ref: String @deprecated(reason: "Use api.ref instead. No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """Git Ref."""
+  sha: String @deprecated(reason: "Use api.ref instead. No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """Styx Version details."""
+  styx: AppVersionDetails!
+}
+
+"""Input type of `GetAuditLogs`."""
+input GetAuditLogsInput {
+  """Latest date from which to return the logs."""
+  endDate: DateTime
+
+  """Limit number of records."""
+  limit: Int = 25
+
+  """Specify the ordering of records in `GetUserAuditPage` response."""
+  orderBy: OrderByInput = {field: "createdOn", sort: DESC}
+
+  """Page number for pagination of Model."""
+  pageNumber: Int = 0
+
+  """Earliest date from which to return the logs."""
+  startDate: DateTime
+}
+
+"""Input type of `GetCountries`."""
+input GetCountriesInput {
+  """Filter for `Alert`s until end date as DateTime."""
+  endDate: DateTime!
+
+  """Filter for `Alert`s from start date as DateTime."""
+  startDate: DateTime!
+}
+
+"""Get Data Mapping response"""
+type GetDataMappingConfigurationResponse {
+  """Bucket name for data files that are part of this `DataMapping`."""
+  bucket: String
+
+  """Column delimeter of `DataMapping`."""
+  columnDelimeter: String
+
+  """Created `DataMapping` on DateTime."""
+  createdOn: DateTime
+
+  """`User` associated with `DataMapping`."""
+  creator: UserEntity
+
+  """Data mapping columns of `DataMapping`."""
+  dataMappingColumns: [DataMappingColumn!]
+
+  """Deleted `DataMapping` on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `DataMapping`."""
+  id: String
+
+  """Name of `DataMapping`."""
+  name: String
+
+  """Quote delimeter of `DataMapping`."""
+  quoteDelimeter: String
+
+  """s3 config for Data Mapping"""
+  s3: String
+
+  """Source fields of `DataMapping`."""
+  sourceFields: String
+
+  """`Template` for this `DataMapping`."""
+  template: Template
+
+  """Updated `DataMapping` on DateTime."""
+  updatedOn: DateTime
+
+  """Version of `DataMapping`."""
+  version: String
+}
+
+"""Input for getting a data mapping record."""
+input GetDataMappingInput {
+  """Filter `DataMapping`s by its id."""
+  id: String!
+}
+
+"""Get Data Mapping latest file response"""
+type GetDataMappingLatestFileResponse {
+  """File with latest statuses for a mapping."""
+  file: FileWithLatestStatus
+
+  """`Template` for this `DataMapping`."""
+  template: Template
+}
+
+"""Get Data Mapping response"""
+type GetDataMappingResponse {
+  """Bucket name for data files that are part of this `DataMapping`."""
+  bucket: String
+
+  """Column delimeter of `DataMapping`."""
+  columnDelimeter: String
+
+  """Created `DataMapping` on DateTime."""
+  createdOn: DateTime
+
+  """`User` associated with `DataMapping`."""
+  creator: UserEntity
+
+  """Data mapping columns of `DataMapping`."""
+  dataMappingColumns: [DataMappingColumn!]
+
+  """Deleted `DataMapping` on DateTime."""
+  deletedOn: DateTime
+
+  """List of all files with latest status for a mapping."""
+  files: [FileWithLatestStatus!]
+
+  """ID of `DataMapping`."""
+  id: String
+
+  """Name of `DataMapping`."""
+  name: String
+
+  """Quote delimeter of `DataMapping`."""
+  quoteDelimeter: String
+
+  """Source fields of `DataMapping`."""
+  sourceFields: String
+
+  """`Template` for this `DataMapping`."""
+  template: Template
+
+  """Updated `DataMapping` on DateTime."""
+  updatedOn: DateTime
+
+  """Version of `DataMapping`."""
+  version: String
+}
+
+"""Input for updating a data mapping record."""
+input GetDataMappingsInput {
+  """Filter `DataMapping`s by the ID of its data mapping template type."""
+  dataMappingTemplate: [String!]
+}
+
+"""Input type of `DataPoints`."""
+input GetDataPointsByDataMappingInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime
+
+  """`ID` of `DataMapping`."""
+  id: String
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime
+}
+
+"""Get Data Mapping response"""
+type GetDataPointsByDataMappingResponse {
+  """Page metadata."""
+  pageInfo: PageInfo!
+
+  """List of recordss."""
+  records: [JSONObject!]!
+
+  """Total number of records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Input type of `GetDefaultDefinition`."""
+input GetDefaultDefinitionInput {
+  """Name of Default Definition"""
+  name: String!
+}
+
+"""Input type of `GetDetectedEntitiesBreakdown`."""
+input GetDetectedEntitiesBreakdownInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime
+
+  """`Pipeline`'s Family name."""
+  pipelineFamilyName: String
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime
+}
+
+"""Input type for `GetDetectionDetailsAdminSettings"""
+input GetDetectionDetailsAdminSettingsInput {
+  """Pipeline Family Detection Suffix"""
+  detectionSuffix: String
+}
+
+"""Input type of `GetDetection`."""
+input GetDetectionInput {
+  """System created `Detection` on DateTime."""
+  alertDate: DateTime
+
+  """ID of `Entity`."""
+  entityId: String
+
+  """ID of `Alert`."""
+  id: String!
+}
+
+"""Input type of `GetDetectionsByQueue`."""
+input GetDetectionsByQueueInput {
+  """All assigned/unassigned users of `Detection`."""
+  assigned: Boolean
+
+  """Specific assigned user/users of `Detection`."""
+  assignedToUserId: [String!]
+
+  """`AlertType` of `Alert`."""
+  detectionTypes: [String!]
+
+  """Filter records until end date as DateTime."""
+  endDate: DateTime
+
+  """Available filters when fetching detections from queue."""
+  filterBy: DetectionQueueFilter = {}
+
+  """`ID` of `AlertQueue`."""
+  id: String
+
+  """Specify the ordering of records in `DetectionsPage` response."""
+  orderBy: OrderByInput = {field: "alertDate", sort: DESC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime
+
+  """Status of `Alert`."""
+  statuses: [String!]
+}
+
+"""Input type of `GetEntities`."""
+input GetEntitiesInput {
+  """Filter for Model."""
+  filter: FilterInput = {endDate: null, fields: [], startDate: null}
+
+  """IDs of `Entity`."""
+  ids: [String!] = []
+
+  """Order by Model's column/field."""
+  orderBy: OrderByInput = {sort: DESC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Data source of `Entity`."""
+  pipelineFamilyName: String = ""
+
+  """Subtype of `Entity`."""
+  subtype: EntitySubtypes
+}
+
+"""Input type of `GetEntity`."""
+input GetEntityInput {
+  """ID of `Entity`."""
+  id: String!
+}
+
+"""Input type of `GetEntityTrades`."""
+input GetEntityTradesInput {
+  """Account ID`."""
+  accountId: String
+
+  """ID of `Entity`."""
+  entityId: String!
+
+  """Filter for Model."""
+  filter: FilterInput = {endDate: null, fields: [], startDate: null}
+
+  """Filter events by this type."""
+  filterBy: EventFilter = {}
+
+  """Specify the ordering of records"""
+  orderBy: OrderByInput = {field: "transactionDate", sort: ASC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+}
+
+"""Event Attributes."""
+type GetEntityTradesResponse {
+  """Transaction Value."""
+  amount: Float
+
+  """value (Base Currency)."""
+  amountNorm: String
+
+  """Beneficiary Account Number."""
+  beneficiaryAccountNumber: String
+
+  """Book ID."""
+  bookId: String
+
+  """Buy/Sell."""
+  buySell: String
+
+  """Country of Residence."""
+  countryOfResidence: String
+
+  """Base Currency."""
+  currencyNorm: String
+
+  """Internal Trade Flag."""
+  internalTrade: String
+
+  """ISIN"""
+  isin: String
+
+  """Last Trade Event."""
+  lastTradeEvent: String
+
+  """Originator Account Number."""
+  originatorAccountNumber: String
+
+  """Settlement Amount."""
+  settlementAmount: Float
+
+  """Settlement Date."""
+  settlementDate: DateTime
+
+  """Termination Date."""
+  terminationDate: DateTime
+
+  """Ticker"""
+  ticker: String
+
+  """Trade Status."""
+  tradeStatus: String
+
+  """Trade Type."""
+  tradeType: String
+
+  """Transaction Currency."""
+  transactionCurrency: String
+
+  """Transaction Date."""
+  transactionDate: DateTime
+
+  """Transaction Contract ID."""
+  transactionId: String
+
+  """Transaction Type."""
+  transactionType: String
+
+  """Trader Code or Dealer Name."""
+  workerCode: String
+}
+
+"""Input type of `getEventInput`."""
+input GetEventInput {
+  """ID of `Event`."""
+  id: String!
+
+  """Subtype of `Event`."""
+  subtype: EventSubtypes = Transaction
+}
+
+"""Input type of `GetEventsInput`."""
+input GetEventsInput {
+  """Filter `Events` by `Object`."""
+  accountId: String = null
+
+  """Filter `Events` by `Entity`."""
+  entityId: String = null
+
+  """Filter for Model."""
+  filter: FilterInput = {endDate: null, fields: [], startDate: null}
+
+  """Filter events by this type."""
+  filterBy: EventFilter = {}
+
+  """Specify the ordering of records in `PaginatedEvents` response."""
+  orderBy: OrderByInput = {field: "eventDate", sort: DESC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Subtype of `Event`."""
+  subtype: EventSubtypes = Transaction
+}
+
+"""Input type of `GetFeatureHistory`."""
+input GetFeatureHistoryInput {
+  """ID of Entity associated with `FeatureHistory`."""
+  entityId: String!
+}
+
+input GetFeatureToggleInput {
+  key: FeatureToggleKey!
+}
+
+"""Input type of `GetFeaturesInput`."""
+input GetFeaturesInput {
+  """Run date end date."""
+  endDate: DateTime
+
+  """Entity Id of feature."""
+  entityId: String
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Run date start date."""
+  startDate: DateTime
+}
+
+"""Input type to query Get Field Suggestions"""
+input GetFieldsSuggestionsInput {
+  """Field to query"""
+  field: String!
+
+  """Item type to query"""
+  itemType: IndexNames!
+
+  """Number of results to return, Defaults to 10"""
+  limit: Float
+
+  """Query text"""
+  query: String!
+}
+
+"""Input type of `GetFileStatuses`."""
+input GetFileStatusesInput {
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+}
+
+"""
+Input type of `GetRelationshipsLinksView`.
+@deprecated(reason: "Replaced by `RiskScoreTrendsInput`. Removal on v5.0.0.")
+"""
+input GetFlowOfFundsViewInput {
+  """Required filters for Entity Links Explorer."""
+  filter: WithFlowOfFundsFilter!
+
+  """ID of `DataModel` with `Relationship`s."""
+  id: String!
+
+  """Cursor based pagination."""
+  page: CursorPaginationForRelationshipNodes! = {after: null, first: 10}
+}
+
+"""Input type of `GetKeyValue`."""
+input GetKeyValueInput {
+  """Key of `KeyValue`."""
+  key: String!
+
+  """Version of `KeyValue` as determined by updates on key."""
+  version: String = "latest"
+}
+
+"""Input type of `GetLatestKeyValuesByPrefix`."""
+input GetLatestKeyValuesByPrefixInput {
+  """Represents the first word or character(s) of key."""
+  prefix: String!
+}
+
+"""Input type of `GetLatestRiskScores`."""
+input GetLatestRiskScoresInput {
+  """Set maximum anomaly score value for `RiskScore`."""
+  anomalyScoreMax: Float
+
+  """Set minimum anomaly score value for `RiskScore`."""
+  anomalyScoreMin: Float
+
+  """Set maximum CIB score value for `RiskScore`."""
+  cibScoreMax: Float
+
+  """Set minimum CIB score value for `RiskScore`."""
+  cibScoreMin: Float
+
+  """Set maximum composite score value for `RiskScore`."""
+  compositeScoreMax: Float
+
+  """Set minimum composite score value for `RiskScore`."""
+  compositeScoreMin: Float
+
+  """ID of `LegalEntity`."""
+  entityId: String
+
+  """Set maximum hotspot score value for `RiskScore`."""
+  hotspotScoreMax: Float
+
+  """Set minimum hotspot score value for `RiskScore`."""
+  hotspotScoreMin: Float
+
+  """Limit number of records."""
+  limit: Int = 25
+
+  """Specify the ordering of records in `GetAllRiskScores` response."""
+  orderBy: OrderByInput = {field: "entityid", sort: ASC}
+
+  """Page number for pagination of Model."""
+  pageNumber: Int = 0
+
+  """Risk Score Source of `RiskScore`."""
+  riskScoreSource: String
+
+  """ScoreDate end date."""
+  scoreDateEnd: DateTime
+
+  """ScoreDate start date."""
+  scoreDateStart: DateTime
+
+  """Set maximum similarity score value for `RiskScore`."""
+  similarityScoreMax: Float
+
+  """Set minimum similarity score value for `RiskScore`."""
+  similarityScoreMin: Float
+}
+
+"""Input type of `GetLocales`."""
+input GetLocalesInput {
+  """Language code of `Locales`"""
+  languageCode: String!
+}
+
+"""Input type of `GetLoginCode`."""
+input GetLoginCodeInput {
+  """Email address associated with `LoginCode`."""
+  email: String!
+}
+
+"""Response type of `GetLoginCode`."""
+type GetLoginCodeResponse {
+  """`LoginCode` to authenticate `User`."""
+  code: Float!
+}
+
+"""Input type to get many queues"""
+input GetManyQueuesInput {
+  """Filter by Queue's column/field."""
+  filters: [FieldFilterInput!]
+
+  """Order by Queue's column/field."""
+  orderBy: [MainOrderByInput!]
+}
+
+"""`Queue`s response object."""
+type GetManyQueuesOutput {
+  """List of `Queue`."""
+  records: [QueueOutput!]!
+
+  """Total number of `Queue`."""
+  totalRecords: Int!
+}
+
+"""Input type to get non-team members"""
+input GetNonTeamMembersInput {
+  """Filter for `NonTeamMember`s."""
+  filter: FilterNonTeamMembersInput
+
+  """Pagination of `NonTeamMember`."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """ID of the `Team`."""
+  teamId: ID!
+}
+
+"""Input type for getting `Note`s by `Alert` ID."""
+input GetNotesInput {
+  """ID of `Alert`."""
+  alertId: String!
+}
+
+"""Input type of `GetObject`."""
+input GetObjectInput {
+  """ID of `Object`."""
+  id: String!
+}
+
+"""
+Input type to support Pagination requests with search queries for `User`s.
+"""
+input GetPaginatedUsersInput {
+  """Filter for `Users`s."""
+  filter: FilterUsersInput
+
+  """Order by Model's column/field."""
+  orderBy: OrderByInput = {sort: DESC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+}
+
+"""Input type to get a queue"""
+input GetQueueDetailsInput {
+  """ID of `Queue`."""
+  id: ID!
+}
+
+"""
+Input type of `GetRelationshipsLinksView`.
+@deprecated(reason: "Replaced by `RiskScoreTrendsInput`. Removal on v5.0.0.")
+"""
+input GetRelationshipsLinksViewInput {
+  """Required filters for Entity Links Explorer."""
+  filter: WithRelationshipFilter!
+
+  """ID of `DataModel` with `Relationship`s."""
+  id: String!
+
+  """Cursor based pagination."""
+  page: CursorPaginationForRelationshipNodes! = {after: null, first: 10}
+}
+
+"""
+Query response for `GetRelationshipsLinksView` with cursor based pagination.
+"""
+type GetRelationshipsLinksViewResponse {
+  """Attributes of `DataModel`."""
+  attributes: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """List directly connected Nodes."""
+  children: [RelationshipNode!]!
+
+  """Composite score associated with entity."""
+  compositeScore: Float
+
+  """Customer data of `DataModel`."""
+  customerData: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """ID of `DataModel`."""
+  id: String!
+
+  """Label of `DataModel`."""
+  label: String
+
+  """IDs of bidirectionally connected Nodes."""
+  links: [String!]!
+
+  """Name of data source."""
+  sourceName: String
+
+  """Subtype of `DataModel`."""
+  subtype: String!
+
+  """Watchlist Flags."""
+  watchlistFlags: [WatchlistFlag!]!
+}
+
+"""Input type for getting a `RiskRating`."""
+input GetRiskRating {
+  """Label for `RiskRating` as unique ID."""
+  id: String!
+}
+
+"""
+Input type of `GetRiskScoreTrends`.
+@deprecated(reason: "Replaced by `RiskScoreTrendsInput`. Removal on v5.0.0.")
+"""
+input GetRiskScoreTrends {
+  """
+  Optional day to use as a starting point for generating a year of Risk Score Trends.
+  """
+  day: Int
+
+  """ID of `Entity`."""
+  entityId: String!
+
+  """
+  Optional month to use as a starting point for generating a year of Risk Score Trends.
+  """
+  month: Int
+
+  """Specify the beginning of 12-month range to generate trends."""
+  startDate: DateTime!
+
+  """Year to generate Risk Score Trends."""
+  year: Int!
+}
+
+"""User Role."""
+input GetRoleInput {
+  """Role name."""
+  name: String!
+}
+
+"""Input type of `GetRule`."""
+input GetRule {
+  """ID of `Rule`."""
+  id: String!
+}
+
+"""Response type for `GetRule`."""
+type GetRuleResponse {
+  """Indicates whether `Rule` is active."""
+  active: Boolean!
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `Rule`."""
+  description: String!
+
+  """Event type."""
+  eventType: String
+
+  """ID of `Rule`."""
+  id: String!
+
+  """Name of `Rule`."""
+  name: String!
+
+  """Logic for `Rule`."""
+  rule: JSONObject!
+
+  """`RuleAction`s associated to a `Rule`."""
+  ruleActions: [RuleAction!]
+
+  """`RuleSet` associated with `Rule`"""
+  ruleSet: RuleSet
+
+  """ID of `RuleSet`."""
+  ruleSetId: String!
+
+  """Score of `Rule`."""
+  score: Float!
+
+  """Type of `Rule`."""
+  type: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User`."""
+  user: UserEntity
+
+  """ID of `User`."""
+  userId: String!
+
+  """List of all `Rule` versions."""
+  versions: [Rule!]
+}
+
+"""Input type of `GetRuleSet`."""
+input GetRuleSetInput {
+  """ID of `RuleSet`."""
+  id: String!
+}
+
+"""Input type of `GetSummarizedTransactionsByCounterparty`."""
+input GetSummarizedTransactionsByCounterpartyInput {
+  """ID of `Account`."""
+  accountId: String
+
+  """End date for transaction data."""
+  endDate: DateTime!
+
+  """ID of entity to use for transaction query."""
+  entityId: String!
+
+  """Start date for transaction data."""
+  startDate: DateTime!
+}
+
+"""Input type of `GetSummarizedTransactionsByType`."""
+input GetSummarizedTransactionsByTypeInput {
+  """ID of `Account`."""
+  accountId: String
+
+  """End date for transaction data."""
+  endDate: DateTime!
+
+  """ID of entity to use for transaction query."""
+  entityId: String!
+
+  """Start date for transaction data."""
+  startDate: DateTime!
+}
+
+"""Input type of `GetSummarizedTransactionsInput`."""
+input GetSummarizedTransactionsInput {
+  """ID of `Account`."""
+  accountId: String
+
+  """End date for transaction data."""
+  endDate: DateTime!
+
+  """ID of entity to use for transaction query."""
+  entityId: String!
+
+  """Start date for transaction data."""
+  startDate: DateTime!
+
+  """Transaction Summary Type."""
+  summaryType: TransactionSummaryTypes!
+}
+
+"""Input type to get a team"""
+input GetTeamInput {
+  """ID of `Team`."""
+  id: ID!
+}
+
+"""Input type to get team members"""
+input GetTeamMembersInput {
+  """Order by Model's column/field."""
+  orderBy: [AccessControlOrderByInput!]
+
+  """Pagination of `TeamMember`."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """ID of the `Team`."""
+  teamId: ID!
+}
+
+"""Input type for `GetTotalAlertsBySource`."""
+input GetTotalAlertsBySourceInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime = null
+
+  """`Pipeline`'s Family name."""
+  pipelineFamilyName: String
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime = null
+}
+
+"""Get type of `TrainingModel`."""
+input GetTrainingModelInput {
+  """Model name of `TrainingModel`."""
+  modelName: String!
+
+  """Version of `TrainingModel`."""
+  version: Float
+}
+
+"""
+Input type of `GetTransactionDetailsBetweenEdges`.
+@deprecated(reason: "Replaced by `GetTransactionSummaryDetailsInput`. Removal on v5.0.0.")
+"""
+input GetTransactionDetailsBetweenEdgesInput {
+  """Required filters for Entity Links Explorer."""
+  filter: WithFlowOfFundsFilter!
+
+  """Cursor based pagination."""
+  page: CursorPaginationForRelationshipNodes! = {after: null, first: 10}
+
+  """ID of first Model object for `Relationship` record."""
+  sourceId: String!
+
+  """ID of second Model object for `Relationship` record."""
+  targetId: String!
+}
+
+"""Input type for `GetTransactionsThroughput`."""
+input GetTransactionsThroughputInput {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime = null
+
+  """`Pipeline`'s Family name."""
+  pipelineFamilyName: String
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime = null
+}
+
+"""Input type for `GetTransactionsWithEntities`."""
+input GetTransactionsWithEntitiesInput {
+  """Filter for Model."""
+  filter: FilterInput = {endDate: null, fields: [], startDate: null}
+
+  """Filter events by this type."""
+  filterBy: EventFilter = {}
+
+  """Order by Model's column/field."""
+  orderBy: OrderByInput = {sort: DESC}
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Name of originating `Pipeline` for `Event` with subtype transaction."""
+  pipelineFamilyName: String
+}
+
+"""Response type of `GetTransactionsWithEntities`."""
+type GetTransactionsWithEntitiesResponse {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `IntersectionEventModelWithEntityFullName`s."""
+  records: [IntersectionEventModelWithEntityFullName!]!
+
+  """
+  Total number of `IntersectionEventModelWithEntityFullName` records that can be returned.
+  """
+  totalRecords: Int!
+}
+
+"""Input type of `GetUserInput`."""
+input GetUserInput {
+  """ID of `User`."""
+  id: String!
+}
+
+"""Input type of `GetUserLogHistory`."""
+input GetUserLogHistoryInput {
+  """Latest date from which to return the logs."""
+  endDate: DateTime
+
+  """Limit number of records."""
+  limit: Int = 25
+
+  """Specify the ordering of records in `GetUserAuditPage` response."""
+  orderBy: OrderByInput = {field: "createdOn", sort: DESC}
+
+  """Page number for pagination of Model."""
+  pageNumber: Int = 0
+
+  """Earliest date from which to return the logs."""
+  startDate: DateTime
+
+  """`ID` of `User`."""
+  userId: String!
+}
+
+"""Attributes for `Object` of subtype id."""
+type IdAttributes {
+  """Type of ID Object."""
+  type: String!
+}
+
+enum IndexNames {
+  ACCOUNTS
+  ALERTS
+  ENTITIES
+}
+
+"""Input type of `InitialSetupByEmail`."""
+input InitialSetupByEmail {
+  """Email of `User`."""
+  email: String!
+}
+
+"""Response of `InitialSetup`."""
+type InitialSetupResponse {
+  """Api Key"""
+  apiKey: String
+
+  """message"""
+  message: String
+
+  """status"""
+  status: String!
+}
+
+"""Installation Details."""
+type InstallationDetails {
+  """Indicates whether the installation was valid."""
+  installValid: Boolean
+}
+
+type IntersectionEventModelWithEntityFullName {
+  """Associated beneficiary `Entity`."""
+  beneficiaries: [EntityModel!]
+
+  """beneficiary id of `Event`."""
+  beneficiaryId: String
+
+  """Book ID."""
+  bookId: String
+
+  """Buy/Sell."""
+  buySell: String
+
+  """Clearing Broker ID."""
+  clearerId: String
+
+  """Country of Residence."""
+  countryOfResidence: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Credit or Debit for `Event`."""
+  creditDebitFlag: String
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Destination country."""
+  destinationCountry: String
+
+  """Date of event."""
+  eventDate: DateTime
+
+  """File associated with event."""
+  file: File
+
+  """Functional amount of `Event`."""
+  functionalAmount: Float
+
+  """Functional currency of `Event`."""
+  functionalCurrency: String
+
+  """ID of `Event`."""
+  id: String!
+
+  """Internal Trade Flag."""
+  internalTrade: String
+
+  """ISIN."""
+  isin: String
+
+  """Label of `Event`."""
+  label: String
+
+  """Last Trade Event."""
+  lastTradeEvent: String
+
+  """Maturity Date."""
+  maturityDate: DateTime
+
+  """Net Present Value."""
+  netPresentValue: Float
+
+  """Origin country."""
+  originCountry: String
+
+  """Original amount of `Event`."""
+  originalAmount: Float
+
+  """Original currency of `Event`."""
+  originalCurrency: String
+
+  """originator id of `Event`."""
+  originatorId: String
+
+  """Associated originator `Entity`."""
+  originators: [EntityModel!]
+
+  """pipeline family name of `Event`."""
+  pipelineFamilyName: String
+
+  """Product Type."""
+  productType: String
+
+  """Settlement Amount."""
+  settlementAmount: Float
+
+  """Settlement Date."""
+  settlementDate: DateTime
+
+  """source id of `Event`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """source table name of `Event`."""
+  sourceTable: String
+
+  """Stock Exchange."""
+  stockExchange: String
+
+  """Stock Quantity."""
+  stockQuality: Float
+
+  """Subtype of `Event`."""
+  subtype: String!
+
+  """Termination Date."""
+  terminationDate: DateTime
+
+  """Ticker."""
+  ticker: String
+
+  """Trade ID."""
+  tradeId: String
+
+  """Trade Status."""
+  tradeStatus: String
+
+  """Trade Type."""
+  tradeType: String
+
+  """Transaction Time."""
+  transactionTime: String
+
+  """Type of transaction (e.g., wire, card, cash, etc)."""
+  transactionType: String
+
+  """txn id of `Event`."""
+  txnId: String
+
+  """Beneficiary name of `Entity` for subtype 'legalEntity'."""
+  ultimateBeneficiary: String
+
+  """Originator name of `Entity` for subtype 'legalEntity'."""
+  ultimateOriginator: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Trader Code or Dealer Name."""
+  workerCode: String
+}
+
+"""`InvalidateCache`."""
+type InvalidateCache {
+  """Number of deleted cache objects."""
+  deletedCacheObjects: Float!
+}
+
+"""Input type of invalidateCache"""
+input InvalidateCacheInput {
+  """Regex to search on keys."""
+  pattern: String
+}
+
+"""Input type of `InvestigationProgress`."""
+input InvestigationProgress {
+  financialCrimeType: String
+  isProgressRequired: Boolean!
+}
+
+"""ItemMetadata model."""
+type ItemMetadata {
+  """Attributes of ItemMetadata."""
+  attributes: JSONObject
+
+  """Created `ItemMetadata` on DateTime."""
+  createdOn: DateTime
+
+  """Deleted `ItemMetadata` on DateTime."""
+  deletedOn: DateTime
+
+  """Fields of ItemMetadata."""
+  fields: JSONObject
+
+  """ID of `ItemMetadata`."""
+  id: String!
+
+  """Pipeline Family of ItemMetadata."""
+  pipelineFamilyName: String!
+
+  """Table for item"""
+  table: String!
+
+  """Type of ItemMetadata."""
+  type: String!
+
+  """Updated `ItemMetadata` on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type for `GetItemMetadata`."""
+input ItemMetadataFilterRequest {
+  """Filter results by pipeline family name."""
+  pipelineFamilyName: String = "sensa"
+
+  """Table for item"""
+  table: String!
+
+  """Type of ItemMetadata."""
+  type: String!
+}
+
+"""Input type for `GetItemsMetadata`."""
+input ItemsMetadataFilterRequest {
+  """Filter results by pipeline family name."""
+  pipelineFamilyName: String
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+"""Data transfer object of `KeyValue` (i.e., `kvs`)."""
+type KeyValueType {
+  """Created `KeyValue` on DateTime."""
+  createdOn: DateTime
+
+  """Permissions that have access to update a `KeyValue`."""
+  editPermissions: JSONObject
+
+  """Indiciates whether value of `KeyValue` is encrypted."""
+  isEncrypted: Boolean!
+
+  """Indiciates whether value of `KeyValue` is an environment variable."""
+  isEnv: Boolean
+
+  """Key of `KeyValue`."""
+  key: String!
+
+  """Value of `KeyValue`."""
+  value: JSON
+
+  """Version of `KeyValue` as determined by updates on key."""
+  version: String
+}
+
+"""
+Input type to support pagination requests with search queries for `KeyValue`s.
+"""
+input KeyValuesInput {
+  """Key of `KeyValue`."""
+  key: String!
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """Version of `KeyValue` record as determined by updates on key."""
+  version: String
+}
+
+"""Attributes fields for `Entity` of subtype legalEntity."""
+type LegalEntityAttributeFields {
+  """Legal entity's country of residence."""
+  countryOfResidence: String
+
+  """Email of legal entity."""
+  email: String
+
+  """Type of legal entity."""
+  entityType: String!
+
+  """Family name of legal entity."""
+  familyName: String
+
+  """Complete address of legal entity."""
+  fullAddress: String
+
+  """Name of legal entity."""
+  fullName: String
+
+  """Phone number of legal entity."""
+  phone: String
+
+  """Tax ID of legal entity."""
+  taxId: String
+}
+
+enum LibraryAttributesColumnType {
+  DATE
+  NUMBER
+  TEXT
+  TIME
+}
+
+"""`LinkedNode` for `Account` data."""
+type LinkedAccount {
+  """Account number."""
+  accountNumber: String!
+
+  """ID of `Node`."""
+  id: String!
+
+  """Expandable status of `LinkedNode`."""
+  isExpandable: Boolean!
+
+  """IDs of bi-directionally connected `LinkedNode`."""
+  links: [String!]!
+
+  """Subtype of `LinkedNode`."""
+  subtype: String!
+}
+
+"""`LinkedNode` for `Entity` data."""
+type LinkedEntity {
+  """Annual income of `Event`."""
+  annualIncome: Float
+
+  """Business unit for `Entity`."""
+  businessUnit: String
+
+  """Country of residence for `Entity`."""
+  countryOfResidence: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Email address of `Entity`."""
+  email: String
+
+  """Type of `Entity`."""
+  entityType: String
+
+  """External entity id of associated `Entity`."""
+  externalEntityId: String
+
+  """`File` associated with `Entity`."""
+  file: File
+
+  """Full address of `Entity`."""
+  fullAddress: String
+
+  """Full name of `Entity`."""
+  fullName: String
+
+  """Further information of `Entity`."""
+  furtherInformation: String
+
+  """ID of `Node`."""
+  id: String!
+
+  """Expandable status of `LinkedNode`."""
+  isExpandable: Boolean!
+
+  """Label of `Entity`."""
+  label: String
+
+  """IDs of bi-directionally connected `LinkedNode`."""
+  links: [String!]!
+
+  """Onboard date of `Entity`."""
+  onboardDate: DateTime
+
+  """Phone number of `Entity`."""
+  phone: String
+
+  """pipeline family name of `Entity`."""
+  pipelineFamilyName: String
+
+  """source id of `Entity`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """Source table name of `Entity`."""
+  sourceTable: String
+
+  """Subtype of `LinkedNode`."""
+  subtype: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""`LinkedNode` for matched data between `Entities`."""
+type LinkedMatch {
+  """ID of `Node`."""
+  id: String!
+
+  """Expandable status of `LinkedNode`."""
+  isExpandable: Boolean!
+
+  """IDs of bi-directionally connected `LinkedNode`."""
+  links: [String!]!
+
+  """Matched `Entity` fields."""
+  matches: [String!]!
+
+  """Subtype of `LinkedNode`."""
+  subtype: String!
+}
+
+union LinkedNodeData = LinkedAccount | LinkedEntity | LinkedMatch | LinkedTransactionSummary
+
+"""`LinkedNode` for `TransactionSummary` data."""
+type LinkedTransactionSummary {
+  """ID of `Node`."""
+  id: String!
+
+  """Expandable status of `LinkedNode`."""
+  isExpandable: Boolean!
+
+  """IDs of bi-directionally connected `LinkedNode`."""
+  links: [String!]!
+
+  """Subtype of `LinkedNode`."""
+  subtype: String!
+
+  """Total transaction amount between Nodes."""
+  totalAmount: Float!
+}
+
+"""Input type to list access policies"""
+input ListAccessPoliciesInput {
+  """Order by Model's column/field."""
+  orderBy: [AccessControlOrderByInput!]
+
+  """Pagination of `TeamMember`."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+}
+
+"""ListAccessPoliciesOutput"""
+type ListAccessPoliciesOutputDto {
+  """List of `Access Policy`."""
+  records: [AccessPolicyOutputDto!]!
+
+  """Total number of `Access Policy`."""
+  totalRecords: Int!
+}
+
+"""Response type for `GetLocales`."""
+type Locales {
+  """Language code of `Locales`"""
+  languageCode: String!
+
+  """Locale of `Locales`"""
+  locale: JSONObject!
+}
+
+"""Login code model."""
+type LoginCode {
+  """`LoginCode` to authenticate `User`."""
+  code: Float!
+
+  """Created `LoginCode` on DateTime."""
+  createDate: DateTime!
+
+  """Email address associated with `LoginCode`."""
+  email: String!
+
+  """`User` associated with `LoginCode`."""
+  user: UserEntity
+}
+
+"""Response type for `CreateNewLoginCode`."""
+type LoginCodeResponseObject {
+  """Indicates mode."""
+  appMode: String
+
+  """Refresh Token for install user."""
+  refreshToken: String
+
+  """SAML Callback url"""
+  samlCallbackUrl: String
+
+  """Indicates whether login code was successfully created."""
+  success: Boolean!
+
+  """Token for install user."""
+  token: String
+}
+
+"""Input type of Login."""
+input LoginInput {
+  """Email address of `User`."""
+  email: String!
+
+  """Temporary login code for `User`."""
+  loginCode: Float!
+}
+
+"""Input type to order by column/field."""
+input MainOrderByInput {
+  """Direction to order by. `ASC` for ascending and `DESC` for descending."""
+  direction: Sort! = DESC
+
+  """Model's attribute to order by."""
+  field: String
+}
+
+input MessageInput {
+  event: String!
+  message: String!
+  type: String!
+}
+
+input MetadataInput {
+  buttons: [ButtonInput!]
+  charts: [ChartInput!]
+  expandedPanels: [ExpandedPanelInput!]
+  facetedSearchFields: [String!]
+  fields: [FieldInput!]
+  formFields: [FormFieldInput!]
+  navigations: [NavigationInput!]
+  popUps: [PopUpInput!]
+  rowSelection: RowSelectionInput!
+  scrollTos: [ScrollToInput!]
+  stylingRules: StylingRulesInput!
+  workflowActions: [WorkflowActionInput!]
+}
+
+type MockRuleSet {
+  entity_name: String!
+  id: String!
+  label: String!
+  pipelines: [String!]
+  rule_name: String!
+  rule_performance: Float!
+  score: Float!
+}
+
+input ModifyAdditionalProp {
+  expression: String!
+  fieldClassName: String
+  iconName: String
+  order: Int!
+}
+
+input ModifyButtonInput {
+  displayName: String!
+  icon: String
+  name: String!
+  order: Int!
+  taskType: String!
+  type: String!
+}
+
+input ModifyCddAlertIdsMappingInput {
+  cddAlertId: String!
+}
+
+input ModifyChartInput {
+  componentType: String!
+  displayName: String!
+  filterMetricsLabel: String
+  filterMetricsValue: String
+  filterOn: String
+  order: Int!
+}
+
+input ModifyDataSourceInput {
+  path: String!
+  serviceName: String!
+  type: String!
+}
+
+"""Input type of `CreateDefaultDefinition`."""
+input ModifyDefaultDefinitionInputDto {
+  """The name of the screen definition"""
+  name: String!
+  sections: [ModifySectionInput!]!
+
+  """The title of the screen definition"""
+  title: String!
+  version: Int
+}
+
+input ModifyDefinitionFilterInput {
+  defaultValue: String
+  disabled: Boolean
+  type: String
+}
+
+input ModifyExpandedPanelInput {
+  mappings: ModifyCddAlertIdsMappingInput!
+  panelName: String!
+  params: [String!]
+}
+
+input ModifyFieldInput {
+  componentType: String!
+  displayName: String!
+  filter: ModifyDefinitionFilterInput
+  isVisible: Boolean!
+  mapping: String
+  name: String!
+  order: Int!
+  sort: String
+}
+
+input ModifyFormFieldInput {
+  componentType: String!
+  displayName: String!
+  hidden: Boolean
+  mapping: String
+  maxLength: Int
+  name: String!
+  order: Int!
+  required: Boolean!
+}
+
+input ModifyFormSubmitInput {
+  path: String
+  serviceName: String!
+  updatesPanels: [String!]!
+}
+
+input ModifyMessageInput {
+  event: String!
+  message: String!
+  type: String!
+}
+
+input ModifyMetadataInput {
+  buttons: [ModifyButtonInput!]
+  charts: [ModifyChartInput!]
+  expandedPanels: [ModifyExpandedPanelInput!]
+  facetedSearchFields: [String!]
+  fields: [ModifyFieldInput!]
+  formFields: [ModifyFormFieldInput!]
+  navigations: [ModifyNavigationInput!]
+  popUps: [ModifyPopUpInput!]
+  rowSelection: ModifyRowSelectionInput!
+  scrollTos: [ModifyScrollToInput!]
+  stylingRules: ModifyStylingRulesInput!
+  workflowActions: [ModifyWorkflowActionInput!]
+}
+
+input ModifyNavigationInput {
+  expression: String
+  fieldName: String!
+  mappings: ModifyCddAlertIdsMappingInput!
+  order: Int!
+  params: [String!]!
+  targetScreenName: String!
+}
+
+input ModifyPanelInput {
+  buttons: [String!]
+  clientManaged: Boolean
+  colSpan: Int!
+  dataSource: ModifyDataSourceInput
+  displayName: String
+  feature: String
+  fieldLayoutDirection: String
+  formSubmit: ModifyFormSubmitInput
+  isVisible: Boolean
+  loading: Boolean
+  metadata: ModifyMetadataInput!
+  name: String!
+  order: Int!
+  searchCriteria: [String!]
+  section: String
+  type: String!
+  view: String
+}
+
+input ModifyPopUpInput {
+  buttonName: String
+  fieldName: String
+  panelName: String
+  params: [String!]
+  popUpPanelDisplayName: String
+  popUpPanelName: String
+  taskActionCode: String
+}
+
+input ModifyRedirectInput {
+  targetScreenName: String!
+}
+
+input ModifyRowSelectionInput {
+  allow: Boolean!
+}
+
+input ModifyScrollToInput {
+  buttonName: String
+  sectionName: String
+}
+
+input ModifySectionInput {
+  associatedTaskType: String
+  displayName: String
+  feature: String
+  icon: String
+  isVisible: Boolean!
+  name: String!
+  order: Float!
+  panels: [ModifyPanelInput!]!
+  type: String!
+}
+
+"""Input type of `CreateDefaultDefinition`."""
+input ModifyStylingRulesInput {
+  additionalProp1: [ModifyAdditionalProp!]!
+  additionalProp2: [ModifyAdditionalProp!]!
+  additionalProp3: [ModifyAdditionalProp!]!
+}
+
+input ModifySubjectIdsMappingInput {
+  subjectId: String!
+}
+
+"""Input type of `ModifyUserPreferences`"""
+input ModifyUserPreferencesInput {
+  """ImageId of `User` to be modified"""
+  imageId: String
+
+  """Language of `User` to be modified"""
+  language: String!
+
+  """Timezone of `User` to be modified"""
+  timeZone: String!
+}
+
+input ModifyWorkflowActionInput {
+  action: String!
+  buttonName: String
+  mappings: ModifySubjectIdsMappingInput!
+  messages: [ModifyMessageInput!]
+  name: String!
+  params: [String!]!
+  redirect: ModifyRedirectInput!
+  type: String
+}
+
+"""Monthly highlights for `Alert`."""
+type MonthHighlights {
+  """Label of `Alert`."""
+  label: String
+
+  """Sum of `Alert`s for last month."""
+  lastMonth: Float
+
+  """Sum of `Alert`s for this month."""
+  thisMonth: Float
+
+  """`AlertType` of `Alert`."""
+  type: String
+}
+
+type Mutation {
+  """Login with API Key to access protected resources."""
+  apiLogin(input: ApiLoginInput!): Auth!
+
+  """Assign user to detections"""
+  assignUserToDetections(input: AssignDetectionsInput!): Boolean!
+
+  """Assign users to a Team."""
+  assignUsersToTeam(input: AssignUsersToTeamInput!): AssignUsersToTeamOutputDto!
+
+  """Create an `AccessPolicy`."""
+  createAccessPolicy(input: CreateAccessPolicyInput!): CreateAccessPolicyOutputDto!
+
+  """Create a new `Advanced Rule`."""
+  createAdvancedRule(input: CreateRuleInput!): Rule!
+
+  """Create a note for `Alert`."""
+  createAlertNote(input: CreateNoteInput!): AlertNote!
+
+  """Create a single `AlertQueue`."""
+  createAlertQueue(input: CreateAlertQueueInput!): AlertQueue!
+
+  """Create a single `AlertType`."""
+  createAlertType(input: CreateAlertTypeInput!): AlertType!
+
+  """Create API Key for the `User` currently logged in."""
+  createApiKey: CreateApiKeyResponse!
+
+  """Create a new `Audit Log`."""
+  createAuditLog(input: CreateAuditLogInput!): AuditLogDto!
+
+  """Create a new `DataMapping`."""
+  createDataMapping(input: CreateDataMappingInput!): DataMapping @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Create default screen definition"""
+  createDefaultDefinition(input: CreateDefaultDefinitionInput!): Definition!
+
+  """Create a file."""
+  createFile(input: CreateFileInput!): CreateFileResponseDto!
+
+  """Create a file status."""
+  createFileStatus(input: CreateFileStatusInput!): CreateFileStatusMessage!
+
+  """Create a single `KeyValue`."""
+  createKeyValue(input: CreateKeyValueInput!): KeyValueType!
+
+  """Create new login code for `User`."""
+  createNewLoginCode(input: CreateLoginCodeInput!): LoginCodeResponseObject!
+
+  """Create an `OrganisationUnit`."""
+  createOrganisationUnit(input: CreateOrganisationUnitInput!): CreateOrganisationUnitOutputDto!
+
+  """Create Queue"""
+  createQueue(input: CreateQueueInputDto!): CreateQueueOutputDto!
+
+  """Create a risk rating."""
+  createRiskRating(createRiskRatingInput: CreateRiskRatingInput!): RiskRating!
+
+  """Create role"""
+  createRole(input: CreateRoleInput!): CreateRoleOutputDto!
+
+  """Create a new `Rule`."""
+  createRule(input: CreateRuleInput!): Rule!
+
+  """Create a new `RuleAction`."""
+  createRuleAction(input: CreateRuleActionInput!): RuleActionModel @deprecated(reason: "Relationships between `Rule` and `RuleAction` is now managed in Rule resolvers. Removal on v5.0.0.")
+
+  """Create `RuleFlag`s."""
+  createRuleFlags(input: CreateRuleFlagsInput!): BulkInsertResponse!
+
+  """Create a single `RuleSet`."""
+  createRuleSet(input: CreateRuleSetsInput!): RuleSetResponse!
+
+  """Create `SystemPreferences`."""
+  createSystemPreferences(createSystemPreferencesInput: CreateSystemPreferencesInput!): SystemPreferencesDto!
+
+  """Create a new task type"""
+  createTaskType(input: CreateTaskTypeInputDto!): Boolean!
+
+  """Create a `Team`."""
+  createTeam(input: CreateTeamInput!): CreateTeamOutputDto!
+
+  """Create a template property."""
+  createTemplateProperty(input: CreateTemplatePropertyInput!): TemplateProperty!
+
+  """Create a Training Model."""
+  createTrainingModel(input: CreateTrainingModelInput!): TrainingModel!
+
+  """Create a single `User`."""
+  createUser(input: CreateUserInput!): User!
+
+  """Create API Key for a particular `User`."""
+  createUserApiKey(input: CreateUserApiKeyInput!): CreateApiKeyResponse!
+
+  """Create UserPreferences for a given `User`"""
+  createUserPreferences(input: CreateUserPreferencesInput!): UserPreferences!
+
+  """Create multiple `Users`."""
+  createUsers(input: CreateUsersInput!): CreateUsersResponse!
+
+  """Delete an Activity."""
+  deleteActivity(input: DeleteActivityInput!): ActivityModel!
+
+  """Delete a single `AlertQueue`."""
+  deleteAlertQueue(
+    """Input type of `DeleteAlertQueue`."""
+    input: AlertQueueIdInput!
+  ): AlertQueue!
+
+  """Delete a single `AlertType`."""
+  deleteAlertType(input: DeleteAlertTypeInput!): AlertType!
+
+  """Delete a single `DataMapping`."""
+  deleteDataMapping(input: DeleteDataMappingInput!): DataMapping @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Delete a `Feature toggle`."""
+  deleteFeatureToggle(input: DeleteFeatureToggleInput!): FeatureToggleDto!
+
+  """Delete a file."""
+  deleteFile(input: FileInput!): DeleteFileMessage!
+
+  """Delete a single `RiskRating`."""
+  deleteRiskRating(input: GetRiskRating!): RiskRating!
+
+  """Delete a single `Rule`."""
+  deleteRule(input: DeleteRuleInput!): Rule!
+
+  """Delete a single `RuleSet`."""
+  deleteRuleSet(input: DeleteRuleSetInput!): RuleSetResponse!
+
+  """Delete SAML Settings from KVS"""
+  deleteSamlSettings(input: DeleteKeyValueInput!): Boolean!
+
+  """Delete a `Team`."""
+  deleteTeam(input: DeleteTeamInput!): DeleteTeamDto!
+
+  """Delete template property."""
+  deleteTemplateProperty(id: String!): TemplateProperty!
+
+  """Delete a single `User`."""
+  deleteUser(input: DeleteUserInput!): User!
+
+  """Flush all cached data."""
+  flushAll: Boolean!
+
+  """Flush data from in-memory cache."""
+  flushCache: Boolean!
+
+  """Flush data from DB."""
+  flushDb: Boolean!
+
+  """Flush data from Meilisearch."""
+  flushSearch: FlushSearchPayload!
+
+  """Initial app setup"""
+  initialSetup(input: InitialSetupByEmail!): InitialSetupResponse!
+
+  """Invalidate cache. Optionally receives a string to search if included."""
+  invalidateCache(input: InvalidateCacheInput!): InvalidateCache!
+
+  """Login with code to access protected resources."""
+  login(input: LoginInput!): Auth!
+
+  """Modify Default Screen Definition"""
+  modifyDefaultDefinition(input: ModifyDefaultDefinitionInputDto!): Boolean!
+
+  """Modify UserPreferences for a given `User`"""
+  modifyUserPreferences(input: ModifyUserPreferencesInput!): UserPreferences!
+
+  """Login with OIDC code to access protected resources."""
+  oidcLogin(input: OidcLoginInput!): Auth!
+
+  """Refresh token."""
+  refreshToken(token: String!): Auth!
+
+  """Remove UserPreferences from a given `User`"""
+  removeUserPreferences: UserPreferences!
+
+  """Remove users from team."""
+  removeUsersFromTeam(input: RemoveUsersFromTeamInput!): RemoveUsersFromTeamOutputDto!
+
+  """Run Engine `Evaluate`."""
+  ruleEngineEvaluate(input: RuleEngineEvaluateInput!): RuleEngineEvaluateResponse!
+
+  """Set the value of a `Feature toggle`."""
+  setFeatureToggle(input: SetFeatureToggleInput!): FeatureToggleDto!
+
+  """Sign out and revoke all active tokens."""
+  signOut: Boolean!
+  testSMTPSettings(input: TestSMTPSettingsInput!): TestSMTPSettingsResponse!
+
+  """Trigger Entity Links Mapping process."""
+  triggerEntityLinksMapping: Boolean!
+
+  """Unassign user from detections"""
+  unassignUserFromDetections(input: [String!]!): Boolean!
+
+  """Update decision of `Detection`."""
+  updateAlertDecision(input: UpdateAlertDecisionInput!): Detection!
+
+  """Update a single `AlertQueue`."""
+  updateAlertQueue(input: UpdateAlertQueueInput!): AlertQueue!
+
+  """Update a single `AlertType`."""
+  updateAlertType(input: UpdateAlertTypeInput!): AlertType!
+
+  """Update a single `DataMapping`."""
+  updateDataMapping(input: UpdateDataMappingInput!): DataMapping @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Updates Detection Details Admin Settings ."""
+  updateDetectionDetailsAdminSettings(input: UpdateKeyValueInput!): [DetectionDetailsAdminSettings!]!
+
+  """Update a single `KeyValue`"""
+  updateKeyValue(input: UpdateKeyValueInput!): KeyValueType!
+
+  """Update a batch/list of `KeyValue`s."""
+  updateKeyValues(input: UpdateKeyValuesInput!): [KeyValueType!]!
+
+  """Update an `OrganisationUnit`."""
+  updateOrganisationUnit(input: UpdateOrganisationUnitInput!): OrganisationUnit!
+
+  """Update a `Queue`."""
+  updateQueue(input: UpdateQueueInput!): QueueOutput!
+
+  """Update a single `RiskRating`."""
+  updateRiskRating(input: UpdateRiskRatingInput!): RiskRating!
+
+  """
+  Update all `RiskRating`s. This will overwrite all existing `RiskRating`s. 
+  Exclude `RiskRating` from input to delete.
+  """
+  updateRiskRatings(input: UpdateRiskRatingsInput!): [RiskRating!]!
+
+  """Update role"""
+  updateRole(input: UpdateRoleInput!): RoleDto!
+
+  """Update a single `Rule`."""
+  updateRule(input: UpdateRuleInput!): Rule!
+
+  """Update the status of `Rule`."""
+  updateRuleActive(input: UpdateRuleActiveInput!): Rule!
+
+  """Update a single `RuleSet`."""
+  updateRuleSet(input: UpdateRuleSetsInput!): RuleSetResponse!
+
+  """Update Saml Settings Configurations"""
+  updateSamlSettings(input: SamlSettingsInput!): SamlSettings!
+
+  """Update a `Team`."""
+  updateTeam(input: UpdateTeamInput!): Team!
+
+  """Update template property."""
+  updateTemplateProperty(input: UpdateTemplatePropertyInput!): TemplateProperty!
+
+  """Update a single `User`."""
+  updateUser(input: UpdateUserInput!): User!
+
+  """Upserts a landing folder of type `DataSource`"""
+  upsertLandingDataSource(input: UpsertLandingDataSourceInput!): UpsertLandingDataSourceResponseDto!
+}
+
+input NavigationInput {
+  expression: String
+  fieldName: String!
+  mappings: CddAlertIdsMappingInput!
+  order: Float!
+  params: [String!]!
+  targetScreenName: String!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type NavigationItem {
+  """title of Definition"""
+  expression: String
+
+  """title of Definition"""
+  fieldName: String!
+
+  """Suggestions for a field"""
+  mappings: JSON
+
+  """Name of Definition"""
+  order: Float
+
+  """title of Definition"""
+  params: [String!]!
+
+  """title of Definition"""
+  targetScreenName: String!
+}
+
+enum NodeTypes {
+  ALERT
+  ENTITY
+  EVENT
+  OBJECT
+  RISKSCORE
+}
+
+"""Team member response object"""
+type NonTeamMember {
+  """First name of `TeamMember`."""
+  first_name: String!
+
+  """ID of `TeamMember`."""
+  id: ID!
+
+  """Image ID of `TeamMember`."""
+  imageId: String
+
+  """Last name of `TeamMember`."""
+  last_name: String!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type Notification {
+  """title of Definition"""
+  displayLocation: String
+
+  """title of Definition"""
+  type: String!
+
+  """Suggestions for a field"""
+  updatesComponents: [String!]
+
+  """Suggestions for a field"""
+  updatesPanels: [String!]
+}
+
+input NotificationInput {
+  displayLocation: String
+  type: String!
+  updatesComponents: [String!]
+  updatesPanels: [String!]
+}
+
+"""Object type for `Object`."""
+type ObjectModel {
+  """Attributes of `Object`."""
+  attributes: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Customer data of `Object`."""
+  customerData: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """File associated with object."""
+  file: File
+
+  """ID of `Object`."""
+  id: String!
+
+  """Label of `Object`."""
+  label: String
+
+  """pipeline family name of `Object`."""
+  pipelineFamilyName: String
+
+  """source id of `Object`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """source table name of `Object`."""
+  sourceTable: String
+
+  """Subtype of `Object`."""
+  subtype: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type to support Offset Pagination requests."""
+input OffsetPaginationInput {
+  """Limit number of records."""
+  limit: Int = 25
+
+  """Page number for pagination of Model."""
+  pageNumber: Int = 0
+}
+
+"""Input type of OIDC Login."""
+input OidcLoginInput {
+  """Code from OIDC provider."""
+  code: String!
+}
+
+"""Login to authenticate a `User`."""
+type OidcUrl {
+  """Login URL to ask user credentials and grant access."""
+  loginUrl: String!
+}
+
+enum OperationType {
+  REST
+  direct
+}
+
+"""Input type to support OrderBy requests."""
+input OrderByInput {
+  """Model's attribute to order by."""
+  field: String
+
+  """Set the sort order for requests records of Model."""
+  sort: Sort = DESC
+}
+
+"""OrganisationUnit"""
+type OrganisationUnit {
+  """Created `OrganisationUnit` on DateTime."""
+  createdOn: DateTime!
+
+  """Deleted `OrganisationUnit` on DateTime."""
+  deletedOn: DateTime
+
+  """OrganisationUnit description"""
+  description: String
+
+  """OrganisationUnit ID"""
+  id: ID!
+
+  """OrganisationUnit active flag"""
+  isActive: Boolean!
+
+  """OrganisationUnit name"""
+  name: String!
+
+  """OrganisationUnit parent id"""
+  parentId: String
+
+  """OrganisationUnit resource key"""
+  resourceKey: String
+
+  """Updated `OrganisationUnit` on DateTime."""
+  updatedOn: DateTime!
+}
+
+"""OrganisationUnit dto"""
+type OrganisationUnitDto {
+  """OrganisationUnit active flag"""
+  activeFlag: Boolean!
+
+  """OrganisationUnit children"""
+  children: [OrganisationUnitDto!]!
+
+  """OrganisationUnit code"""
+  code: ID!
+
+  """OrganisationUnit label"""
+  label: String!
+
+  """OrganisationUnit path"""
+  path: String!
+}
+
+input OutcomeTemplate {
+  label: String
+  outcome: String
+}
+
+type PageInfo {
+  """End cursor."""
+  endCursor: Float @deprecated(reason: "New object type will be created to support cursor based pagination. Removal on v5.0.0.")
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+
+  """Start cursor."""
+  startCursor: Float @deprecated(reason: "New object type will be created to support cursor based pagination. Removal on v5.0.0.")
+}
+
+"""Paginated query response from `GetEntityTrades`."""
+type PaginatedEntityTrades {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `GetEntityTradesResponse`s."""
+  records: [GetEntityTradesResponse!]!
+
+  """
+  Total number of `GetEntityTradesResponse` records that can be returned.
+  """
+  totalRecords: Int!
+}
+
+"""Query response from `GetEvents`."""
+type PaginatedEvents {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `EventModel`s."""
+  records: [EventModel!]!
+
+  """Total number of `EventModel` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Query response from `GetFileStatuses`."""
+type PaginatedFileStatuses {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `FileStatus`s."""
+  records: [FileStatus!]!
+
+  """Total number of `FileStatus` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Paginated non-team members response object"""
+type PaginatedNonTeamMembersDto {
+  """List of `TeamMember`."""
+  records: [NonTeamMember!]!
+
+  """Total number of non-team members."""
+  totalRecords: Int!
+}
+
+"""
+Base Query response for Entity Links Explorer with cursor based pagination.
+@deprecated(reason: "Replaced by `GetRelationshipsLinks`. Removal on v5.0.0.")
+"""
+type PaginatedRelationshipsLinksView {
+  """Attributes of `DataModel`."""
+  attributes: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """List directly connected Nodes."""
+  children: [RelationshipNode!]!
+
+  """Composite score associated with entity."""
+  compositeScore: Float
+
+  """Customer data of `DataModel`."""
+  customerData: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """ID of `DataModel`."""
+  id: String!
+
+  """Label of `DataModel`."""
+  label: String
+
+  """Cursor page metadata."""
+  pageInfo: RelationshipPageInfo!
+
+  """Name of data source."""
+  sourceName: String
+
+  """Subtype of `DataModel`."""
+  subtype: String!
+
+  """Watchlist Flags."""
+  watchlistFlags: [WatchlistFlag!]!
+}
+
+"""Paginated team members response object"""
+type PaginatedTeamMembersDto {
+  """List of `TeamMember`."""
+  records: [TeamMember!]!
+
+  """Total number of team members."""
+  totalRecords: Int!
+}
+
+"""Paginated `Team`s response object."""
+type PaginatedTeamsDto {
+  """List of `Team`."""
+  records: [Team!]!
+
+  """Total number of `Team`."""
+  totalRecords: Int!
+}
+
+"""
+Query response for `GetTransactionDetailsBetweenEdges`.
+@deprecated(reason: "Replaced by `DataModelEdge` pagination. Removal on v5.0.0.")
+"""
+type PaginatedTransactionDetails {
+  """Cursor page metadata."""
+  pageInfo: RelationshipPageInfo!
+
+  """
+  Event`s of subtype 'transaction' associated by adjacent `Object`s of subtype 'account'.
+  """
+  records: [RelationshipNodeWithoutLinks!]!
+}
+
+"""Paginated `User`s response object."""
+type PaginatedUsers {
+  """`List of `User`."""
+  records: [User!]!
+
+  """Total number of `User` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type Panel {
+  """Suggestions for a field"""
+  buttons: [String!]
+
+  """title of Definition"""
+  clientManaged: Boolean
+
+  """Name of Definition"""
+  colSpan: Float
+
+  """Suggestions for a field"""
+  dataSource: DataSource
+
+  """Suggestions for a field"""
+  displayName: String
+
+  """Suggestions for a field"""
+  feature: String
+
+  """Suggestions for a field"""
+  fieldLayoutDirection: String
+
+  """Suggestions for a field"""
+  formSubmit: FormSubmit
+
+  """title of Definition"""
+  isVisible: Boolean
+
+  """title of Definition"""
+  loading: Boolean
+
+  """Suggestions for a field"""
+  metadata: PanelMetadata!
+
+  """Suggestions for a field"""
+  name: String!
+
+  """Name of Definition"""
+  order: Float!
+
+  """Suggestions for a field"""
+  searchCriteria: [String!]
+
+  """Suggestions for a field"""
+  section: String
+
+  """Suggestions for a field"""
+  type: String!
+
+  """Suggestions for a field"""
+  view: String
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type PanelField {
+  """Suggestions for a field"""
+  componentType: String!
+
+  """Suggestions for a field"""
+  displayName: String!
+
+  """Suggestions for a field"""
+  filter: FieldFilter
+
+  """Suggestions for a field"""
+  isVisible: Boolean!
+
+  """Suggestions for a field"""
+  mapping: String
+
+  """Suggestions for a field"""
+  name: String!
+
+  """Name of Definition"""
+  order: Float!
+
+  """Suggestions for a field"""
+  sort: FieldSort
+}
+
+input PanelInput {
+  buttons: [String!]
+  clientManaged: Boolean
+  colSpan: Float!
+  dataSource: DataSourceInput
+  displayName: String
+  feature: String
+  fieldLayoutDirection: String
+  formSubmit: FormSubmitInput
+  isVisible: Boolean
+  loading: Boolean
+  metadata: MetadataInput!
+  name: String!
+  order: Float!
+  searchCriteria: [String!]
+  section: String
+  type: String!
+  view: String
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type PanelMetadata {
+  """Suggestions for a field"""
+  buttons: [Button!]
+
+  """Suggestions for a field"""
+  charts: [Chart!]
+
+  """Suggestions for a field"""
+  expandedPanels: [ExpandedPanel!]
+
+  """Suggestions for a field"""
+  facetedSearchFields: [String!]
+
+  """Suggestions for a field"""
+  fields: [PanelField!]
+
+  """Suggestions for a field"""
+  formFields: [FormField!]
+
+  """Suggestions for a field"""
+  navigations: [NavigationItem!]
+
+  """Suggestions for a field"""
+  popUps: [PopUp!]
+
+  """Suggestions for a field"""
+  rowSelection: PanelMetadataRowSelection
+
+  """Suggestions for a field"""
+  scrollTos: [ScrollTo!]
+
+  """Suggestions for a field"""
+  stylingRules: JSON
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type PanelMetadataRowSelection {
+  """Name of Definition"""
+  allow: Boolean!
+}
+
+"""Get file by ID input."""
+input ParseCsvInput {
+  """ID of `File`."""
+  id: String!
+}
+
+"""Parsed CSV file."""
+type ParseCsvResponse {
+  """First row of data."""
+  data: [[String!]!]!
+
+  """Headers."""
+  headers: [String!]
+}
+
+input PayloadCriteria {
+  criteria: String!
+}
+
+input PayloadTemplate {
+  collectionAttribute: String!
+  type: String!
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type PopUp {
+  """Suggestions for a field"""
+  buttonName: String
+
+  """Suggestions for a field"""
+  fieldName: String
+
+  """Suggestions for a field"""
+  panelName: String
+
+  """Suggestions for a field"""
+  params: [String!]
+
+  """Suggestions for a field"""
+  popUpPanelDisplayName: String
+
+  """Suggestions for a field"""
+  popUpPanelName: String
+
+  """Suggestions for a field"""
+  taskActionCode: String
+}
+
+input PopUpInput {
+  buttonName: String
+  fieldName: String
+  panelName: String
+  params: [String!]
+  popUpPanelDisplayName: String
+  popUpPanelName: String
+  taskActionCode: String
+}
+
+type Query {
+  """Get `accounts` associated to `entity`."""
+  accounts(
+    """Filter accounts to those affilated to `entity`."""
+    entityId: String!
+  ): [AccountObject!]!
+
+  """Check Username."""
+  checkUsername(query: CheckUsernameInput!): Boolean!
+
+  """Retrieve one AML rule list."""
+  dataList(query: DataListFilter!): DataListPayload!
+
+  """Retrieve all AML rules."""
+  dataLists(query: OffsetPaginationInput! = {}): DataListsPayload!
+
+  """
+  Get metadata for particular data source (i.e., `BinaryObject`) from pipeline family `Bucket`.
+  """
+  dataSource(query: DataSourceFilterRequest!): BinaryObject!
+
+  """
+  Get metadata for data sources (i.e., `BinaryObject`) from all pipeline family `Bucket`s.
+  """
+  dataSources: [Bucket!]!
+
+  """Get Entity Trades"""
+  entityTrades(query: GetEntityTradesInput!): PaginatedEntityTrades!
+
+  """Retrieve exemptions."""
+  exemptions(query: ExemptionsInput!): [ExemptionList!]!
+  flowOfFundsLinks(query: FlowOfFundsLinksInput!): RelationshipsLinks!
+
+  """Retrieve list of total active and alerted entities."""
+  getActiveAndAlertedEntitiesCount(query: GetActiveAlertedEntitiesInput!): [ActiveAlertedEntity!]!
+
+  """Retrieve a list of `Activity`s by alertId."""
+  getActivitiesByReferenceId(query: GetActivitiesInput!): [ActivityWithNoteAttachments!]!
+
+  """Retrieve `Alert` counts by status."""
+  getAlertCountsByStatus(
+    """Input type of `GetAlertCountsByStatus`."""
+    query: GetAlertsByInput!
+  ): [AlertStatusCount!]!
+
+  """Retrieve `Alert` counts by type."""
+  getAlertCountsByType(
+    """Input type of `GetAlertCountsByType`."""
+    query: GetAlertsByInput!
+  ): [AlertTypeCounts!]!
+
+  """Retrieve list of all features for `Alert`."""
+  getAlertFeatures(query: GetAlertFeaturesInput!): Shap
+
+  """Retrieve list of all feature-list-items for `Alert`."""
+  getAlertFeaturesList: [AlertFeatureListItem!] @deprecated(reason: "Replaced by  `getDetectionFeaturesList`. Removal on v5.0.0.")
+
+  """Retrieve a list of `Note`s by alertId."""
+  getAlertNotes(query: GetNotesInput!): [AlertNote!]!
+
+  """Retrieve a single `AlertQueue`."""
+  getAlertQueue(
+    """Input type of `GetAlertQueue`."""
+    query: AlertQueueIdInput!
+  ): AlertQueue!
+
+  """Retrieve all `AlertQueue`s."""
+  getAlertQueues: [AlertQueueSummary!]!
+
+  """Retrieve list of `Alert`s statuses."""
+  getAlertStatusFilter: [AlertStatusFilter!]!
+
+  """Retrieve all `AlertType`s."""
+  getAlertTypes: [AlertType!]!
+
+  """Retrieve paginated list of `Alert`s."""
+  getAllDetections(query: GetAllDetectionsInput!): DetectionsPage!
+
+  "Retrieve list of `FeatureHistory`.\r\nReturns `FeatureHistory[]`."
+  getAllFeatureHistoryRecords: [FeatureHistory!]!
+
+  """Retrieve a list of all `Feature toggle`s."""
+  getAllFeatureToggles: AllFeatureTogglesDto!
+
+  """Retrieve list of all `RiskRating`s."""
+  getAllRiskRatings: [RiskRating!]!
+
+  """Retrieve paginated list of `RiskScores`s."""
+  getAllRiskScores(query: GetAllRiskScoresInput!): RiskScoresPage!
+
+  """Retrieve list of all Roles."""
+  getAllRoles: [RoleDto!]!
+
+  """Retrieve All Services inside application"""
+  getAllServicesInstances(query: GetAllServiceInstancesInput!): [ServiceInstanceDto!]!
+
+  """Retrieve list of all `Team`s."""
+  getAllTeams(query: GetAllTeamsInput!): PaginatedTeamsDto!
+
+  """Retrieve Application Version details."""
+  getAppVersion: GetAppVersionResponse!
+
+  """Retrieve paginated list of `Audit Log`s."""
+  getAuditLogs(query: GetAuditLogsInput!): AuditLogsPage!
+
+  """
+  Retrieve pageinated list of legal entity's country of residence associated with `Alert`s.
+  """
+  getCountries(query: GetCountriesInput!): [Country!]!
+
+  """Get `DataMapping` record by Id."""
+  getDataMapping(query: GetDataMappingInput!): GetDataMappingResponse @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Get `DataMapping` config information."""
+  getDataMappingConfiguration(query: GetDataMappingInput): GetDataMappingConfigurationResponse @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Get latest `DataMapping` processed file by DataMapping Id."""
+  getDataMappingLatestFile(query: GetDataMappingInput!): GetDataMappingLatestFileResponse @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Get all `DataMapping` records."""
+  getDataMappings(query: GetDataMappingsInput): [DataMappingsFilePulse!] @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Get Data Points by Data Mapping."""
+  getDataPointsByDataMapping(input: GetDataPointsByDataMappingInput!): GetDataPointsByDataMappingResponse @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Get default screen definition"""
+  getDefaultDefinition(query: GetDefaultDefinitionInput!): Definition!
+
+  """
+  Retrieve summary of `Detection`s by `Entity.id` and `Detection.category`.
+  """
+  getDetectedEntitiesBreakdown(query: GetDetectedEntitiesBreakdownInput!): DetectedEntitiesBreakdown!
+
+  """Retrieve a single `Detection`."""
+  getDetection(query: GetDetectionInput!): Detection!
+
+  """Retrieves Detection Details Admin Settings ."""
+  getDetectionDetailsAdminSettings(query: GetDetectionDetailsAdminSettingsInput!): [DetectionDetailsAdminSettings!]!
+
+  """Retrieve list of all all unique feature names for `Detection`."""
+  getDetectionFeaturesList: [DetectionFeatureList!]!
+
+  """Retrieve list of all unique `Detection`s types."""
+  getDetectionTypesFilter: [DetectionTypesFilter!]!
+
+  """Retrieve paginated list of `Detection`s by queue."""
+  getDetectionsByQueue(query: GetDetectionsByQueueInput!): DetectionsPage!
+
+  """Get all Entities"""
+  getEntities(query: GetEntitiesInput!): EntitiesPayload!
+
+  """Get `Entity`."""
+  getEntity(query: GetEntityInput!): Entity!
+
+  """Get Event"""
+  getEvent(input: GetEventInput!): Event!
+
+  """Get Events"""
+  getEvents(query: GetEventsInput!): PaginatedEvents!
+
+  "Retrieve a single `FeatureHistory`.\r\nReturns `FeatureHistory`."
+  getFeatureHistory(ids: GetFeatureHistoryInput!): FeatureHistory!
+
+  """Retrieve a `Feature toggle`."""
+  getFeatureToggle(query: GetFeatureToggleInput!): FeatureToggleDto!
+
+  """Get Features."""
+  getFeatures(input: GetFeaturesInput!): [Feature!] @deprecated(reason: "Replaced by `Query.getAlertFeatures`. Removal on v5.0.0.")
+
+  """Get field suggestions"""
+  getFieldSuggestions(input: GetFieldsSuggestionsInput!): FieldSuggestionResponse!
+
+  """Get file by file id."""
+  getFile(query: FileInput!): String!
+
+  """Get file metadata by file id."""
+  getFileMetadata(query: FileInput!): FileWithLatestStatus!
+
+  """Get paginated list of `FileStatus` records."""
+  getFileStatuses(query: GetFileStatusesInput!): PaginatedFileStatuses!
+
+  """Get all files by bucket name."""
+  getFiles(query: GetAllFilesInput!): [String!]!
+
+  """
+  Get `Relationship`s and all associated records – including transaction summaries.
+  """
+  getFlowOfFundsLinksView(query: GetFlowOfFundsViewInput!): PaginatedRelationshipsLinksView @deprecated(reason: "Replaced by  `flowOfFundsLinks`. Removal on v5.0.0.")
+
+  """Retrieve Alerts Generated Summary reports."""
+  getGeneratedAlertsSummary(
+    """Input type of `getGeneratedAlertsSummary`."""
+    query: GetAlertsGeneratedSummaryInput!
+  ): GetAlertsGeneratedSummary!
+
+  """Get file by file id."""
+  getImage(query: FileInput!): String!
+
+  """Retrieve Installation Details."""
+  getInstallationDetails: InstallationDetails!
+
+  """Retrieve `ItemMetadata` by pipeline family name, table name, and type."""
+  getItemMetadata(query: ItemMetadataFilterRequest!): ItemMetadata!
+
+  """Retrieve all `ItemMetadata`."""
+  getItemsMetadata(query: ItemsMetadataFilterRequest): [ItemMetadata!]!
+
+  """Retrieve a single `KeyValue` by key and version (optional)."""
+  getKeyValue(query: GetKeyValueInput!): KeyValueType!
+
+  """Retrieve a list of latest unencrypted `KeyValue`s by prefix."""
+  getLatestKeyValuesByPrefix(query: GetLatestKeyValuesByPrefixInput!): [KeyValueType!]!
+
+  """Retrieve paginated list of Latest `RiskScores`s."""
+  getLatestRiskScores(query: GetLatestRiskScoresInput!): RiskScoresPage!
+
+  """Retrieve Locales for a given language code"""
+  getLocale(query: GetLocalesInput!): Locales!
+
+  """Get latest login code."""
+  getLoginCode(query: GetLoginCodeInput!): GetLoginCodeResponse!
+
+  """Retrieve many queues"""
+  getManyQueues(query: GetManyQueuesInput!): GetManyQueuesOutput!
+
+  """Retrieve month highlights for `Alert`."""
+  getMonthHighlights(
+    """Input type of `GetMonthHighlights`."""
+    query: GetAlertsByInput!
+  ): [MonthHighlights!]!
+
+  """Retrieve list of all `NonTeamMembers`."""
+  getNonTeamMembers(query: GetNonTeamMembersInput!): PaginatedNonTeamMembersDto!
+
+  """Get `Object`."""
+  getObject(input: GetObjectInput!): ObjectModel!
+
+  """OIDC Login URL to ask user credentials."""
+  getOidcLoginUrl: OidcUrl!
+
+  """Parse data source CSV file."""
+  getParsedCsv(query: ParseCsvInput!): ParseCsvResponse @deprecated(reason: "No longer supported and will be dropped in future release. Removal on v5.0.0.")
+
+  """Retrieve a `Queue` by `id`."""
+  getQueueDetailsById(query: GetQueueDetailsInput!): QueueOutput!
+
+  """
+  Get `Relationship`s and associated `Entity` records for Entity Links Explorer's relationship view.
+  """
+  getRelationshipsLinksView(query: GetRelationshipsLinksViewInput!): GetRelationshipsLinksViewResponse @deprecated(reason: "Replaced by  `relationshipsLinks`. Removal on v5.0.0.")
+
+  """Retrieve a single `RiskRating`."""
+  getRiskRating(input: GetRiskRating!): RiskRating!
+
+  """Retrieve list of `RiskScoreTrend` by month in provided year."""
+  getRiskScoreTrends(query: GetRiskScoreTrends!): [RiskScoreTrend!] @deprecated(reason: "Replaced by `riskScoreTrends`. Removal on v5.0.0.")
+
+  """Get Role by name."""
+  getRole(input: GetRoleInput!): Role
+
+  """Get all Roles."""
+  getRoles: [Role!]!
+
+  """Retrieve root organisation unit hierarchy."""
+  getRootOrganisationUnit: JSONObject!
+
+  """Retrieve a single `Rule`."""
+  getRule(query: GetRule!): GetRuleResponse
+
+  """Retrieve list of all `Rule Action`s."""
+  getRuleActions: [RuleActionModel!] @deprecated(reason: "To obtain a list of unique `RuleAction`s, please use `KeyValue` resolver methods. Removal on v5.0.0.")
+
+  """Run Engine `Status`"""
+  getRuleEngineStatusByRunId(runId: String!): RuleEngineStatusResponse!
+
+  """Run Engine `Status`"""
+  getRuleLibraryAttributes(pipelineId: String!): RuleLibraryAttributesResponse!
+  getRuleSet: [MockRuleSet!]!
+
+  """Retrieve list of all `RuleSets`."""
+  getRuleSets: [RuleSet!]!
+
+  """Retrieve a single `RuleSet`."""
+  getRuleSetsById(input: GetRuleSetInput!): RuleSetResponse!
+
+  """Retrieve list of all `Rule`s."""
+  getRules: [Rule!]!
+
+  """Retrieve SAML Settings"""
+  getSamlSettings: SamlSettings!
+
+  """Retrieve summarized `Transaction`s by Type."""
+  getSummarizedTransactionByType(query: GetSummarizedTransactionsByTypeInput!): SummarizedTransactionsByTypeResponse!
+
+  """Retrieve summarized `Transaction`s."""
+  getSummarizedTransactions(query: GetSummarizedTransactionsInput!): SummarizedTransactionsResponse!
+
+  """Retrieve summarized `Transaction`s."""
+  getSummarizedTransactionsByCounterparty(query: GetSummarizedTransactionsByCounterpartyInput!): [CounterpartyTransactionGroup!]!
+
+  """Retrieve `SystemPreferences`."""
+  getSystemPreferences: SystemPreferencesDto!
+
+  """Retrieve list of all Targets."""
+  getTargets: [Target!]!
+
+  """Retrieve a `Team` by its `id`."""
+  getTeamById(query: GetTeamInput!): Team!
+
+  """Retrieve list of all `Team` members."""
+  getTeamMembers(query: GetTeamMembersInput!): PaginatedTeamMembersDto!
+
+  """Get all template properties."""
+  getTemplateProperties: [TemplateProperty!]!
+
+  """Get template property by template property ID."""
+  getTemplateProperty(input: String!): TemplateProperty!
+
+  """Retrieve list of total alerts by source."""
+  getTotalAlertsBySource(query: GetTotalAlertsBySourceInput!): TotalAlertsBySourceResponse!
+
+  """Retrieve a Training Model."""
+  getTrainingModel(query: GetTrainingModelInput!): TrainingModel!
+
+  """Get all Transaction records associated between two Accounts."""
+  getTransactionDetailsBetweenEdges(query: GetTransactionDetailsBetweenEdgesInput!): PaginatedTransactionDetails @deprecated(reason: "Replaced by  `transactionDetailsBetweenEdges`. Removal on v5.0.0.")
+
+  """Transactions throughput by time period."""
+  getTransactionsThroughput(query: GetTransactionsThroughputInput!): TransactionsThroughputDto!
+
+  """Get `Event` of subtype transaction with associated `Entity`."""
+  getTransactionsWithEntities(query: GetTransactionsWithEntitiesInput = {}): GetTransactionsWithEntitiesResponse!
+
+  """Retrieve a single `User`."""
+  getUser(query: GetUserInput!): User!
+
+  """Retrieve paginated list of `Audit Log`s."""
+  getUserLogHistory(query: GetUserLogHistoryInput!): AuditLogsPage!
+
+  """Retrieve UserPreferences for a given `User`"""
+  getUserPreferences: UserPreferences!
+
+  """Retrieve list of all `User`s."""
+  getUsers(query: GetPaginatedUsersInput!): PaginatedUsers!
+
+  """Retrieve a list of `User`s."""
+  getUsersByName(query: String!): [User!]!
+
+  """Check whether cache exists for ResolverName and Query arguments."""
+  getValidateCache(query: ValidateCacheInput!): ValidateCache!
+
+  """Retrieve a list of `KeyValue` by key and version (optional)."""
+  keyValues(query: KeyValuesInput!): [KeyValueType!]!
+
+  """Get all `AccessPolicy`."""
+  listAccessPolicies(query: ListAccessPoliciesInput): ListAccessPoliciesOutputDto!
+
+  """Trigger reindexing of Meilisearch records sourced from datalake."""
+  reindexNodes(query: ReindexNodesInput!): ReindexNodesResponse!
+
+  """
+  Get `Relationship`s and associated `Entity` records for Entity Links Explorer's relationship view.
+  """
+  relationshipsLinks(query: RelationshipsLinksInput!): RelationshipsLinks!
+
+  """Retrieve list of `RiskScoreTrend` by month in provided year."""
+  riskScoreTrends(query: RiskScoreTrendsInput!): [RiskScorePayload!]!
+  transactionSummaryDetails(query: TransactionSummaryDetailsInput!): TransactionSummaryDetails!
+}
+
+"""Base props of `QueueOutput`."""
+type QueueOnTeamDto {
+  """ID of `Queue`."""
+  id: ID!
+
+  """Queue name"""
+  name: String!
+}
+
+"""Queue output"""
+type QueueOutput {
+  """Created on DateTime."""
+  createdOn: DateTime!
+
+  """Queue description"""
+  description: String
+
+  """ID of `Queue`."""
+  id: ID!
+
+  """Queue logic: filtering and sorting"""
+  logic: JSONObject!
+
+  """Queue name"""
+  name: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime!
+}
+
+input Reason {
+  """
+  Unique identifier for a Reason. The value that will be sent to the api for persistence when a Reason is chosen by the user.
+  """
+  code: String!
+
+  """
+  Display Name which is an Internationalization result value if the locale code is provided
+  """
+  displayName: String
+
+  """The default name of a Reason"""
+  name: String!
+
+  """
+  The resource key that will be used to internationalize the Reason text before display in the Web Client. The name will be used as the default display value if the resourceKey attribute is not used
+  """
+  resourceKey: String
+}
+
+input RedirectInput {
+  targetScreenName: String!
+}
+
+"""Input type of `ReindexNodes`."""
+input ReindexNodesInput {
+  """
+  Provide list of NodeTypes for Meilisearch to trigger reindexing (defaults to all).
+  """
+  nodeTypes: [NodeTypes!] = []
+}
+
+"""Response type for `ReindexNodes`."""
+type ReindexNodesResponse {
+  """Message describes the status of request."""
+  message: String!
+
+  """Indicates whether request was successful."""
+  success: Boolean!
+}
+
+"""
+Cursor of `Relationship`.
+@deprecated(reason: "Replaced by `LinkedNode`. Removal on v5.0.0.")
+"""
+type RelationshipCursorType {
+  """ID of first Model object for `Relationship` record."""
+  sourceId: String
+
+  """ID of second Model object for `Relationship` record."""
+  targetId: String
+}
+
+"""
+Input type of `Relationship` cursor for pagination.
+@deprecated(reason: "Pagination replaced by `GetRelationshipsLinks`. Removal on v5.0.0.")
+"""
+input RelationshipCursorTypeInput {
+  """ID of first Model object for `Relationship` record."""
+  sourceId: String!
+
+  """ID of second Model object for `Relationship` record."""
+  targetId: String!
+}
+
+"""Input Filters of `relationshipsLinks`."""
+input RelationshipFiltersInput {
+  """List of `Entity` attributes to filter by."""
+  fields: [RelationshipsFields!] = []
+}
+
+"""
+Object type of "DataModel" for `GetRelationshipsLinksView`.
+@deprecated(reason: "Replaced by `LinkedNode`. Removal on v5.0.0.")
+"""
+type RelationshipNode {
+  """Attributes of `DataModel`."""
+  attributes: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """Composite score associated with entity."""
+  compositeScore: Float
+
+  """Customer data of `DataModel`."""
+  customerData: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """ID of `DataModel`."""
+  id: String!
+
+  """Label of `DataModel`."""
+  label: String
+
+  """IDs of bidirectionally connected Nodes."""
+  links: [String!]!
+
+  """Name of data source."""
+  sourceName: String
+
+  """Subtype of `DataModel`."""
+  subtype: String!
+
+  """Watchlist Flags."""
+  watchlistFlags: [WatchlistFlag!]!
+}
+
+"""
+Object type of "DataModel" for `GetTransactionDetailsBetweenEdges`.
+@deprecated(reason: "Replaced by `LinkedNode` connections. Removal on v5.0.0.")
+"""
+type RelationshipNodeWithoutLinks {
+  """Attributes of `DataModel`."""
+  attributes: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """Composite score associated with entity."""
+  compositeScore: Float
+
+  """Customer data of `DataModel`."""
+  customerData: JSONObject @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """ID of `DataModel`."""
+  id: String!
+
+  """Label of `DataModel`."""
+  label: String
+
+  """Name of data source."""
+  sourceName: String
+
+  """Subtype of `DataModel`."""
+  subtype: String!
+
+  """Watchlist Flags."""
+  watchlistFlags: [WatchlistFlag!]!
+}
+
+"""
+Cursor page metadata for Entity Links Explorer queries.
+@deprecated(reason: "Pagination replaced by `GetRelationshipsLinks`. Removal on v5.0.0.")
+"""
+type RelationshipPageInfo {
+  """ID of last `Relationship` record provided."""
+  endCursor: RelationshipCursorType!
+
+  """Indicates whether more records exist."""
+  hasNextPage: Boolean!
+
+  """ID of first `Relationship` record provided."""
+  startCursor: RelationshipCursorType!
+}
+
+enum RelationshipsFields {
+  EMAIL
+  FULL_ADDRESS
+  FULL_NAME
+  PHONE
+}
+
+"""Response type for Relationship Links."""
+type RelationshipsLinks {
+  """Edges pointing to `LinkedNode`."""
+  edges: [DataModelEdge!]!
+
+  """Message to indicate the status of Entity Links Explorer."""
+  message: String
+
+  """Pagination details."""
+  pageInfo: PageInfo!
+}
+
+"""Input type of `relationshipsLinks`."""
+input RelationshipsLinksInput {
+  """ID of `Alert`."""
+  alertId: String!
+
+  """ID of `Entity` with `Relationship`s."""
+  entityId: String!
+
+  """Filters for Entity Links Explorer."""
+  filterBy: RelationshipFiltersInput!
+}
+
+"""Input type to remove users from a team"""
+input RemoveUsersFromTeamInput {
+  """Id of `Team`."""
+  teamId: ID!
+
+  """User IDs to remove from a `Team`."""
+  userIds: [String!]! = []
+}
+
+"""Response type for batch remove users from a team."""
+type RemoveUsersFromTeamOutputDto {
+  """List of removed users"""
+  removedUsers: [UserRemovedFromTeam!]!
+}
+
+"""Report Summary Objecte."""
+type ReportSummaryObject {
+  """Date of report row"""
+  date: String
+
+  """Summary of report metrics"""
+  summary: [ReportSummaryRow!]
+}
+
+"""Report Summary Row."""
+type ReportSummaryRow {
+  """Count of data point"""
+  count: Float
+
+  """Key of data point"""
+  key: String
+}
+
+"""Attributes of `Event` with subtype transaction (retail banking)."""
+type RetailBankingAttributes {
+  """Account number of Counterparty."""
+  counterpartyAccountNumber: String
+
+  """ID of Counterparty."""
+  counterpartyId: String
+
+  """Indicates whether transaction was a credit or debit."""
+  creditDebitFlag: String!
+
+  """Date of subtype event."""
+  eventDate: String!
+
+  """Amount of functional transaction."""
+  functionalTransactionAmount: Float
+
+  """Currency of functional transaction."""
+  functionalTransactionCurrency: String
+
+  """Account number of Ledger."""
+  ledgerAccountNumber: String
+
+  """Amount of original transaction."""
+  originalTransactionAmount: Float
+
+  """Currency of original transaction."""
+  originalTransactionCurrency: String
+
+  """ID of primary party."""
+  primaryPartyId: String
+
+  """Unique identifier of transaction."""
+  referenceNumber: String!
+
+  """Type of transaction (e.g., wire, card, cash, etc)."""
+  transactionType: String
+}
+
+"""`RiskRating` model."""
+type RiskRating {
+  """Color for `RiskRating`."""
+  color: String!
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Display order for `RiskRating`."""
+  displayOrder: Float!
+
+  """Label for `RiskRating` as unique ID."""
+  id: String!
+
+  """Label for `RiskRating`."""
+  label: String!
+}
+
+"""Input type of `riskRatings` for `UpdateRiskRatingsInput`."""
+input RiskRatingFieldInput {
+  """Color for `RiskRating`."""
+  color: String!
+
+  """Display order for `RiskRating`."""
+  displayOrder: Float!
+
+  """Label for `RiskRating` as unique ID."""
+  id: String!
+
+  """Label for `RiskRating`."""
+  label: String!
+}
+
+"""`RiskScore`."""
+type RiskScore {
+  """List of `ShapFeature`s for `RiskScore`."""
+  alertingFeatures: [ShapFeature!]
+
+  """Anomaly score of `RiskScore`."""
+  anomalyScore: Float
+
+  """CIB score of `RiskScore`."""
+  cibScore: Float
+
+  """Composite score of `RiskScore`."""
+  compositeScore: Float
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Customer data of `RiskScore`."""
+  customerData: JSONObject
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `LegalEntity` associated with `RiskScore`."""
+  entityId: String!
+
+  """Hotspot score of `RiskScore`."""
+  hotspotScore: Float
+
+  """ID of `RiskScore`."""
+  id: String!
+
+  """pipeline family name of `RiskScore`."""
+  pipelineFamilyName: String
+
+  """Date of `RiskScore`."""
+  riskScoreDate: Date!
+
+  """Source of `RiskScore`."""
+  riskScoreSource: String
+
+  """Similarity score of `RiskScore`."""
+  similarityScore: Float
+
+  """source id of `RiskScore`."""
+  sourceId: String
+
+  """source table name of `RiskScore`."""
+  sourceTable: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Represents Risk Score Trends for month in provided year."""
+type RiskScorePayload {
+  """Count of Risk Score by month."""
+  count: Int!
+
+  """Represents the month of provided Risk Score Trends."""
+  month: Int!
+
+  """Risk Score for month in provided year."""
+  riskScore: String!
+
+  """Represents the year of provided Risk Score Trends."""
+  year: Int
+}
+
+"""
+Represents Risk Score Trends for month in provided year.
+@deprecated(reason: "Replaced by `RiskScoreTrendPayload`. Removal on v5.0.0.")
+"""
+type RiskScoreTrend {
+  """Count of Risk Score by month."""
+  count: Int!
+
+  """Represents the month of provided Risk Score Trends."""
+  month: Int!
+
+  """Risk Score for month in provided year."""
+  riskScore: String!
+
+  """Represents the year of provided Risk Score Trends."""
+  year: Int
+}
+
+"""Input type of `riskScoreTrends`."""
+input RiskScoreTrendsInput {
+  """ID of `Entity`."""
+  entityId: String!
+
+  """Specify the beginning of 12-month range to generate trends."""
+  startDate: DateTime!
+}
+
+"""Response type for `GetAllRiskScores`."""
+type RiskScoresPage {
+  """Offset page metadata."""
+  pageInfo: PageInfo
+
+  """List of `RiskScore`s."""
+  records: [RiskScore!]!
+
+  """Total number of `RiskScore` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""User Role."""
+type Role {
+  """Role name."""
+  name: String
+
+  """Permissions of `User`."""
+  permissions: JSON
+}
+
+"""Role dto"""
+type RoleDto {
+  """Role ID"""
+  id: ID!
+
+  """Role name"""
+  name: String!
+}
+
+enum RoleOptions {
+  admin
+  guest
+  l1Investigator
+  serviceAccount
+}
+
+input RowSelectionInput {
+  allow: Boolean!
+}
+
+"""`Rule` DTO."""
+type Rule {
+  """Indicates whether `Rule` is active."""
+  active: Boolean!
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `Rule`."""
+  description: String!
+
+  """Event type."""
+  eventType: String
+
+  """ID of `Rule`."""
+  id: String!
+
+  """Name of `Rule`."""
+  name: String!
+
+  """Logic for `Rule`."""
+  rule: JSONObject!
+
+  """`RuleAction`s associated to a `Rule`."""
+  ruleActions: [RuleAction!]
+
+  """`RuleSet` associated with `Rule`"""
+  ruleSet: RuleSet
+
+  """ID of `RuleSet`."""
+  ruleSetId: String!
+
+  """Score of `Rule`."""
+  score: Float!
+
+  """Type of `Rule`."""
+  type: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User`."""
+  user: UserEntity
+
+  """ID of `User`."""
+  userId: String!
+}
+
+"""`RuleAction`."""
+type RuleAction {
+  """ID of `RuleAction` as `KeyValue`."""
+  id: String!
+
+  """Name of `RuleAction`."""
+  name: String!
+}
+
+"""`RuleAction`."""
+type RuleActionModel {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Unique record ID for `RuleAction`."""
+  id: String!
+
+  """`Rule` associated with `RuleAction`."""
+  rule: Rule
+
+  """ID of `RuleAction` as `KeyValue`."""
+  ruleActionIds: [String!]!
+
+  """ID of associated `Rule` with `RuleAction`."""
+  ruleId: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type of `RuleEngineEvaluateInput`."""
+input RuleEngineEvaluateInput {
+  """End of `Evaluate`."""
+  end: String!
+
+  """ID of `Pipeline`."""
+  pipelineId: String
+
+  """Rule Sets of `Evaluate`."""
+  ruleSets: [String!]
+
+  """Start of `Evaluate`."""
+  start: String!
+}
+
+"""Response from `ruleEngineEvaluate`."""
+type RuleEngineEvaluateResponse {
+  """ID for rule engine evaluation request."""
+  runId: String!
+
+  """Status for rule engine evaluation."""
+  status: String!
+}
+
+"""Response from `ruleEngineEvaluate`."""
+type RuleEngineStatusResponse {
+  """Created time for rule engine evaluation."""
+  createdTime: String
+
+  """Date for rule engine evaluation."""
+  date: String
+
+  """End date for rule engine evaluation."""
+  endDate: String
+
+  """Ended time for rule engine evaluation."""
+  endedTime: String
+
+  """Message for rule engine evaluation."""
+  errorMessage: String
+
+  """Error type for rule engine evaluation"""
+  errorType: String
+
+  """Errors for rule engine evaluation"""
+  errors: [[String!]!]
+
+  """Generated alerts for rule engine evaluation"""
+  generatedAlerts: JSONObject
+
+  """Pipeline id for rule engine evaluation"""
+  pipelineId: String
+
+  """Redis job id for rule engine evaluation"""
+  redisJobId: String
+
+  """Rule set ids for rule engine evaluation."""
+  rulesetIds: [String!]
+
+  """ID for rule engine evaluation request."""
+  runId: String!
+
+  """Start date for engine evaluation"""
+  startDate: String
+
+  """Started time for engine evaluation"""
+  startedTime: String
+
+  """Status for rule engine evaluation."""
+  status: String!
+}
+
+"""Object type representing `Rule` schema."""
+type RuleEntity {
+  """Indicates whether `Rule` is active."""
+  active: Boolean!
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `Rule`."""
+  description: String!
+
+  """Event type."""
+  eventType: String
+
+  """ID of `Rule`."""
+  id: String!
+
+  """Name of `Rule`."""
+  name: String
+
+  """Logic for `Rule`."""
+  rule: JSONObject!
+
+  """`RuleAction`s associated to a `Rule`."""
+  ruleActions: [RuleAction!]
+
+  """`RuleSet` associated with `Rule`"""
+  ruleSet: RuleSet
+
+  """ID of `RuleSet`."""
+  ruleSetId: String
+
+  """Score of `Rule`."""
+  score: Int
+
+  """Type of `Rule`."""
+  type: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User`."""
+  user: UserEntity
+
+  """ID of `User`."""
+  userId: String
+}
+
+"""Input type of `CreateRuleFlagInput`."""
+input RuleFlagInput {
+  """EntityID."""
+  entityId: String!
+
+  """Record Date."""
+  recordDate: DateTime!
+
+  """RuleFlag."""
+  ruleFlag: String!
+}
+
+"""Response from `getRuleLibraryAttributes`."""
+type RuleLibraryAttribute {
+  """Columns for library attribute"""
+  columns: [RuleLibraryAttributeColumn!]!
+
+  """Description for library attribute column."""
+  tableDescription: String!
+
+  """Name for library attribute column"""
+  tableName: String!
+}
+
+"""Response from `getRuleLibraryAttributes`."""
+type RuleLibraryAttributeColumn {
+  """Description for library attribute column."""
+  description: String!
+
+  """Name for library attribute column"""
+  name: String!
+
+  """Column data type"""
+  type: LibraryAttributesColumnType!
+}
+
+"""Response from `getLibraryAttributes`."""
+type RuleLibraryAttributesResponse {
+  """Library attributes."""
+  attributes: [RuleLibraryAttribute!]!
+}
+
+"""List of AML collection."""
+type RuleList {
+  """Collection of AML rules."""
+  data: [JSONObject!]!
+
+  """Name of the list as it appears in List Management."""
+  displayName: String!
+
+  """Name of list as it appears from source."""
+  name: String!
+
+  """Name of pipeline family associated with list."""
+  pipelineFamilyName: String!
+}
+
+"""`RuleSet` DTO."""
+type RuleSet {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `RuleSet`."""
+  description: String
+
+  """Indicates whether `RuleSet` is enabled."""
+  enabled: Boolean
+
+  """ID of `RuleSet`."""
+  id: String!
+
+  """Name of `RuleSet`."""
+  name: String!
+
+  """ID of associated `Pipeline`."""
+  pipelineId: String
+
+  """Precondition of `Rule`."""
+  preconditions: JSONObject
+
+  """Array of rules associated with a `RuleSet`."""
+  rules: [RuleEntity!]
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User`."""
+  user: UserEntity
+
+  """ID of `User`."""
+  userId: String
+}
+
+"""Response object for `RuleSet`."""
+type RuleSetResponse {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `RuleSet`."""
+  description: String
+
+  """Indicates whether `RuleSet` is enabled."""
+  enabled: Boolean
+
+  """ID of `RuleSet`."""
+  id: String
+
+  """Name of `RuleSet`."""
+  name: String!
+
+  """ID of associated `Pipeline`."""
+  pipelineId: String
+
+  """Precondition of `Rule`."""
+  preconditions: JSONObject
+
+  """Array of rules associated with a `RuleSet`."""
+  rules: [RuleEntity!]
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User`."""
+  user: UserEntity
+
+  """ID of `User`."""
+  userId: String
+
+  """Versions of `RuleSet`."""
+  versions: [RuleSet!]!
+}
+
+input SamlRoleMappingInput {
+  groupId: String!
+  groupName: String!
+  role: RoleOptions!
+}
+
+type SamlRoleMappingResponse {
+  groupId: String!
+  groupName: String!
+  role: RoleOptions!
+}
+
+"""SAML settings"""
+type SamlSettings {
+  entityId: String!
+  fieldMappingEmail: String!
+  fieldMappingFirstName: String!
+  fieldMappingGroup: String!
+  fieldMappingLastName: String!
+  fileName: String
+  redirectUrl: String!
+  roleMappings: [SamlRoleMappingResponse!]!
+  status: SamlSettingsStatus!
+  url: String
+}
+
+input SamlSettingsInput {
+  fieldMappingEmail: String
+  fieldMappingFirstName: String
+  fieldMappingGroup: String
+  fieldMappingLastName: String
+  idpSsoUrl: String
+  roleMappings: [SamlRoleMappingInput!]
+  samlMetaDataUrl: String
+}
+
+enum SamlSettingsStatus {
+  Empty
+  Initialized
+  Set
+}
+
+"""Input type for creating `Scopes`."""
+input ScopesInput {
+  """Selector inputs for `Scope`."""
+  selectors: [SelectorInput!]!
+}
+
+"""Output type for `Scopes`."""
+type ScopesOutput {
+  """Selector output for `Scope`."""
+  selectors: [SelectorOutput!]!
+}
+
+input ScreenDefinitionFilterInput {
+  defaultValue: String
+  disabled: Boolean
+  type: String
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type ScrollTo {
+  """Name of Definition"""
+  buttonName: String
+
+  """Name of Definition"""
+  sectionName: String
+}
+
+input ScrollToInput {
+  buttonName: String
+  sectionName: String
+}
+
+"""Response type for `GetDefaultDefinition`."""
+type Section {
+  """Name of Definition"""
+  associatedTaskType: String
+
+  """Name of Definition"""
+  displayName: String
+
+  """Name of Definition"""
+  feature: String
+
+  """Name of Definition"""
+  icon: String
+
+  """Name of Definition"""
+  isVisible: Boolean!
+
+  """Name of Definition"""
+  name: String!
+
+  """Name of Definition"""
+  order: Float!
+
+  """Suggestions for a field"""
+  panels: [Panel!]!
+
+  """Name of Definition"""
+  type: String!
+}
+
+input SectionInput {
+  associatedTaskType: String
+  displayName: String
+  feature: String
+  icon: String
+  isVisible: Boolean!
+  name: String!
+  order: Float!
+  panels: [PanelInput!]!
+  type: String!
+}
+
+"""Input type for creating `Selector`."""
+input SelectorInput {
+  """SelectorInput financial crime type"""
+  financialCrimeType: String!
+
+  """SelectorInput organisation unit"""
+  organisationUnit: String!
+}
+
+"""Output type for `Selector`."""
+type SelectorOutput {
+  """SelectorOutput financial crime type"""
+  financialCrimeType: String!
+
+  """SelectorOutput organisation unit"""
+  organisationUnit: String!
+}
+
+"""Response type for `GetAllServicesInstances`."""
+type ServiceInstanceDto {
+  """Name of the service"""
+  serviceName: String!
+
+  """Base URL to service"""
+  serviceUrl: String!
+}
+
+input SetFeatureToggleInput {
+  key: FeatureToggleKey!
+  value: Boolean!
+}
+
+"""Shap values of `Entity` generated on DateTime."""
+type Shap {
+  """ID of `Entity`."""
+  entityId: String!
+
+  """DateTime of shap values."""
+  featureDate: DateTime!
+
+  """Relevant feature values and shap values."""
+  features: [ShapFeature!]!
+
+  """Composite key of `shap.entity` and `shap.feature_date`."""
+  id: ID!
+}
+
+"""Relevant feature values and shap values."""
+type ShapFeature {
+  """Average value of Feature."""
+  averageFeatureValue: Float
+
+  """Average value of Peer Group."""
+  averagePeerGroupValue: Float
+
+  """Name of Feature."""
+  featureName: String!
+
+  """Value of Feature."""
+  featureValue: Float!
+
+  """Shap value of Feature."""
+  shapValue: Float!
+}
+
+enum Sort {
+  ASC
+  DESC
+}
+
+input StatusTemplate {
+  closedBy: String
+  closedTimestamp: String
+  label: String!
+  reviewedBy: String
+  reviewedTimestamp: String
+  status: String!
+}
+
+input StylingRulesInput {
+  additionalProp1: [AdditionalPropInput!]!
+  additionalProp2: [AdditionalPropInput!]!
+  additionalProp3: [AdditionalPropInput!]!
+}
+
+input SubjectIdsMappingInput {
+  subjectId: String!
+}
+
+"""Summarized Transaction DTO."""
+type SummarizedTransaction {
+  """Transaction type of `SummarizedTransaction`."""
+  transactionType: String!
+
+  """Value of `SummarizedTransaction`."""
+  value: Float!
+}
+
+"""Summarized Transactions by Type Response."""
+type SummarizedTransactionsByTypeResponse {
+  """Total Credits of Transactions."""
+  credit: [SummarizedTransaction!]
+
+  """Total Debits of Transactions."""
+  debit: [SummarizedTransaction!]
+
+  """Total Credits of Transactions."""
+  totalCredit: Float
+
+  """Total Credits of Transactions."""
+  totalDebit: Float
+}
+
+"""Summarized Transactions Response."""
+type SummarizedTransactionsResponse {
+  """Total Credits of Transactions."""
+  credit: [DebitCreditSummarizedTransaction!]
+
+  """Total Debits of Transactions."""
+  debit: [DebitCreditSummarizedTransaction!]
+
+  """Total Credits of Transactions."""
+  totalCredit: Float
+
+  """Total Credits of Transactions."""
+  totalDebit: Float
+}
+
+"""Response type for `GetSystemPreferences`."""
+type SystemPreferencesDto {
+  """Currency for `SystemPreferences`."""
+  currency: String!
+
+  """Date format for `SystemPreferences`."""
+  dateFormat: String!
+}
+
+input Tag {
+  category: String!
+  resourceKey: String!
+  tag: String!
+}
+
+input Tagging {
+  add: [String!]!
+  remove: [String!]!
+}
+
+"""Target."""
+type Target {
+  """Health of Target."""
+  health: String
+
+  """Instance label of Target."""
+  instanceLabel: String
+
+  """Job label of Target."""
+  jobLabel: String
+
+  """Last scrape of Target."""
+  lastScrape: String
+}
+
+input TaskAction {
+  """Task Action Category"""
+  category: TaskActionCategory!
+
+  """
+  The Action code. This is an Unique Identifier of a given Action within a given Task Type
+  """
+  code: String!
+
+  """It represents the type of the action button that will be displayed."""
+  componentType: String
+
+  """The instruction text in English which tells the user what to do"""
+  description: String!
+
+  """
+  The notification name which completes action execution in case of failure (only populated when `isAsynchronous` is true)
+  """
+  failureNotification: String
+
+  """The flag indicating if the action is asynchronous"""
+  isAsynchronous: Boolean! = true
+  isMassAction: Boolean
+
+  """Task Action name in plain English"""
+  name: String!
+
+  """Operation codes for action"""
+  operationCodes: [String!]
+
+  """The REST operations path"""
+  operationPath: String
+
+  """Action operation type"""
+  operationType: OperationType
+  outcomeTemplate: OutcomeTemplate
+  payloadCriteria: PayloadCriteria
+  payloadTemplate: PayloadTemplate
+
+  """
+  The notification name which completes action execution in case of failure (only populated when `isAsynchronous` is true)
+  """
+  reasons: [Reason!]
+
+  """
+  The resource key prefix which is used to build a resource key by appending the `action` value to this prefix. The resource key can be expanded to a localised description
+  """
+  resourceKeyPrefix: String = "subject.task.action"
+
+  """The Service Name registered in the Service Discovery"""
+  serviceName: String!
+  statusTemplate: StatusTemplate
+  subjectTagging: Tagging
+
+  """
+  The notification name which completes action execution in case of success (only populated when `isAsynchronous` is true)
+  """
+  successNotification: String
+  taskTagging: Tagging
+}
+
+enum TaskActionCategory {
+  builder
+  closure
+  decision
+  user
+}
+
+enum TaskTypeCategory {
+  SUBTASK
+  TASK
+}
+
+"""Team"""
+type Team {
+  """Access Policy of `Team`."""
+  accessPolicy: AccessPolicy
+
+  """Created on DateTime."""
+  createdOn: DateTime!
+
+  """Description of `Team`."""
+  description: String
+
+  """ID of `Team`."""
+  id: ID!
+
+  """Team members count."""
+  membersCount: Float
+
+  """Name of `Team`."""
+  name: String!
+  queues: [QueueOnTeamDto!]!
+  roles: [RoleDto!]!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime!
+}
+
+"""Team member response object"""
+type TeamMember {
+  """Created on DateTime."""
+  createdOn: DateTime!
+
+  """`TeamMember` details."""
+  user: TeamMemberUserInfo!
+}
+
+"""Team member user object"""
+type TeamMemberUserInfo {
+  """ID of `User`."""
+  id: ID!
+
+  """Image ID of `User`."""
+  imageId: String
+
+  """Name of `User`."""
+  name: String!
+}
+
+"""`Template` model."""
+type Template {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """`Data Mapping` associated with `Template`."""
+  dataMappings: [DataMapping!]!
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `Template`."""
+  description: String
+
+  """ID of `Template`."""
+  id: String!
+
+  """ItemMetadata for a template."""
+  itemMetadata: ItemMetadata
+
+  """Name of `Template`."""
+  name: String!
+
+  """Properties associated with `Template`."""
+  templateProperties: [TemplateProperty!]
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""`TemplateProperty` model."""
+type TemplateProperty {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Data type of `TemplateProperty`."""
+  dataType: String!
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Description of `TemplateProperty`."""
+  description: String
+
+  """Display name of `TemplateProperty`."""
+  displayName: String
+
+  """ID of `TemplateProperty`."""
+  id: String
+
+  """Data type of `TemplateProperty`."""
+  isCustomField: Boolean
+
+  """Name of `TemplateProperty`."""
+  name: String!
+
+  """Indicates whether `TemplateProperty` is required."""
+  required: Boolean!
+
+  """`Template` associated with `TemplateProperty`."""
+  template: Template!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Input type of `TestSMTPSettings`."""
+input TestSMTPSettingsInput {
+  """Sender email for SMTP."""
+  fromEmail: String!
+
+  """Name for SMTP."""
+  fromName: String!
+
+  """Hostname for SMTP."""
+  hostName: String!
+
+  """Options for SMTP."""
+  options: JSON
+
+  """Password for SMTP."""
+  password: String
+
+  """Port for SMTP."""
+  port: Float!
+
+  """Provide email address to validate SMTP settings."""
+  toEmail: String
+
+  """Username for SMTP."""
+  userName: String!
+}
+
+"""Response for `TestSMTPSettings`."""
+type TestSMTPSettingsResponse {
+  """Indicates whether SMTP settings successfully sent a test email."""
+  success: Boolean!
+}
+
+"""`Token`."""
+type Token {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `Token`."""
+  id: String!
+
+  """IP Address of `User` that requested the `Token`."""
+  ip: String!
+
+  """Value of `Token`."""
+  token: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """`User` that requested the `Token`."""
+  user: UserEntity!
+}
+
+"""Query response from `GetTotalAlertsBySource`."""
+type TotalAlertsBySourceResponse {
+  """Represents the category total for `Alert`s by `RiskRating`."""
+  totalAlertsByRiskRating: [CategoryTotalAlertsByRiskRating!]!
+
+  """Represents the category total for `Alert`s by status."""
+  totalAlertsByStatus: [CategoryTotalAlertsByStatus!]!
+}
+
+"""Oject type for Training model"""
+type TrainingModel {
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """ID of `TrainingModel`."""
+  id: String!
+
+  """Model data for `TrainingModel`."""
+  modelData: JSONObject
+
+  """Model name of `TrainingModel`."""
+  modelName: String!
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+}
+
+"""Edge to connect `Transaction` nodes."""
+type TransactionEdge {
+  """Cursor for current `Transaction` node."""
+  cursor: String!
+
+  """`Transaction` object details."""
+  node: EventModel!
+}
+
+"""Attributes of `TransactionSummaryNode`."""
+type TransactionSummaryAttributes {
+  """Total transaction amount between Nodes."""
+  totalAmount: Float!
+}
+
+"""Response type for `transactionSummaryDetails`."""
+type TransactionSummaryDetails {
+  """Edges pointing to `Transaction` objects."""
+  edges: [TransactionEdge!]!
+
+  """Pagination details."""
+  pageInfo: PageInfo!
+
+  """Total number of `Transaction` records that can be returned."""
+  totalRecords: Int!
+}
+
+"""Input type of `transactionSummaryDetails`."""
+input TransactionSummaryDetailsInput {
+  """ID of `Alert` related to `TransactionSummary`."""
+  alertId: String!
+
+  """ID of `Entity` related to `TransactionSummary`."""
+  entityId: String!
+
+  """Filters for Entity Links Explorer."""
+  filterBy: FlowOfFundsFiltersInput!
+
+  """Specify the ordering of `TransactionSummary` records."""
+  orderBy: OrderByInput
+
+  """Specify page and limit for paginated results."""
+  page: OffsetPaginationInput = {limit: 25, pageNumber: 0}
+
+  """
+  Composite ID for `TransactionSummary` formed by `originatorId` and `beneficiaryId`.
+  """
+  transactionSummaryId: String!
+}
+
+enum TransactionSummaryTypes {
+  Daily
+  Monthly
+  Weekly
+}
+
+"""
+Aggregated `Transaction`s amounts grouped by either Credit or Debit type and transaction type.
+"""
+type TransactionsByCreditOrDebitType {
+  """Total amount for `Transaction` within provided time period."""
+  totalTransactionAmount: Float!
+
+  """Type of `Transaction`."""
+  transactionType: String!
+}
+
+"""Month data map for `GetTransactionsThroughput`."""
+type TransactionsEntitiesDataByMonth {
+  """Month number for `Transaction`."""
+  month: Float!
+
+  """Number of active entities for selected time window."""
+  numberOfActiveEntities: Float!
+
+  """Number of transactions for selected time window."""
+  numberOfTransactions: Float!
+
+  """Year number for `Transaction`."""
+  year: Float!
+}
+
+"""Query response from `GetTransactionsThroughput`."""
+type TransactionsThroughputDto {
+  """Average Entities Per Month."""
+  avgEntitiesPerMonth: Float
+
+  """Average Transactions Per Month."""
+  avgTransactionsPerMonth: Float
+
+  """Data by month for `GetTransactionsThroughput`."""
+  dataByMonth: [TransactionsEntitiesDataByMonth!]
+
+  """Flag to notify if there is no data for the period."""
+  isEmpty: Boolean
+
+  """Total Entities all time."""
+  totalEntities: Float
+
+  """Total Transactions all time."""
+  totalTransactions: Float
+}
+
+"""Input type of `UpdateAlertDecision`."""
+input UpdateAlertDecisionInput {
+  """ID of `Alert`"""
+  alertId: String!
+
+  """Decision comment of `Detection`"""
+  comment: String
+
+  """ID of `RiskRating`"""
+  decision: String
+
+  """Status of `Alert`"""
+  status: String
+
+  """Indicates whether detections should be suppressed for entity"""
+  suppressEntity: Boolean
+}
+
+"""Input type of `UpdateAlertQueue`."""
+input UpdateAlertQueueInput {
+  """Filters of `AlertQueue`."""
+  filters: JSONObject
+
+  """ID of `AlertQueue`."""
+  id: String!
+
+  """Label of `AlertQueue`."""
+  label: String
+
+  """Name of `AlertQueue`."""
+  name: String
+
+  """Queue users of AlertQueue."""
+  queueUsers: [String!]
+}
+
+"""Input type of `UpdateAlertType`."""
+input UpdateAlertTypeInput {
+  """ID of `AlertType`."""
+  id: String!
+
+  """Display Name of the Alert Type."""
+  name: String
+
+  """Query of `AlertType`."""
+  query: String
+
+  """Score of `AlertType`."""
+  score: Float
+}
+
+"""Update data mapping column input"""
+input UpdateDataMappingColumnInput {
+  """Column position of `DataMappingColumn`."""
+  columnPosition: Float!
+
+  """Data mapping ID."""
+  dataMappingId: String
+
+  """Data type of datamappingcolumn."""
+  dataType: String!
+
+  """Default of datamappingcolumn."""
+  default: String!
+
+  """Example data of `DataMappingColumn`."""
+  exampleData: String
+
+  """Mapping column ID."""
+  id: String
+
+  """Source of `DataMappingColumn`."""
+  source: String!
+
+  """Template property ID."""
+  templatePropertyId: String!
+}
+
+"""Input for updating a data mapping record."""
+input UpdateDataMappingInput {
+  """Data mapping columns."""
+  dataMappingColumns: [UpdateDataMappingColumnInput!]!
+
+  """ID of `File`."""
+  fileId: String
+
+  """ID of `DataMapping`."""
+  id: String!
+
+  """Name of `DataMapping`."""
+  name: String!
+
+  """ID of `Template`."""
+  templateId: String
+}
+
+"""Input type of `UpdateKeyValue`."""
+input UpdateKeyValueInput {
+  """Permissions that have access to update a `KeyValue`."""
+  editPermissions: JSONObject
+
+  """Values to encrypt."""
+  encryptedValues: JSON
+
+  """Indiciates whether value of `KeyValue` is an environment variable."""
+  isEnv: Boolean
+
+  """Key of `KeyValue`."""
+  key: String!
+
+  """Value of `KeyValue`."""
+  value: JSON
+}
+
+"""Input type of `UpdateKeyValues`."""
+input UpdateKeyValuesInput {
+  """List of `KeyValue`s to update."""
+  batch: [UpdateKeyValueInput!]!
+}
+
+"""Input type to update an organisation unit"""
+input UpdateOrganisationUnitInput {
+  """OrganisationUnit code"""
+  code: String!
+
+  """OrganisationUnit is active"""
+  isActive: Boolean!
+
+  """OrganisationUnit label"""
+  label: String!
+
+  """OrganisationUnit original code"""
+  originalCode: String!
+
+  """OrganisationUnit parent id"""
+  parentId: String
+}
+
+"""Input type to update a queue"""
+input UpdateQueueInput {
+  """Queue description"""
+  description: String
+
+  """ID of `Queue`."""
+  id: ID!
+
+  """Queue logic: filtering and sorting"""
+  logic: JSONObject
+
+  """Queue name"""
+  name: String
+}
+
+"""Input type of `UpdateRiskRating`."""
+input UpdateRiskRatingInput {
+  """Color for `RiskRating`."""
+  color: String
+
+  """Display order for `RiskRating`."""
+  displayOrder: Float
+
+  """Label for `RiskRating` as unique ID."""
+  id: String!
+
+  """Label for `RiskRating`."""
+  label: String
+}
+
+"""Input type of `UpdateRiskRatings`."""
+input UpdateRiskRatingsInput {
+  """List of `RiskRating`s."""
+  riskRatings: [RiskRatingFieldInput!]
+}
+
+"""Input type to update a `Role`"""
+input UpdateRoleInput {
+  """ID of `Role`."""
+  id: String!
+
+  """Name of `Role`."""
+  name: String
+
+  """Permissions of `Role`."""
+  permissions: JSONObject
+}
+
+"""Input for updating the active rule"""
+input UpdateRuleActiveInput {
+  """Indicates whether `Rule` is active."""
+  active: Boolean!
+
+  """ID of `Rule`."""
+  id: String!
+}
+
+"""Input type to update a rule record."""
+input UpdateRuleInput {
+  """Indicates whether `Rule` is active."""
+  active: Boolean!
+
+  """Description of `Rule`."""
+  description: String!
+
+  """Event type."""
+  eventType: String
+
+  """ID of `Rule`."""
+  id: String!
+
+  """Name of `Rule`."""
+  name: String
+
+  """Logic for `Rule`."""
+  rule: JSONObject!
+
+  """Rule Action ids associated to the Rule."""
+  ruleActionIds: [String!]
+
+  """ID of `RuleSet`."""
+  ruleSetId: String!
+
+  """Score of `Rule`."""
+  score: Float!
+
+  """Type of `Rule`."""
+  type: String
+}
+
+"""Input type of `UpdateRuleSet`."""
+input UpdateRuleSetsInput {
+  """ID of `RuleSet`."""
+  id: String!
+
+  """Name of `RuleSet`."""
+  name: String
+
+  """Pipeline ID associated to the RuleSet."""
+  pipelineId: String
+
+  """Precondition of RuleSet."""
+  preconditions: String
+}
+
+"""Input type to update a team"""
+input UpdateTeamInput {
+  """Access policy Id of `Team`."""
+  accessPolicyId: String
+
+  """Description of `Team`."""
+  description: String
+
+  """ID of `Team`."""
+  id: ID!
+
+  """Name of `Team`."""
+  name: String
+
+  """List of `Queue` IDs"""
+  queuesIds: [String!]
+
+  """Role IDs of `Team`."""
+  roleIds: [String!]
+}
+
+"""Input type for updating a template property record."""
+input UpdateTemplatePropertyInput {
+  """Data type of `TemplateProperty`."""
+  dataType: String!
+
+  """Description of `TemplateProperty`."""
+  description: String
+
+  """Display name of `TemplateProperty`."""
+  displayName: String
+
+  """ID of `TemplateProperty`."""
+  id: String
+
+  """Name of `TemplateProperty`."""
+  name: String!
+}
+
+"""Input type of user field in `UpdateUserInput`."""
+input UpdateUser {
+  """Email of `User`."""
+  email: String
+
+  """Indicates whether `User` is enabled."""
+  enabled: Boolean
+
+  """First name of `User`."""
+  first_name: String
+
+  """ImageId of `User`."""
+  imageId: String
+
+  """Language of `User`."""
+  language: String
+
+  """Last name of `User`."""
+  last_name: String
+
+  """Permissions of `User`."""
+  permissions: JSONObject
+
+  """Preferences of `User`."""
+  preferences: JSONObject
+
+  """Role of `User`."""
+  role: String
+
+  """Time zone of `User`."""
+  time_zone: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Username of `User`."""
+  username: String
+
+  """The first day of the week `User`."""
+  weekStartsOn: String
+}
+
+"""Input type of `UpdateUser`."""
+input UpdateUserInput {
+  """ID of `User`."""
+  id: String
+
+  """Permissions of `User`."""
+  permissions: JSONObject
+
+  """`User` object."""
+  user: UpdateUser
+}
+
+"""Input type of `UpdateDataSourceStatsInput`."""
+input UpsertLandingDataSourceInput {
+  """Bucket for `File`."""
+  bucket: String
+
+  """ID of `File`."""
+  id: String
+
+  """Folder path of the landing folder`."""
+  landingFolderPath: String!
+
+  """Mimetype of `File`."""
+  mimetype: String
+
+  """Name of `File`."""
+  name: String
+
+  """Pipeline family name of `Data Source`."""
+  pipelineFamilyName: String!
+
+  """Size of the landing folder for a `Data Source`."""
+  size: Int!
+}
+
+"""Mutation response from `upsertLandingDataSource`."""
+type UpsertLandingDataSourceResponseDto {
+  """ID of `File`."""
+  id: String!
+}
+
+"""User."""
+type User {
+  """Alert queues assigned by `User`."""
+  alert_queues_assigned: [AlertQueueAssigned!]
+
+  """Alert queues owned by `User`."""
+  alert_queues_owned: [AlertQueue!]
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Email of `User`."""
+  email: String!
+
+  """Indicates whether `User` is enabled."""
+  enabled: Boolean
+
+  """First name of `User`."""
+  first_name: String
+
+  """ID of `User`."""
+  id: String!
+
+  """ImageId of `User`."""
+  imageId: String
+
+  """Language of `User`."""
+  language: String
+
+  """Last name of `User`."""
+  last_name: String
+
+  """Login code of `User`."""
+  login_codes: LoginCode
+
+  """Permission of `User`."""
+  permissions: JSONObject
+
+  """Preferences of `User`."""
+  preferences: JSONObject
+
+  """Role of `User`."""
+  role: String
+
+  """Time zone of `User`."""
+  time_zone: String
+
+  """Tokens of `User`."""
+  tokens: [Token!]
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Username of `User`."""
+  username: String @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """The first day of the week `User`."""
+  weekStartsOn: String
+}
+
+"""User assigned to a team"""
+type UserAssignedToTeam {
+  """User email"""
+  email: String!
+
+  """User ID"""
+  id: ID!
+}
+
+"""User."""
+type UserEntity {
+  """`AlertType`s of `User`."""
+  alertTypes: [AlertType!]
+
+  """`AlertQueue`s of `User`."""
+  alert_queues: [AlertQueue!]
+
+  """`AlertQueue` joiner table on `User`."""
+  alert_queues_users_users: [AlertQueueAssignedUsers!]
+
+  """API key of `User`."""
+  apiKey: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Email of `User`."""
+  email: String!
+
+  """Indicates whether `User` is enabled."""
+  enabled: Boolean
+
+  """First name of `User`."""
+  first_name: String
+
+  """ID of `User`."""
+  id: String!
+
+  """ImageId of `User`."""
+  imageId: String
+
+  """Language of `User`."""
+  language: String
+
+  """Last name of `User`."""
+  last_name: String
+
+  """Login codes of `User`."""
+  loginCodes: [LoginCode!]
+
+  """Permission of `User`."""
+  permissions: JSONObject
+
+  """Preferences of `User`."""
+  preferences: JSONObject
+
+  """Role of `User`."""
+  role: String
+
+  """Time zone of `User`."""
+  time_zone: String
+
+  """Tokens of `User`."""
+  tokens: [Token!]
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Username of `User`."""
+  username: String! @deprecated(reason: "No longer supported and will be removed in the near future. Removal on v5.0.0.")
+
+  """The first day of the week `User`."""
+  weekStartsOn: String
+}
+
+"""Response type for `UserPreferences`."""
+type UserPreferences {
+  """User's chosen imageId"""
+  imageId: String
+
+  """User's chosen language"""
+  language: String!
+
+  """User's chosen timeZone"""
+  timeZone: String
+}
+
+"""User removed from a team"""
+type UserRemovedFromTeam {
+  """User email"""
+  email: String!
+
+  """User ID"""
+  id: ID!
+}
+
+"""`ValidateCache`."""
+type ValidateCache {
+  """Indicates whether cache exists for given key."""
+  isCached: Boolean!
+
+  """Indicates whether cache exists for given sub key representing query."""
+  isQueryCached: Boolean!
+}
+
+"""Input type of ValidateCache."""
+input ValidateCacheInput {
+  """Stringified values for cached items under resolverName."""
+  queryHash: String!
+
+  """Root key of Redis cache (e.g., "AlertDecisionsResolver")."""
+  resolverName: String!
+}
+
+"""`WatchlistFlag` DTO."""
+type WatchlistFlag {
+  """Notes of `WatchlistFlag`."""
+  notes: String!
+
+  """Type of `WatchlistFlag`."""
+  type: String!
+}
+
+"""Represents an `Event` of subtype transaction (correspondent banking)."""
+type WithCorrespondentBankingAttributes {
+  """Attributes for subtype transaction."""
+  attributes: CorrespondentBankingAttributes
+
+  """Associated beneficiary `Entity`."""
+  beneficiaries: [EntityModel!]
+
+  """beneficiary id of `Event`."""
+  beneficiaryId: String
+
+  """Book ID."""
+  bookId: String
+
+  """Buy/Sell."""
+  buySell: String
+
+  """Clearing Broker ID."""
+  clearerId: String
+
+  """Country of Residence."""
+  countryOfResidence: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Credit or Debit for `Event`."""
+  creditDebitFlag: String
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Destination country."""
+  destinationCountry: String
+
+  """Date of event."""
+  eventDate: DateTime
+
+  """File associated with event."""
+  file: File
+
+  """Functional amount of `Event`."""
+  functionalAmount: Float
+
+  """Functional currency of `Event`."""
+  functionalCurrency: String
+
+  """ID of `Event`."""
+  id: String!
+
+  """Internal Trade Flag."""
+  internalTrade: String
+
+  """ISIN."""
+  isin: String
+
+  """Label of `Event`."""
+  label: String
+
+  """Last Trade Event."""
+  lastTradeEvent: String
+
+  """Maturity Date."""
+  maturityDate: DateTime
+
+  """Net Present Value."""
+  netPresentValue: Float
+
+  """Origin country."""
+  originCountry: String
+
+  """Original amount of `Event`."""
+  originalAmount: Float
+
+  """Original currency of `Event`."""
+  originalCurrency: String
+
+  """originator id of `Event`."""
+  originatorId: String
+
+  """Associated originator `Entity`."""
+  originators: [EntityModel!]
+
+  """pipeline family name of `Event`."""
+  pipelineFamilyName: String
+
+  """Product Type."""
+  productType: String
+
+  """Settlement Amount."""
+  settlementAmount: Float
+
+  """Settlement Date."""
+  settlementDate: DateTime
+
+  """source id of `Event`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """source table name of `Event`."""
+  sourceTable: String
+
+  """Stock Exchange."""
+  stockExchange: String
+
+  """Stock Quantity."""
+  stockQuality: Float
+
+  """Subtype of `Event`."""
+  subtype: String!
+
+  """Termination Date."""
+  terminationDate: DateTime
+
+  """Ticker."""
+  ticker: String
+
+  """Trade ID."""
+  tradeId: String
+
+  """Trade Status."""
+  tradeStatus: String
+
+  """Trade Type."""
+  tradeType: String
+
+  """Transaction Time."""
+  transactionTime: String
+
+  """Type of transaction (e.g., wire, card, cash, etc)."""
+  transactionType: String
+
+  """txn id of `Event`."""
+  txnId: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Trader Code or Dealer Name."""
+  workerCode: String
+}
+
+"""
+Input type to support Filter requests for Entity Links Explorer.
+@deprecated(reason: "Replaced by `GetRelationshipsLinksInput`. Removal on v5.0.0.")
+"""
+input WithFlowOfFundsFilter {
+  """Filter records until end date as DateTime."""
+  endDate: DateTime!
+
+  """Filter records from fromAmount as number."""
+  fromAmount: Float
+
+  """Filter records to higherScore as number."""
+  higherScore: Float
+
+  """Filter records from lowerScore as number."""
+  lowerScore: Float
+
+  """Filter records from start date as DateTime."""
+  startDate: DateTime!
+
+  """Filter records to toAmount as number."""
+  toAmount: Float
+}
+
+"""
+Input type to support Filter requests for Entity Links Explorer.
+@deprecated(reason: "Replaced by `RiskScoreTrendsInput`. Removal on v5.0.0.")
+"""
+input WithRelationshipFilter {
+  """List of `DataModel` attributes to filter by."""
+  fields: [String!]! = []
+
+  """Indicates whether all specified attributes in fields must be present."""
+  isFieldsCombined: Boolean = false
+}
+
+"""Represents an `Event` of subtype transaction (correspondent banking)."""
+type WithRetailBankingAttributes {
+  """Attributes for subtype transaction."""
+  attributes: RetailBankingAttributes
+
+  """Associated beneficiary `Entity`."""
+  beneficiaries: [EntityModel!]
+
+  """beneficiary id of `Event`."""
+  beneficiaryId: String
+
+  """Book ID."""
+  bookId: String
+
+  """Buy/Sell."""
+  buySell: String
+
+  """Clearing Broker ID."""
+  clearerId: String
+
+  """Country of Residence."""
+  countryOfResidence: String
+
+  """Created on DateTime."""
+  createdOn: DateTime
+
+  """Credit or Debit for `Event`."""
+  creditDebitFlag: String
+
+  """Deleted on DateTime."""
+  deletedOn: DateTime
+
+  """Destination country."""
+  destinationCountry: String
+
+  """Date of event."""
+  eventDate: DateTime
+
+  """File associated with event."""
+  file: File
+
+  """Functional amount of `Event`."""
+  functionalAmount: Float
+
+  """Functional currency of `Event`."""
+  functionalCurrency: String
+
+  """ID of `Event`."""
+  id: String!
+
+  """Internal Trade Flag."""
+  internalTrade: String
+
+  """ISIN."""
+  isin: String
+
+  """Label of `Event`."""
+  label: String
+
+  """Last Trade Event."""
+  lastTradeEvent: String
+
+  """Maturity Date."""
+  maturityDate: DateTime
+
+  """Net Present Value."""
+  netPresentValue: Float
+
+  """Origin country."""
+  originCountry: String
+
+  """Original amount of `Event`."""
+  originalAmount: Float
+
+  """Original currency of `Event`."""
+  originalCurrency: String
+
+  """originator id of `Event`."""
+  originatorId: String
+
+  """Associated originator `Entity`."""
+  originators: [EntityModel!]
+
+  """pipeline family name of `Event`."""
+  pipelineFamilyName: String
+
+  """Product Type."""
+  productType: String
+
+  """Settlement Amount."""
+  settlementAmount: Float
+
+  """Settlement Date."""
+  settlementDate: DateTime
+
+  """source id of `Event`."""
+  sourceId: String
+
+  """Source name."""
+  sourceName: String
+
+  """source table name of `Event`."""
+  sourceTable: String
+
+  """Stock Exchange."""
+  stockExchange: String
+
+  """Stock Quantity."""
+  stockQuality: Float
+
+  """Subtype of `Event`."""
+  subtype: String!
+
+  """Termination Date."""
+  terminationDate: DateTime
+
+  """Ticker."""
+  ticker: String
+
+  """Trade ID."""
+  tradeId: String
+
+  """Trade Status."""
+  tradeStatus: String
+
+  """Trade Type."""
+  tradeType: String
+
+  """Transaction Time."""
+  transactionTime: String
+
+  """Type of transaction (e.g., wire, card, cash, etc)."""
+  transactionType: String
+
+  """txn id of `Event`."""
+  txnId: String
+
+  """Updated on DateTime."""
+  updatedOn: DateTime
+
+  """Trader Code or Dealer Name."""
+  workerCode: String
+}
+
+input WorkflowActionInput {
+  action: String!
+  buttonName: String
+  mappings: SubjectIdsMappingInput!
+  messages: [MessageInput!]
+  name: String!
+  params: [String!]!
+  redirect: RedirectInput!
+  type: String
+}

@@ -1,0 +1,4 @@
+mutation ($name: String!, $description: String, $logic: JSONObject!) {
+    createQueue(input: { name: $name, logic: $logic, description: $description })
+    { id }
+}

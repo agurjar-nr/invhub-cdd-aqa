@@ -1,0 +1,171 @@
+{
+	"id": "2023-12-16000000000000000_66BFB289E11D290CE0630300140BC567",
+	"name": "SUBJECT_CHANGED",
+	"version": "1.0",
+	"timestamp": "2023-09-14T12:15:49.823155Z",
+	"entity": {
+		"id": "AUTO_SUBJ_13",
+		"name": "Subject"
+	},
+	"context": {
+		"summary": "Subject: AUTO_SUBJ_13",
+		"organisationUnit": "EUR",
+		"technical": false,
+		"source": {
+			"name": "NetReveal",
+			"userInfo": {
+				"username": "System"
+			}
+		},
+		"detail": {
+			"subjectName": "AUTO_SUBJ_13"
+		}
+	},
+	"value": {
+		"id": "66BFB289E11D290CE0630300140BC567",
+		"data": {
+			"created": "2023-12-13T09:14:39.522958",
+			"source": {
+				"subject": {
+					"subjectId": "AUTO_SUBJ_13",
+					"subjectSrcUniqueId": "AUTO_SUBJ_13",
+					"subjectSrcRefId": "CUST-000008",
+					"subjectName": "AUTO_SUBJ_13",
+					"organisationUnit": "EUR",
+					"subjectTypeCode": "P",
+					"subjectType": "Personal",
+					"residenceAddress": {
+						"contactInformation": "12345 SOME BOULEVARD, City, Kherson, 1555, MY",
+						"addressLine": "12345  SOME BOULEVARD",
+						"countryCode": "MY",
+						"postalCode": "1555",
+						"zone": "EET",
+						"city": "Kherson"
+					},
+					"phone": {
+						"countryCode": "841",
+						"areaCode": "0653",
+						"number": "11515801020",
+						"extension": "3923"
+					},
+					"occupation": "LENDER-MONEY",
+					"nationalityCountryCode": "PK",
+					"relationshipManager": {
+						"id": "000033",
+						"name": "Alladin"
+					},
+					"branchDetail": {
+						"id": "000010",
+						"name": "BRANCH 0010",
+						"sortCode": "7735"
+					},
+					"subjectStatus": "INACTIVE",
+					"isSpecialAttentionRequested": true,
+					"sourcesOfFunds": [
+						"P"
+					],
+					"currencyCodeBase": "USD",
+					"taxInfoDetail": {
+						"taxNumber": "12345678901",
+						"taxNumberType": "EIN",
+						"taxNumberIssuedByCountryCode": "MY"
+					},
+					"segments": [
+						"SME",
+						"Chemicals A Allied Products"
+					],
+					"previouslyReportedFlag": false,
+					"lastUpdatedTimestamp": "2023-09-13T08:20:57.880287",
+					"riskLevel": "Medium",
+					"isBankrupt": false,
+					"isPEP": true,
+					"isOnOtherWatchList": true,
+					"adverseMedia": {
+						"isAdverseMediaPresent": true
+					},
+					"pepType": "INTERNATIONAL",
+					"isSanctioned": true,
+					"isRCA": true,
+					"isPEPRelated": false,
+					"sarCount": 0,
+					"ctrCount": 0,
+					"calculatedScore": 90,
+					"acquisitionDate": "2009-01-05T10:00:00",
+					"personTitle": "MMES.",
+					"employmentStatus": "SOLE TRADE",
+					"employerName": "Techcity",
+					"dateOfBirth": "1934-08-26",
+					"gender": "GN0002",
+					"originCountryCode": "PK",
+					"tags": [
+						{
+							"category": "nr:riskFactors",
+							"tag": "Sanctioned"
+						},
+						{
+							"category": "nr:riskFactors",
+							"tag": "PEP"
+						},
+						{
+							"category": "nr:riskFactors",
+							"tag": "RCA"
+						},
+						{
+							"category": "nr:riskFactors",
+							"tag": "OnOtherWatchlist"
+						},
+						{
+							"category": "nr:riskFactors",
+							"tag": "AdverseMedia"
+						},
+						{
+							"category": "nr:riskFactors",
+							"tag": "SpecialAttention"
+						},
+						{
+							"category": "nr:pepType",
+							"tag": "INTERNATIONAL"
+						}
+					],
+					"accounts": [
+						{
+							"accountId": "ACC-UNIQ-8-2023-12-16",
+							"accountSrcUniqueId": "ACC-UNIQ-8-2023-12-16",
+							"accountSrcRefId": "ACC-8-2023-12-16",
+							"accountName": "SONIA REMLER-8-2023-12-16",
+							"statusCode": "ACTIVE",
+							"currencyCode": "USD",
+							"branchId": "000008",
+							"relationshipMgrId": "000008",
+							"relationshipManager": {
+								"id": "000008",
+								"name": "WAI WAI THA"
+							},
+							"product": {
+								"srcTypeCode": "0003",
+								"name": "Cheque/Check",
+								"group": "Cheque/Check",
+								"class": "S",
+								"srcTypeDescription": "Cheque/Check"
+							},
+							"dateOpened": "1991-11-25T10:00:00",
+							"dataClosed": null,
+							"balanceDate": null,
+							"accountBalance": 13309.36,
+							"accountBalanceBaseCurrency": 15971.23,
+							"creditDebitCode": "Credit",
+							"overdraftLimit": null,
+							"iban": null,
+							"creditLimit": null,
+							"blockedReason": null,
+							"currencyCodeBase": "EUR",
+							"dormantStatusFlag": false,
+							"holdingBankName": "Ocean National Bank",
+							"accountOnHoldFlag": false
+						}
+					]
+				}
+			}
+		}
+	}
+}

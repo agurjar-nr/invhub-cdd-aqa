@@ -1,0 +1,18 @@
+mutation ($id: ID!, $roleIds: [String!]) {
+    updateTeam(input: { id: $id, roleIds: $roleIds}) {
+        id
+        name
+        description
+        accessPolicy {
+            id
+            name
+        }
+        createdOn
+        updatedOn
+        membersCount
+        roles {
+            id
+            name
+        }
+    }
+}
